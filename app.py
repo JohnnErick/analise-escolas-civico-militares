@@ -104,15 +104,16 @@ def main():
     st.sidebar.markdown("##### 🏛️ Universo Cívico-Militar (SEED-PR)")
     st.sidebar.caption("Relação Oficial: **306 colégios** (305 estabelecimentos ativos no PR)")
     
-    total_cm = (df_filtrado["TIPO_GESTAO"] == "Cívico-Militar")["ID_ESCOLA"].nunique() if not df_filtrado.empty else 0
+    total_cm = df_filtrado[df_filtrado["TIPO_GESTAO"] == "Cívico-Militar"]["ID_ESCOLA"].nunique() if not df_filtrado.empty else 0
     cm_com_saeb = df_filtrado[(df_filtrado["TIPO_GESTAO"] == "Cívico-Militar") & df_filtrado["SAEB_PORTUGUES"].notna()]["ID_ESCOLA"].nunique()
     
     st.sidebar.write(f"• Cadastradas no filtro: **{total_cm:,}** escolas")
     st.sidebar.write(f"• Com notas SAEB: **{cm_com_saeb:,}** avaliadas")
     
     st.sidebar.markdown("##### 🏫 Não Cívico-Militares")
-    total_ncm = (df_filtrado["TIPO_GESTAO"] == "Não Cívico-Militar")["ID_ESCOLA"].nunique() if not df_filtrado.empty else 0
+    total_ncm = df_filtrado[df_filtrado["TIPO_GESTAO"] == "Não Cívico-Militar"]["ID_ESCOLA"].nunique() if not df_filtrado.empty else 0
     ncm_com_saeb = df_filtrado[(df_filtrado["TIPO_GESTAO"] == "Não Cívico-Militar") & df_filtrado["SAEB_PORTUGUES"].notna()]["ID_ESCOLA"].nunique()
+
     
     st.sidebar.write(f"• Cadastradas no filtro: **{total_ncm:,}** escolas")
     st.sidebar.write(f"• Com notas SAEB: **{ncm_com_saeb:,}** avaliadas")
