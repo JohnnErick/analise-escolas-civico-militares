@@ -16,7 +16,8 @@ O objetivo deste projeto é fornecer uma **ferramenta de exploração e consumo 
 
 Os dados foram consolidados a partir das planilhas oficiais fornecidas:
 1. `planilha ref/divulgacao_pr_consolidado.xlsx`: Dados do **INEP / MEC** (IDEB e SAEB) para as 3 etapas de ensino no Paraná.
-2. `planilha ref/Escolas civico militares.xlsx`: Relação oficial das **escolas cívico-militares** do Paraná (SEED-PR).
+2. `planilha ref/escolas_civico_militares_pr-final.csv`: Relação oficial e confiável das **escolas cívico-militares** do Paraná (SEED-PR).
+
 
 ### Indicadores e Cobertura:
 1. **Indicador Principal — SAEB**:

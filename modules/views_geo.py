@@ -65,13 +65,20 @@ def render_geo_view(df: pd.DataFrame):
             # Ordenar por diferença ou total
             df_table = df_table.dropna(subset=["Média CM", "Média Não-CM"]).sort_values("Diferença (CM - Não-CM)", ascending=False)
             
+            styler = df_table.style.format({
+                "Média CM": "{:.2f}",
+                "Escolas CM": "{:,.0f}",
+                "Média Não-CM": "{:.2f}",
+                "Escolas Não-CM": "{:,.0f}",
+                "Diferença (CM - Não-CM)": "{:+.2f}"
+            })
+            try:
+                styler = styler.background_gradient(subset=["Diferença (CM - Não-CM)"], cmap="coolwarm", vmin=-10, vmax=10)
+            except Exception:
+                pass
+
             st.dataframe(
-                df_table.style.format({
-                    "Média CM": "{:.2f}",
-                    "Escolas CM": "{:,.0f}",
-                    "Média Não-CM": "{:.2f}",
-                    "Escolas Não-CM": "{:,.0f}",
-                    "Diferença (CM - Não-CM)": "{:+.2f}"
-                }).background_gradient(subset=["Diferença (CM - Não-CM)"], cmap="coolwarm", vmin=-10, vmax=10),
+                styler,
                 use_container_width=True
             )
+

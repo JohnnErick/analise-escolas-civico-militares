@@ -15,7 +15,7 @@ def render_methodology_view():
             """
             - **Fontes Primárias**:
               1. Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP / MEC) — Planilhas Oficiais de Divulgação do IDEB e SAEB para o Estado do Paraná (`planilha ref/divulgacao_pr_consolidado.xlsx`).
-              2. Relação Oficial de Colégios Cívico-Militares do Estado do Paraná (`planilha ref/Escolas civico militares.xlsx`).
+              2. Relação Oficial de Colégios Cívico-Militares do Estado do Paraná (`planilha ref/escolas_civico_militares_pr-final.csv`).
             - **Abas Contempladas na Base Consolidada**:
               1. `divulgacao_anos_iniciais`: Anos Iniciais do Ensino Fundamental (1º ao 5º ano) — 2.976 escolas.
               2. `divulgacao_anos_finais`: Anos Finais do Ensino Fundamental (6º ao 9º ano) — 1.965 escolas.
@@ -31,7 +31,8 @@ def render_methodology_view():
             As escolas cívico-militares no Paraná foram instituídas no âmbito do Programa dos Colégios Cívico-Militares do Paraná (SEED-PR), formalizado pela Lei Estadual nº 20.338/2020 e expansões subsequentes.
             
             **Regra Documentada de Classificação:**
-            1. **Mapeamento Oficial**: Cruzamento determinístico e por correspondência de entidades entre a lista oficial (`Escolas civico militares.xlsx`) e os códigos de identificação `ID_ESCOLA` do INEP.
+            1. **Mapeamento Oficial**: Cruzamento determinístico e por correspondência de entidades entre a fonte confiável oficial (`escolas_civico_militares_pr-final.csv`) e os códigos de identificação `ID_ESCOLA` do INEP.
+
             2. **Validação por Nomenclatura Oficial**: Identificação das siglas padronizadas da SEED-PR e INEP:
                - `C E CM`: Colégio Estadual Cívico-Militar;
                - `E E CM`: Escola Estadual Cívico-Militar;
@@ -79,7 +80,8 @@ def render_methodology_view():
             """
             O projeto é **estritamente voltado para o Estado do Paraná (PR)**.
             Abaixo está a auditoria do cruzamento realizado entre a planilha contendo a relação oficial 
-            das escolas cívico-militares (`Escolas civico militares.xlsx`) e a base oficial do INEP (`divulgacao_pr_consolidado.xlsx`).
+            das escolas cívico-militares (`escolas_civico_militares_pr-final.csv`) e a base oficial do INEP (`divulgacao_pr_consolidado.xlsx`).
+
             """
         )
         

@@ -13,10 +13,12 @@ import numpy as np
 
 BASE_DIR = Path(__file__).resolve().parent
 PLANILHA_PATH = BASE_DIR / "planilha ref" / "divulgacao_pr_consolidado.xlsx"
-PLANILHA_CM_PATH = BASE_DIR / "planilha ref" / "Escolas civico militares.xlsx"
+PLANILHA_CM_CSV = BASE_DIR / "planilha ref" / "escolas_civico_militares_pr-final.csv"
+PLANILHA_CM_PATH = PLANILHA_CM_CSV if PLANILHA_CM_CSV.exists() else (BASE_DIR / "planilha ref" / "Escolas civico militares.xlsx")
 MAP_CM_PATH = BASE_DIR / "data" / "mapeamento_escolas_civico_militares.csv"
 DATA_DIR = BASE_DIR / "data"
 DATA_DIR.mkdir(exist_ok=True)
+
 
 # Carrega IDs oficiais de escolas cívico-militares se o mapeamento existir
 IDS_CIVICO_MILITARES = set()

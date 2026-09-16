@@ -24,8 +24,9 @@ with pd.ExcelWriter(EXCEL_SAIDA, engine="openpyxl") as writer:
     df_resumo = pd.DataFrame([
         {"Item": "Unidade Federativa", "Detalhe": "Paraná (PR) — Filtro exclusivo para escolas do estado"},
         {"Item": "Fonte dos Dados Educacionais", "Detalhe": "INEP / MEC — divulgacao_pr_consolidado.xlsx"},
-        {"Item": "Fonte da Lista Cívico-Militar", "Detalhe": "SEED-PR — Escolas civico militares.xlsx (305 estabelecimentos válidos)"},
+        {"Item": "Fonte da Lista Cívico-Militar", "Detalhe": "SEED-PR — escolas_civico_militares_pr-final.csv (305 estabelecimentos válidos)"},
         {"Item": "Total de Escolas Cívico-Militares Cruzadas", "Detalhe": f"{len(ids_cm)} escolas únicas no Paraná"},
+
         {"Item": "Total de Estabelecimentos Únicos no PR", "Detalhe": "4.941 escolas"},
         {"Item": "Critério de Cruzamento", "Detalhe": "Mapeamento determinístico e por correspondência de entidades (ID_ESCOLA INEP)"},
         {"Item": "Indicador Principal", "Detalhe": "SAEB (Proficiência Língua Portuguesa, Matemática e Nota Média 0-10)"},
