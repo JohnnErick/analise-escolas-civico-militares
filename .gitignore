@@ -4,3 +4,4 @@ __pycache__/
 *.Zone.Identifier
 .DS_Store
 .streamlit/
+planilha_ref/

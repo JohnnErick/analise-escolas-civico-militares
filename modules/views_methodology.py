@@ -41,13 +41,15 @@ def render_methodology_view():
                - `CPM`: Colégio da Polícia Militar;
                - Expressões literais: `CÍVICO-MILITAR`, `CIVICO MILITAR` ou `MILITAR`.
             3. **Filtro de Exclusão**: Foram expressamente desconsiderados os registros contendo `CMEI` ou `C M E I` (Centros Municipais de Educação Infantil), assegurando que creches e pré-escolas municipais não fossem indevidamente rotuladas.
-            4. **Total de Escolas Cívico-Militares Identificadas**:
-               - Anos Finais: 322 escolas;
-               - Ensino Médio: 293 escolas;
-               - Anos Iniciais: 48 escolas.
-
+            4. **Distribuição da Amostra por Etapa (Universo de 306 Colégios Oficiais)**:
+               - **Relação Oficial SEED-PR**: **306 colégios** (305 estabelecimentos ativos no Paraná).
+               - **Anos Finais (6º ao 9º)**: **322 escolas** cadastradas, das quais **315 escolas** possuem notas no SAEB 2023.
+               - **Ensino Médio**: **293 escolas** cadastradas, das quais **260 escolas** possuem notas no SAEB 2023.
+               - **Anos Iniciais (1º ao 5º)**: **48 escolas** cadastradas, das quais apenas **18 escolas** tinham turmas de 5º ano avaliadas no SAEB 2023 (pois esta etapa é de competência quase 100% municipal).
+               - **Total de Escolas Únicas no Paraná**: **343 escolas cívico-militares únicas** com registros históricos consolidados.
             """
         )
+
         
     with st.expander("📊 3. Dicionário de Indicadores Educacionais", expanded=True):
         st.markdown(

@@ -43,13 +43,22 @@ def main():
     )
     anos_filtro = [ano_selecionado] if ano_selecionado != "Todos os Anos" else None
     
-    # 2. Filtro de Etapa de Ensino
+    # 2. Filtro de Etapa de Ensino (Organizado por relevância para o programa)
+    etapas_disponiveis = ["Anos Finais (6º-9º)", "Ensino Médio", "Todas as Etapas", "Anos Iniciais (1º-5º)"]
     etapa_selecionada = st.sidebar.selectbox(
         "Etapa de Ensino:",
-        options=["Todas as Etapas"] + filter_opts["etapas"],
-        index=2  # Padrão: Anos Finais (onde se concentra a maior parte dos colégios cívico-militares)
+        options=etapas_disponiveis,
+        index=0,  # Padrão: Anos Finais (foco primordial dos colégios cívico-militares)
+        help="O programa estadual (SEED-PR) concentra-se nos Anos Finais do Fundamental e no Ensino Médio."
     )
     etapas_filtro = [etapa_selecionada] if etapa_selecionada != "Todas as Etapas" else None
+    
+    if etapa_selecionada == "Anos Iniciais (1º-5º)":
+        st.sidebar.info(
+            "ℹ️ **Anos Iniciais**: O programa cívico-militar da SEED-PR destina-se aos Anos Finais e Ensino Médio. "
+            "Nos Anos Iniciais (geridos pelas redes municipais), apenas 18 escolas estaduais cívico-militares possuíam turmas de 5º ano avaliadas no SAEB 2023.",
+            icon="💡"
+        )
     
     # 3. Filtro de Rede de Ensino
     redes_selecionadas = st.sidebar.multiselect(
@@ -92,18 +101,26 @@ def main():
     
     # Resumo da Amostra na Sidebar
     st.sidebar.markdown("---")
-    st.sidebar.markdown("##### 📊 Amostra Filtrada")
-    total_linhas = len(df_filtrado)
-    total_cm = (df_filtrado["TIPO_GESTAO"] == "Cívico-Militar").sum()
-    total_ncm = (df_filtrado["TIPO_GESTAO"] == "Não Cívico-Militar").sum()
+    st.sidebar.markdown("##### 🏛️ Universo Cívico-Militar (SEED-PR)")
+    st.sidebar.caption("Relação Oficial: **306 colégios** (305 estabelecimentos ativos no PR)")
     
-    st.sidebar.write(f"Total de registros: **{total_linhas:,}**")
-    st.sidebar.write(f"• Cívico-Militares: **{total_cm:,}**")
-    st.sidebar.write(f"• Não Cívico-Militares: **{total_ncm:,}**")
+    total_cm = (df_filtrado["TIPO_GESTAO"] == "Cívico-Militar")["ID_ESCOLA"].nunique() if not df_filtrado.empty else 0
+    cm_com_saeb = df_filtrado[(df_filtrado["TIPO_GESTAO"] == "Cívico-Militar") & df_filtrado["SAEB_PORTUGUES"].notna()]["ID_ESCOLA"].nunique()
     
-    if total_linhas == 0:
+    st.sidebar.write(f"• Cadastradas no filtro: **{total_cm:,}** escolas")
+    st.sidebar.write(f"• Com notas SAEB: **{cm_com_saeb:,}** avaliadas")
+    
+    st.sidebar.markdown("##### 🏫 Não Cívico-Militares")
+    total_ncm = (df_filtrado["TIPO_GESTAO"] == "Não Cívico-Militar")["ID_ESCOLA"].nunique() if not df_filtrado.empty else 0
+    ncm_com_saeb = df_filtrado[(df_filtrado["TIPO_GESTAO"] == "Não Cívico-Militar") & df_filtrado["SAEB_PORTUGUES"].notna()]["ID_ESCOLA"].nunique()
+    
+    st.sidebar.write(f"• Cadastradas no filtro: **{total_ncm:,}** escolas")
+    st.sidebar.write(f"• Com notas SAEB: **{ncm_com_saeb:,}** avaliadas")
+    
+    if len(df_filtrado) == 0:
         st.warning("Nenhum dado encontrado para a combinação de filtros selecionada. Ajuste os filtros na barra lateral.")
         st.stop()
+
         
     # ==========================================
     # NAVEGAÇÃO PRINCIPAL (ABAS)
