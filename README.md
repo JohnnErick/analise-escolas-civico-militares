@@ -1,100 +1,105 @@
-# 🏫 Painel de Análise: Escolas Cívico-Militares (Paraná)
+# 🏫 Painel de Análise: Escolas Cívico-Militares do Paraná
 
-Ambiente interativo de dados desenvolvido para suporte a investigações jornalísticas e análises educacionais sobre o desempenho de escolas públicas cívico-militares e não cívico-militares no Paraná.
-
----
-
-## 🎯 Objetivo e Princípio Analítico
-
-O objetivo deste projeto é fornecer uma **ferramenta de exploração e consumo de microdados** para jornalistas e analistas, permitindo investigar com rigor e transparência o desempenho dos estabelecimentos de ensino com base nas avaliações oficiais do **SAEB** e **IDEB**.
-
-> **Nota de Neutralidade**: O painel não assume que escolas cívico-militares apresentem desempenho superior ou inferior. Seu papel é viabilizar a formulação de hipóteses, a observação de distribuições (e não apenas médias) e a contextualização territorial e histórica. Decisões causais e reportagens finais caberão às etapas posteriores da equipe investigativa.
+Ambiente interativo de exploração de dados educacionais (SAEB e IDEB) para jornalismo investigativo e análise de políticas públicas no Estado do Paraná.
 
 ---
 
-## 📊 Estrutura dos Dados e Indicadores
+## 🍎 Como Usar no MacBook (1 Duplo Clique — Sem Programação)
 
-Os dados foram consolidados a partir das planilhas oficiais fornecidas:
-1. `planilha ref/divulgacao_pr_consolidado.xlsx`: Dados do **INEP / MEC** (IDEB e SAEB) para as 3 etapas de ensino no Paraná.
-2. `planilha ref/escolas_civico_militares_pr-final.csv`: Relação oficial e confiável das **escolas cívico-militares** do Paraná (SEED-PR).
+Este projeto foi preparado para que **qualquer pessoa sem conhecimento técnico** consiga abrir o painel em menos de 2 minutos.
 
+> [!TIP]
+> **Os dados já vão 100% embutidos no projeto** (`data/escolas_tidy.parquet` com apenas 1,5 MB). Você **não precisa** baixar arquivos adicionais, nem ter Excel instalado, nem rodar scripts de tratamento.
 
-### Indicadores e Cobertura:
-1. **Indicador Principal — SAEB**:
-   - **Proficiência em Língua Portuguesa**: Escala do SAEB (~150 a 400 pontos);
-   - **Proficiência em Matemática**: Escala do SAEB (~150 a 400 pontos);
-   - **Nota Média Padronizada**: Escala de 0 a 10 calculada pelo INEP ($N$).
+### Passo a Passo no Mac:
+1. **Baixe o projeto**: Faça o clone pelo Git ou baixe a pasta compactada (ZIP) no botão verde `Code` do GitHub e extraia no seu MacBook.
+2. **Abra a pasta no Finder**.
+3. Dê um **duplo clique no arquivo `iniciar_painel.command`**.
 
-2. **Indicadores Complementares**:
-   - **IDEB Observado**: Índice de Desenvolvimento da Educação Básica ($IDEB = N \times P$);
-   - **Metas Projetadas**: Metas oficiais estabelecidas pelo MEC;
-   - **Taxa de Aprovação (%) e Indicador de Rendimento ($P$)**: Fluxo escolar dos estudantes.
-   - *Nota de Transparência*: A base original fornecida não contempla taxas explícitas de reprovação e abandono escolar.
-
-3. **Cobertura Temporal e Espacial**:
-   - **Unidade Federativa**: Paraná (PR);
-   - **Período**: 2005 a 2025 (séries bianuais);
-   - **Etapas de Ensino**: Anos Iniciais do EF (2.976 escolas), Anos Finais do EF (1.965 escolas) e Ensino Médio (1.704 escolas). Total de 4.941 estabelecimentos únicos.
-   - **Escolas Cívico-Militares Mapeadas**: 322 em Anos Finais, 293 no Ensino Médio e 48 em Anos Iniciais.
-
+**O que vai acontecer automaticamente:**
+- O script detecta o Python do seu Mac;
+- Na primeira vez, ele prepara o ambiente silenciosamente (leva cerca de 1 minuto);
+- **O seu navegador de internet padrão (Safari ou Chrome) abrirá automaticamente** exibindo o painel interativo em `http://localhost:8501`.
+- Para encerrar o painel no final do dia, basta fechar a janelinha preta do Terminal.
 
 ---
 
-## 🏷️ Regra de Classificação de Escolas
-
-Conforme documentado no código (`preprocess_data.py`), a classificação adota as nomenclaturas oficiais da SEED-PR e INEP:
-- **Cívico-Militar**: Escolas contendo no nome oficial as siglas `C E CM` (Colégio Estadual Cívico-Militar), `E E CM`, `E M CM`, `E C M`, `CPM` (Colégio da Polícia Militar), ou as expressões `CIVICO-MILITAR` / `MILITAR`.
-- **Exclusão Específica**: Foram excluídos expressamente registros contendo `CMEI` / `C M E I` (Centros Municipais de Educação Infantil).
-- **Não Cívico-Militar**: Todas as demais escolas da base.
+## 🪟 Como Usar no Windows (1 Duplo Clique)
+Caso utilize Windows, basta dar **duplo clique no arquivo `iniciar_painel.bat`**. O navegador abrirá automaticamente.
 
 ---
 
-## 🚀 Como Executar o Painel
+## ☁️ Alternativa em Nuvem: Acesso Direto pela Web (Sem Instalar Nada)
+Se preferir compartilhar o painel com outros colegas de redação ou leitores sem que eles precisem baixar nada no computador:
+1. Conecte este repositório no [Streamlit Community Cloud](https://share.streamlit.io/) (gratuito).
+2. Clique em **Deploy**.
+3. O painel ficará acessível via link web (ex: `https://seu-usuario-analise-escolas.streamlit.app`) pelo navegador de qualquer computador ou celular.
 
-### 1. Pré-requisitos
-- Python 3.10 ou superior
+---
 
-### 2. Ativar Ambiente e Instalar Dependências
+## 💻 Para Desenvolvedores (Linha de Comando)
+
+Se desejar executar manualmente pelo terminal:
+
 ```bash
+# 1. Criar e ativar o ambiente virtual
 python3 -m venv .venv
 source .venv/bin/activate
+
+# 2. Instalar as dependências
 pip install -r requirements.txt
-```
 
-### 3. Processar / Atualizar Dados (opcional, já processados)
-```bash
-python3 preprocess_data.py
-```
-
-### 4. Iniciar o Painel Streamlit
-```bash
+# 3. Executar o painel
 streamlit run app.py
 ```
-O painel abrirá automaticamente no navegador no endereço `http://localhost:8501`.
+
+Para atualizar o matching geoespacial ou reprocessar os microdados a partir das planilhas brutas:
+```bash
+python3 scripts/spatial_matching_kml.py
+python3 preprocess_data.py
+python3 gerar_planilha_cruzada.py
+```
 
 ---
 
-## 📁 Estrutura de Arquivos
+## 📊 Estrutura dos Dados e Metodologia
+
+- **Universo de Cobertura**: 4.941 estabelecimentos de ensino no Paraná avaliados pelo INEP/MEC entre **2005 e 2025**.
+- **Georreferenciamento de 100% dos Colégios Cívico-Militares**: Todos os 306 colégios cívico-militares oficiais da SEED-PR foram validados com coordenadas de Latitude e Longitude a partir do arquivo KML oficial, eliminando 100% das ambiguidades de homônimos.
+- **Indicador Principal**: Proficiências do SAEB (Matemática, Língua Portuguesa e Nota Média Padronizada de 0 a 10).
+- **Indicadores Complementares**: IDEB Observado, Metas Projetadas do MEC e Taxas de Aprovação / Rendimento Escolar.
+- **Mapa Geoespacial Interativo**: Aba de comparação municipal com mapa de pontos do Paraná por etapa de ensino.
+- **Exportação Disponível**: Botões para download de microdados em CSV e da planilha consolidada completa em Excel `.xlsx`.
+
+---
+
+## 📁 Arquitetura de Pastas
 
 ```text
 analise-escolas/
-├── app.py                     # Aplicação Streamlit principal
-├── preprocess_data.py         # Pipeline de pré-processamento e padronização Parquet
-├── requirements.txt           # Dependências do projeto
-├── README.md                  # Documentação completa
-├── data/                      # Arquivos estruturados em formato Parquet
-│   ├── escolas_tidy.parquet   # Base consolidada em formato long (62.871 linhas)
-│   ├── escolas_wide_*.parquet # Bases abertas por etapa
-├── modules/                   # Módulos da aplicação
-│   ├── data_loader.py         # Leitura em cache e filtros dinâmicos
-│   ├── charts.py              # Visualizações em Plotly
-│   ├── components.py          # KPIs, cards e tabelas
-│   ├── views_saeb.py          # Módulo do indicador principal (SAEB)
-│   ├── views_temporal.py      # Módulo de evolução histórica (2005-2025)
-│   ├── views_complementary.py # Módulo de IDEB e Aprovação
-│   ├── views_geo.py           # Módulo de comparação municipal
-│   ├── views_explorer.py      # Microdados, ficha individual e exportação CSV
-│   └── views_methodology.py   # Dicionário de dados e notas metodológicas
-└── planilha ref/              # Planilha original consolidada
-    └── divulgacao_pr_consolidado.xlsx
+├── iniciar_painel.command    # 🚀 Inicializador de 1 clique para macOS (MacBook)
+├── iniciar_painel.sh         # Inicializador shell para Linux/Mac via terminal
+├── iniciar_painel.bat        # Inicializador de 1 clique para Windows
+├── app.py                   # Ponto de entrada da aplicação Streamlit
+├── requirements.txt         # Pacotes Python necessários
+├── README.md                # Guia de uso e documentação
+├── .streamlit/
+│   └── config.toml          # Configuração silenciosa do Streamlit (sem telemetria)
+├── data/                    # 📦 DADOS EMBUTIDOS (Leves e prontos para uso)
+│   ├── escolas_tidy.parquet # Base analítica consolidada (62.871 linhas, 1.5 MB)
+│   ├── base_parana_cruzada_completa.xlsx # Planilha consolidada com abas e Lat/Lon (3.9 MB)
+│   ├── mapeamento_escolas_civico_militares.csv # 306 colégios mapeados (Lat/Lon/INEP)
+│   └── municipios_pr.csv    # Coordenadas oficiais dos 399 municípios do PR
+├── modules/                 # Módulos modulares do painel
+│   ├── data_loader.py       # Carregamento e filtros com cache
+│   ├── charts.py            # Visualizações Plotly e mapa interativo
+│   ├── components.py        # KPIs, cartões métricos e tabelas
+│   ├── views_saeb.py        # Aba SAEB (Principal)
+│   ├── views_temporal.py    # Aba Séries Históricas
+│   ├── views_complementary.py # Aba IDEB & Rendimento
+│   ├── views_geo.py         # Aba Comparativo Municipal e Mapa
+│   ├── views_explorer.py    # Aba Explorador de Microdados e Ficha Individual
+│   └── views_methodology.py # Aba Metodologia e Transparência
+└── scripts/
+    └── spatial_matching_kml.py # Algoritmo de matching geoespacial KML x INEP
 ```
