@@ -13,28 +13,37 @@ import numpy as np
 
 BASE_DIR = Path(__file__).resolve().parent
 PLANILHA_PATH = BASE_DIR / "planilha ref" / "divulgacao_pr_consolidado.xlsx"
+PLANILHA_CM_PATH = BASE_DIR / "planilha ref" / "Escolas civico militares.xlsx"
+MAP_CM_PATH = BASE_DIR / "data" / "mapeamento_escolas_civico_militares.csv"
 DATA_DIR = BASE_DIR / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
-# Regra de classificação documentada:
-# 1. Identifica escolas cívico-militares com base nas nomenclaturas oficiais da SEED-PR e INEP:
-#    - 'C E CM': Colégio Estadual Cívico-Militar
-#    - 'E E CM': Escola Estadual Cívico-Militar
-#    - 'E M CM': Escola Municipal Cívico-Militar
-#    - 'E C M': Escola Cívico-Militar
-#    - 'CPM' / 'C.P.M.': Colégio da Polícia Militar
-#    - 'CIVICO' / 'CÍVICO' / 'MILITAR'
-# 2. Exclui expressamente escolas de educação infantil ('CMEI' / 'C M E I' - Centro Municipal de Educação Infantil)
-#    e nomes que possuem apenas 'MILITAR' em outro contexto geográfico sem vínculo militar se houver.
-def classificar_tipo_gestao(nome: str) -> str:
+# Carrega IDs oficiais de escolas cívico-militares se o mapeamento existir
+IDS_CIVICO_MILITARES = set()
+if MAP_CM_PATH.exists():
+    df_map = pd.read_csv(MAP_CM_PATH, sep=";", encoding="utf-8-sig")
+    IDS_CIVICO_MILITARES = set(df_map["ID_ESCOLA"].dropna().astype(int).unique())
+
+def classificar_tipo_gestao(id_escola: int, nome: str) -> str:
+    # 1. Verifica se o ID_ESCOLA está no mapeamento da lista oficial
+    try:
+        if int(id_escola) in IDS_CIVICO_MILITARES:
+            return "Cívico-Militar"
+    except (ValueError, TypeError):
+        pass
+        
     nome_str = str(nome).strip().upper()
+    # Exclusão explícita de CMEI
     if re.search(r'C\s*M\s*E\s*I', nome_str):
         return "Não Cívico-Militar"
     
-    padrao_cm = r'(\bC\s*E\s*CM\b|\bE\s*E\s*CM\b|\bE\s*M\s*CM\b|\bE\s*C\s*M\b|\bCPM\b|\bC\.P\.M\b|\bC\.M\b|CIVIC|MILITAR)'
+    # 2. Verifica siglas oficiais da SEED-PR e INEP
+    padrao_cm = r'(\bC\s*E\s*CM\b|\bE\s*E\s*CM\b|\bE\s*M\s*CM\b|\bE\s*C\s*M\b|\bCMEF\b|\bCPM\b|\bC\.P\.M\b|\bC\.M\b|CIVIC|MILITAR)'
     if re.search(padrao_cm, nome_str):
         return "Cívico-Militar"
+        
     return "Não Cívico-Militar"
+
 
 ETAPAS = {
     "divulgacao_anos_iniciais": "Anos Iniciais (1º-5º)",
@@ -61,7 +70,9 @@ def processar_dados():
                 
         df_raw = df_raw.copy()
         df_raw["ETAPA"] = etapa_label
-        df_raw["TIPO_GESTAO"] = df_raw["NO_ESCOLA"].apply(classificar_tipo_gestao)
+        df_raw["TIPO_GESTAO"] = df_raw.apply(
+            lambda r: classificar_tipo_gestao(r["ID_ESCOLA"], r["NO_ESCOLA"]), axis=1
+        )
         
         # Converte colunas de valores para numérico float para compatibilidade no Parquet
         for c in df_raw.columns:

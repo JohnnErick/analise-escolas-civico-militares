@@ -13,34 +13,38 @@ def render_methodology_view():
     with st.expander("📁 1. Origem e Estrutura dos Arquivos de Dados", expanded=True):
         st.markdown(
             """
-            - **Fonte Primária**: Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP / MEC) — Planilhas Oficiais de Divulgação do IDEB e SAEB para o Estado do Paraná.
-            - **Arquivo de Referência**: `planilha ref/divulgacao_pr_consolidado.xlsx`.
-            - **Abas Contempladas**:
+            - **Fontes Primárias**:
+              1. Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP / MEC) — Planilhas Oficiais de Divulgação do IDEB e SAEB para o Estado do Paraná (`planilha ref/divulgacao_pr_consolidado.xlsx`).
+              2. Relação Oficial de Colégios Cívico-Militares do Estado do Paraná (`planilha ref/Escolas civico militares.xlsx`).
+            - **Abas Contempladas na Base Consolidada**:
               1. `divulgacao_anos_iniciais`: Anos Iniciais do Ensino Fundamental (1º ao 5º ano) — 2.976 escolas.
               2. `divulgacao_anos_finais`: Anos Finais do Ensino Fundamental (6º ao 9º ano) — 1.965 escolas.
               3. `divulgacao_ensino_medio`: Ensino Médio — 1.704 escolas.
             - **Total de Escolas Únicas**: 4.941 estabelecimentos de ensino no Paraná.
-            - **Período Coberto**: De **2005 a 2025** (anos ímpares para Anos Iniciais e Finais; 2017 a 2025 para Ensino Médio).
+            - **Período Coberto**: De **2005 a 2025** (séries bianuais para Anos Iniciais e Finais; 2017 a 2025 para Ensino Médio).
             """
         )
         
     with st.expander("🏷️ 2. Critério de Classificação: Cívico-Militar vs Não Cívico-Militar", expanded=True):
         st.markdown(
             """
-            As escolas cívico-militares no Paraná foram instituídas no âmbito do Programa dos Colégios Cívico-Militares do Paraná (SEED-PR), formalizado pela Lei Estadual nº 20.338/2020 e expansões posteriores.
+            As escolas cívico-militares no Paraná foram instituídas no âmbito do Programa dos Colégios Cívico-Militares do Paraná (SEED-PR), formalizado pela Lei Estadual nº 20.338/2020 e expansões subsequentes.
             
             **Regra Documentada de Classificação:**
-            1. Foram classificadas como **Cívico-Militares** as escolas cujos nomes oficiais contêm as nomenclaturas e siglas padronizadas da SEED-PR e INEP:
+            1. **Mapeamento Oficial**: Cruzamento determinístico e por correspondência de entidades entre a lista oficial (`Escolas civico militares.xlsx`) e os códigos de identificação `ID_ESCOLA` do INEP.
+            2. **Validação por Nomenclatura Oficial**: Identificação das siglas padronizadas da SEED-PR e INEP:
                - `C E CM`: Colégio Estadual Cívico-Militar;
                - `E E CM`: Escola Estadual Cívico-Militar;
                - `E M CM` / `E C M`: Escola Municipal / Estadual Cívico-Militar;
+               - `CMEF`: Colégio Estadual Cívico-Militar Ensino Fundamental;
                - `CPM`: Colégio da Polícia Militar;
                - Expressões literais: `CÍVICO-MILITAR`, `CIVICO MILITAR` ou `MILITAR`.
-            2. **Filtro de Exclusão**: Foram expressamente desconsiderados os registros contendo `CMEI` ou `C M E I` (Centros Municipais de Educação Infantil), garantindo que creches e pré-escolas municipais não fossem indevidamente rotuladas.
-            3. **Total Classificado como Cívico-Militar**:
-               - Anos Finais: 133 escolas;
-               - Ensino Médio: 119 escolas;
-               - Anos Iniciais: 22 escolas.
+            3. **Filtro de Exclusão**: Foram expressamente desconsiderados os registros contendo `CMEI` ou `C M E I` (Centros Municipais de Educação Infantil), assegurando que creches e pré-escolas municipais não fossem indevidamente rotuladas.
+            4. **Total de Escolas Cívico-Militares Identificadas**:
+               - Anos Finais: 322 escolas;
+               - Ensino Médio: 293 escolas;
+               - Anos Iniciais: 48 escolas.
+
             """
         )
         

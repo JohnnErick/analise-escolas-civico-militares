@@ -14,8 +14,11 @@ O objetivo deste projeto é fornecer uma **ferramenta de exploração e consumo 
 
 ## 📊 Estrutura dos Dados e Indicadores
 
-Os dados foram consolidados a partir das planilhas oficiais de divulgação do **INEP / MEC**:
+Os dados foram consolidados a partir das planilhas oficiais fornecidas:
+1. `planilha ref/divulgacao_pr_consolidado.xlsx`: Dados do **INEP / MEC** (IDEB e SAEB) para as 3 etapas de ensino no Paraná.
+2. `planilha ref/Escolas civico militares.xlsx`: Relação oficial das **escolas cívico-militares** do Paraná (SEED-PR).
 
+### Indicadores e Cobertura:
 1. **Indicador Principal — SAEB**:
    - **Proficiência em Língua Portuguesa**: Escala do SAEB (~150 a 400 pontos);
    - **Proficiência em Matemática**: Escala do SAEB (~150 a 400 pontos);
@@ -31,6 +34,8 @@ Os dados foram consolidados a partir das planilhas oficiais de divulgação do *
    - **Unidade Federativa**: Paraná (PR);
    - **Período**: 2005 a 2025 (séries bianuais);
    - **Etapas de Ensino**: Anos Iniciais do EF (2.976 escolas), Anos Finais do EF (1.965 escolas) e Ensino Médio (1.704 escolas). Total de 4.941 estabelecimentos únicos.
+   - **Escolas Cívico-Militares Mapeadas**: 322 em Anos Finais, 293 no Ensino Médio e 48 em Anos Iniciais.
+
 
 ---
 
