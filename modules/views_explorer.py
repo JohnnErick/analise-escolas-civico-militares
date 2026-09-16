@@ -45,16 +45,34 @@ def render_explorer_view(df_filtrado: pd.DataFrame):
                 height=450
             )
             
-            # Exportação CSV
-            csv_data = df_filtrado[colunas_selecionadas].to_csv(index=False, sep=";", encoding="utf-8-sig")
-            st.download_button(
-                label="📥 Baixar Dados Filtrados em CSV (Excel)",
-                data=csv_data,
-                file_name="analise_escolas_filtrado.csv",
-                mime="text/csv"
-            )
+            col_d1, col_d2 = st.columns(2)
+            with col_d1:
+                # Exportação CSV dos dados com filtros atuais
+                csv_data = df_filtrado[colunas_selecionadas].to_csv(index=False, sep=";", encoding="utf-8-sig")
+                st.download_button(
+                    label="📥 Baixar Visualização Filtrada em CSV",
+                    data=csv_data,
+                    file_name="analise_escolas_filtrado.csv",
+                    mime="text/csv",
+                    use_container_width=True
+                )
+            with col_d2:
+                # Download da base completa cruzada em Excel
+                from pathlib import Path
+                excel_completo = Path(__file__).resolve().parent.parent / "data" / "base_parana_cruzada_completa.xlsx"
+                if excel_completo.exists():
+                    with open(excel_completo, "rb") as f:
+                        st.download_button(
+                            label="📊 Baixar Base Cruzada Completa do PR (.xlsx)",
+                            data=f.read(),
+                            file_name="base_parana_cruzada_completa.xlsx",
+                            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                            help="Arquivo Excel com abas separadas por etapa e a coluna ESCOLA_CIVICO_MILITAR.",
+                            use_container_width=True
+                        )
         else:
             st.warning("Selecione ao menos uma coluna para exibir.")
+
             
     with tab_ficha:
         st.subheader("Investigação de Unidade Escolar Individual")

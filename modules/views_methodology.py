@@ -73,3 +73,40 @@ def render_methodology_view():
             - **Não Causalidade**: A mera comparação entre médias não isola o perfil socioeconômico dos estudantes, nível de vulnerabilidade da região ou processo de seleção/transição da comunidade escolar. Análises de causalidade e impactos controlados caberão às etapas futuras de modelagem econométrica/estatística.
             """
         )
+        
+    with st.expander("🔗 5. Auditoria do Cruzamento das Planilhas (Exclusivo Paraná)", expanded=True):
+        st.markdown(
+            """
+            O projeto é **estritamente voltado para o Estado do Paraná (PR)**.
+            Abaixo está a auditoria do cruzamento realizado entre a planilha contendo a relação oficial 
+            das escolas cívico-militares (`Escolas civico militares.xlsx`) e a base oficial do INEP (`divulgacao_pr_consolidado.xlsx`).
+            """
+        )
+        
+        import pandas as pd
+        from pathlib import Path
+        map_path = Path(__file__).resolve().parent.parent / "data" / "relatorio_cruzamento_escolas.csv"
+        excel_path = Path(__file__).resolve().parent.parent / "data" / "base_parana_cruzada_completa.xlsx"
+        
+        if map_path.exists():
+            df_map = pd.read_csv(map_path, sep=";", encoding="utf-8-sig")
+            st.dataframe(
+                df_map[[
+                    "NOME_PLANILHA_CIVICO_MILITAR", "ID_ESCOLA", "NO_ESCOLA_INEP",
+                    "NO_MUNICIPIO", "REDE", "SG_UF", "STATUS_CRUZAMENTO"
+                ]],
+                use_container_width=True,
+                height=350
+            )
+            
+        if excel_path.exists():
+            with open(excel_path, "rb") as f:
+                excel_bytes = f.read()
+            st.download_button(
+                label="📥 Baixar Planilha Cruzada Completa (Excel .xlsx)",
+                data=excel_bytes,
+                file_name="base_parana_cruzada_completa.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                help="Planilha contendo o resumo, a lista mapeada e todas as escolas do Paraná por etapa com a coluna ESCOLA_CIVICO_MILITAR."
+            )
+
