@@ -1,0 +1,2806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Colégios Cívico-Militares do Paraná</name>
+    <description/>
+    <Style id="icon-1899-DB4436-nodesc-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-DB4436-nodesc-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-DB4436-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-DB4436-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-DB4436-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Camada sem título</name>
+      <Placemark>
+        <name>Colegio Estadual Cívico Militar Prefeito Carlos Massaretto</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4255693,-23.5525914,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Alberto Santos Dumont, C E-Ef M Profis</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4679734,-23.5539536,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Heitor C. A. Furtado</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4923123,-23.5567566,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jose Canale, C E Cívico-Militar Pe-Ef M e Profissional</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4442329,-23.5367279,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Marquês de Caravelas</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.433881,-23.414043,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Francisco F Bastos, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4468896,-23.3908575,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Walfredo S Correa, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4296244,-23.3988298,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jose De Anchieta, C E Pe-Ef M Profis</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4379052,-23.5506594,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>OSMAR GUARACY FREIRE, C E-EF M P</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4280765,-23.5770531,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Polivalente Carlos Domingos Silva</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4475131,-23.560829,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Irondi Mantovani Pugliesi</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4311545,-23.4545218,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Rosa Delúcia Calsavara</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.5768082,-23.5980919,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Olavo Bilac</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.3099004,-23.9862929,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Jandaia do Sul</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.6437141,-23.6043288,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Tadashi Enomoto</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4582487,-23.5271891,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C.E. Cívico-Militar Professora Jaci Real Prado de Oliveira</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2898451,-25.313673,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Emilia Buzato, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.387306,-25.3805007,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Prof Rosa Frederica Johnson</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2710547,-25.3436638,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Professor Alberto Krause</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3032256,-25.3728924,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ivan F Do Amaral Filho, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.107308,-25.36639,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Colégio Estadual Cívico-Militar Oscar Joseph D'Plácido e Silva]]></name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.1854863,-25.4571787,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Planta Deodoro, E E-Ef</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.0499961,-25.4231323,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Maria Lopes De Paula, C E Profa-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2464627,-25.3476533,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Alfredo Chaves</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.1973687,-25.3666915,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Joao Bosco, C E D-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2223951,-25.3459755,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rui Barbosa, C E C-M - EFM</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.1224774,-25.3750802,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Vinicius De Moraes, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.1491966,-25.3269596,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Vereador Luiz Maltaca</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3396194,-25.2072315,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Semiramis de Barros Braga</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.1880964,-25.4249495,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Elias Abrahao C E E Fund Medio</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.1105309,-25.3703378,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Manoel Borges de Macedo</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.31325,-25.1904096,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Dias Da Rocha do FATO</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.4059584,-25.5914927,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Cívico Militar Prof. Anderson Rangel E. F. M.</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3037934,-25.7020878,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar- Prof. João Hoinatz De Andrade</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3040687,-25.6408152,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual General Carneiro</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.7205397,-25.7700765,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Manoel Antônio Da Cunha</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.7234347,-25.7613332,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mireille Maria F Z Machado, E E Prof-Ef</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3240359,-25.7556743,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Eleutério Fernandes de Andrade</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.4967539,-25.8732903,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Presidente Caetano Munhoz Rocha</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.7939038,-26.100215,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ovande Do Amaral, C E Dr-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.7786334,-26.0885728,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chico Mendes, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.1682742,-25.605627,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Antonio Vieira, C E Pe-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.1836573,-25.5130952,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Shirley Catarina Tamalu Machado</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.156646,-25.5073978,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Zilda Arns Neumann</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.0854816,-25.544442,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Rocha Pombo</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3848557,-25.5541766,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Juventude De Santo Antonio, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.5879715,-25.4635516,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Djalma Marinho</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.5625309,-25.4690451,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Joao Xxiii, C E-E F M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.4094114,-25.4336014,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Macedo Soares, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.5296764,-25.459711,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Miguel Franco Filho, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.5269708,-25.6791199,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Padre Arnaldo Jansen</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2082133,-25.538982,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Guimarães Rosa</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.5106036,-24.4038148,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Senador Teotonio Vilela</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.51643,-24.3959892,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Professor Darcy José Costa</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.3553886,-24.0251445,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Dr Osvaldo Cruz-Ensino de 1º e 2º Graus</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.3722419,-24.0519787,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Marechal Rondon - Ensino Fundamental, Médio e Cursos Técnicos</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.3808913,-24.0402573,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Unidade Polo, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.3707276,-24.0328518,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Rui Barbosa E E E Fund</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.5280907,-24.3171689,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Olavo Bilac</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.3402373,-23.9160466,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cataratas, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.4026825,-24.9606161,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Brasmadeira</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.4387789,-24.9288711,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Julia Wanderley</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.4756058,-24.941375,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Olivo Fracaro - Ensino Fundamental e Medio</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.40427,-24.9444107,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Santos Dumont, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.5101973,-24.9835816,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Doutor João Ferreira Neves</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.1526012,-25.199197,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Lindoeste-EFM</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.5757838,-25.257275,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Santa Tereza Do Oeste, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.6192834,-25.0553836,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Carlos A Camargo, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.6063471,-25.4910232,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Marechal Humberto de Alencar Castelo Branco - EFM</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.465882,-24.9782215,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>José Ângelo Baggio Orso, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.4940019,-24.9870315,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Bairro 14 de Novembro</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.4801429,-24.9869767,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Amâncio Moro</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.2952073,-24.8038914,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual D.Bosco</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.5946463,-23.6697883,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Primo Manfrinato, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.6293885,-23.6683795,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Castro Alves, C E-Em</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.7746999,-23.4188279,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Professor Leo Kohler</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.4441256,-23.7717821,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Cívico Militar Prof. Mailon Medeiros</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.3676946,-23.1129878,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Andre Seugling, C E-Ef M Profis</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.6512728,-23.1890622,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>CEEFM Monteiro Lobato</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.6437218,-23.1869325,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Adelia A Lopes, E E Profa-Ef</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.977051,-23.2563664,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar João XXIII</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.7376699,-23.720973,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual João Turin</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.758852,-23.462834,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Paulo Mozart Machado, C E Prof-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.7937049,-23.1953988,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Nobrega Da Cunha, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.3709259,-23.1058563,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Cívico Militar Professor Antônio Bitonti</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.8173866,-23.041602,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Arlindo Carvalho De Amorim, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3383342,-25.4955094,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Beatriz Faria Ansay, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3127859,-25.5657558,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Marechal Cândido Rondon</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3108306,-25.4748452,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Ermelino de Leão</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2475328,-25.3920864,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Etelvina C Ribas, C E Profa-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2736287,-25.5281721,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Getúlio Vargas</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2534276,-25.3561778,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Gottlieb Müeller</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2386473,-25.4931551,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-militar João Turin</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2790117,-25.4522164,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Luiz Carlos Paula e Souza</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2805089,-25.557661,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Cívico Militar Manoel A Guimaraes, C E Sen-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3005938,-25.4250461,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Professor Olavo Del Claro</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3607105,-25.4154865,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colegio Estadual Cívico Militar Republica Oriental Do Uruguai</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2291198,-25.4403919,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sebastiao Saporski, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2781411,-25.3746877,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Segismundo Falarz, C E C-M-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2537956,-25.4805145,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Cívico Militar Senhorinha de Moraes Sarmento</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2050252,-25.4650383,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Yvone Pimentel, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3005679,-25.4956563,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Cruzeiro do Sul</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2103996,-25.3673887,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Guido Arzua, C E Prof-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2686962,-25.5504253,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Jayme Canet</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2657142,-25.5000954,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Joao Loyola, C E Prof-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3000709,-25.5184881,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Joao Paulo I, C E Papa-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2379426,-25.3841602,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Padre João Wislinski</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2328508,-25.3655379,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Julio Mesquita, C E Prof-Ef M Profis</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.228759,-25.4563546,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lamenha Lins, C E Pres-Em Profis</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2681076,-25.4547543,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Prof° Luiza Ross</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2247274,-25.5156454,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Milton Carneiro</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.2381832,-25.5369995,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Pinheiro do Paraná</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3331074,-25.3863558,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Santa Felicidade</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3390489,-25.406427,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Santo Antônio</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.3549698,-25.4337595,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Vinícius de Moraes</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.0852892,-25.7614433,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jorge De Lima, E E-Ef</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.3088493,-25.7796958,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Leonardo da Vinci - Ensino Fundamental, Médio e Profissional</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.058003,-25.7522257,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Carmelita S Dias, C E Profa-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.5867868,-25.469875,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Presidente Castelo Branco</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.5770548,-25.5367084,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Pres. Costa e Silva</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.5901991,-25.5230231,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Tancredo de Almeida Neves</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.5383546,-25.52039,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Tarquínio Santos</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.564174,-25.5536017,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Ipê Roxo</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.5548954,-25.4633378,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Sol de Maio</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.4943661,-25.4743953,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Tancredo Neves</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.1184438,-25.3014695,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Cívico-Militar Naira Fellini</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.115115,-25.2881383,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Angelo Antonio Benedet</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.4165935,-25.4462528,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Nestor Victor dos Santos</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.2430528,-25.3466312,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Carlos Drummond de Andrade</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.5308891,-25.5143616,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colegio Estadual Do Campo Presidente Kennedy</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.0519939,-25.3825992,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Santa Rita</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.523504,-25.4857603,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Marechal Artur da Costa e Silva</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.0921707,-25.2926502,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Candido Portinari</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.4721904,-25.9157813,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Vicente De Carli, C E Prof-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.0722077,-26.0671774,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Beatriz Biavatti</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.0386392,-26.0736797,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Dom Carlos Eduardo</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.5343995,-25.7750584,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Manoel Ribas, E E Interventor-Ef</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.7280951,-26.0561954,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio João Zacco</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.7595696,-25.7278702,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Cívico-Militar Vila Guaira, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.0377368,-24.1826962,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Olavo Bilac</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.995887,-24.5402004,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Ribeiro de Campos, E E C-M-Ef</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.0242938,-24.1879467,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>COLÉGIO ESTADUAL VEREADOR HEITOR ROCHA KRAMER - EFM.</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.5198542,-25.3965951,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mahatma Gandhi, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4464611,-25.3842682,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Manoel Ribas</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4693594,-25.3882159,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Santo Antônio</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.6476256,-25.6976346,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>COLÉGIO ESTADUAL ENGENHEIRO MICHEL GASTON PROSPER AUGUSTA REYDAMS</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.085813,-25.7937587,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Edite Cordeiro Marques</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.5356958,-25.0420816,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Professora Leni Marlene Jacob</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4714886,-25.3510367,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Parigot de Souza</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.0758448,-25.5736279,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Caxias, C E Dq-Ef M Profis</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.6501287,-25.4679575,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Joao De M Pessoa, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.6608279,-25.4669602,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Nicolau Copérnico - EF M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.83238,-25.8823011,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Barão de Capanema - Ensino Fundamental e Médio</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.9793128,-25.2102584,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Profª Maria Ignácia</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.6926537,-25.6224564,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Dr Afonso Alves de Camargo</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.789246,-25.7290951,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Anita Garibaldi</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.6870614,-24.1795729,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Nereu Ramos</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.668372,-24.514456,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Vicente Machado, C E C-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.859483,-23.867154,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Antônio Diniz Pereira</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.6810542,-24.2371218,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jose De Mattos Leao, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.8227515,-23.9921247,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Dr. Generoso Marques</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.0753047,-23.0408725,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hercília de Paula e Silva, CECM Profª - EFM e Profissional</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.7236531,-23.4280655,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar José Pavan - EFM</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.9903287,-23.1639897,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Doutor João da Rocha Chueiri</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.7536553,-23.2000041,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Ruth Martinez Correa</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.354024,-23.405755,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Edith de Souza Prado de Oliveira</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.0762294,-23.2940324,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Cívico-militar Moralina Eleutério</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.066601,-23.2942603,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Stella Maris</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.2296316,-23.0448736,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Dona Carolina Lupion</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.0670641,-23.0487442,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Anésio de Almeida Leite</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.9480476,-23.1449623,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Antonio Raminelli, C E C M -E F M P</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.2543374,-23.2732471,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Érico Veríssimo - Ensino fundamental e médio</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.2845723,-23.2749106,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>11 De Outubro, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.2233927,-23.3118444,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Basilio De Lucca, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.0583979,-23.2599669,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ulysses Guimaraes, E E-Ef</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.0261947,-23.2785765,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Professora Adelia Dionisia Barbosa</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.176756,-23.2655025,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Josemaria Escriva, E E Mons-Ef</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.152803,-23.2773452,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fernando De B Pinto, CECM Dr-EfEm</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1485919,-23.2629209,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tsuru Oguido, C E C-M - Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.2012548,-23.2857601,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Vani Ruiz Viessi</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1285854,-23.3693132,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Vista Bela</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.2024848,-23.2658761,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Francisco Villanueva,C E Prof-E F M P</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.3880773,-23.31742,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Presidente Kennedy</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.366108,-23.3163241,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jose Alexandre Chiarelli, Ce Prof-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.3828468,-23.3328151,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Monteiro Lobato</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.0340792,-23.0582288,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Anastácio Cerezine</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.2315606,-22.7778808,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lauro G Da V Pessoa, E E Prof-Ef</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1432282,-23.2514855,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Newton Guimarães</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1516913,-23.3278296,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Barão do Rio Branco</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1558095,-23.3289881,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>João Rodrigues Da Silva, C E Prof-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1232388,-23.3153819,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Andrea Nuzzi, C E Maestro-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.2382114,-23.2945912,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Attílio Codato - Ensino Fundamental e Médio</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.267319,-23.282759,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Civíco-Militar Estadual Professora Helena Kolody</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.2857064,-23.2828838,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Manuel Bandeira, C E-Ef Em</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.2260513,-23.3058376,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Carlos de Almeida</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.123584,-23.2830263,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Professora Célia Moraes Oliveira</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1357188,-23.2952374,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Professor Doutor Heber Soares Vargas</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1325222,-23.3358921,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hugo Simas, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1633959,-23.3122078,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Humberto P Coutinho</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1099554,-23.3288396,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Margarida de Barros Lisboa</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1486237,-23.3475895,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Nilo Pecanha, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1680853,-23.2998474,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>R. Rudolf Keilhold, 173</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1440594,-23.2597151,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Do Patrimônio Regina</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.2228984,-23.4104282,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colegio Estadual Profº. Thiago Terra</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1260772,-23.382852,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Pe Wistremundo R. P. Garcia</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.1742089,-23.2817168,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Dr. Lauro Portugal Tavares</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.4421591,-23.1923628,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Serafim França</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.6658848,-23.2385056,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cecília Meireles</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.9755941,-22.835171,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual São Vicente Pallotti</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.6728596,-23.525065,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio estadual Pedro Viriato Parigot de Souza</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.7923513,-23.4795439,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Alberto J. Byington Jr.</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.9588668,-23.433925,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Duque de Caxias cívico-militar</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.9203082,-23.4038199,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Ipiranga</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.9485675,-23.4160755,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Tomaz Edison de Andrade Vieira</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.959955,-23.4515069,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Vinícius de Moraes</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.919624,-23.4614971,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Vercindes Gerotto dos Reis</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.0364967,-23.4574853,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cora Coralina</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.8758243,-23.4616939,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual do Jardim Independência</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.8716125,-23.4338201,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Cecília Meireles</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.810043,-23.042663,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Pres. Arthur da Costa e Silva</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.080065,-23.615678,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Cívico-Militar F. J. Perioto – Ensino Fundamental</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.0958483,-23.3503332,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Manoel F Almeida, E E Dr-Ef</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.78812,-22.692332,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Presidente Afonso Camargo</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.1397903,-22.9336231,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Vale do Tigre</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.988266,-22.7646703,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Alberico M da Silva</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.198884,-23.000371,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Santos Dumont</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.2915606,-22.9628599,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Moyses Lupion, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -48.7078728,-25.4381987,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>29 De Abril, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -48.5704917,-25.8744125,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Professora Abigail Dos Santos Correa</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -48.5274838,-25.7963225,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Dídio Augusto de Camargo Viana</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -48.5492506,-25.5511737,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Cívico Militar Faria Sobrinho</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -48.5042748,-25.5174615,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Helena Viana Sundin, Ensino Fundamental e Ensino Médio</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -48.5045626,-25.5135708,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colegio Estadual Hélio Antônio De Souza</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -48.4694618,-25.6925524,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Sertãozinho</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -48.5434786,-25.8110782,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Flauzina Dias Viegas</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.4672829,-23.0589765,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Leonel Franca</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.469032,-23.0797706,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Sílvio Vidal</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.4786942,-23.0957246,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Agostinho Stefanello</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.317238,-23.1322607,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Santo Inácio de Loyola</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.6229037,-22.7330188,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar l Nova Visão</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.5278488,-25.851292,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Pres. Castelo Branco</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.3675692,-26.4118364,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tancredo Neves, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.562658,-25.999419,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sebastiao Parana, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.9872498,-26.4800108,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Monsenhor Eduardo</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.9874444,-26.4948318,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Carmela Bortot, E E-Ef</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.6771411,-26.215747,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Castro Alves, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.6799241,-26.2323867,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Rui Barbosa</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.6900221,-26.2626828,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Irmão Isidoro Dumont - EF</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.8156112,-25.968305,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual São João Bosco - EFM</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.702238,-26.2415967,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual João C. da Costa</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.2097724,-24.8864388,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Dom Pedro I</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.7644418,-24.7585116,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Eurico Batista Rosas</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.1076699,-24.9658134,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Joana Torres Pereira</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.9896336,-24.8027216,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Prof. Nicolau Hampf</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.0015891,-24.8117823,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Alcides Munhoz</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.6030284,-25.2262264,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar São Judas Tadeu</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.0010484,-25.4249742,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Prof• Leandro Manoel da Costa</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.9358482,-24.5340785,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar General Antônio Sampaio</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.1308596,-25.0929642,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Professor Colares</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.1560742,-25.1145,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar José Elias da Rocha</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.1547276,-25.1053079,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Frei Doroteu de Padua</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.2447604,-25.0426809,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Coronel Amazonas</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.8895713,-25.5436864,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar General Osório</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.1366796,-25.0917591,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio cívico militar do Paraná Becker e Silva</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.1737623,-25.0976329,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Padre Carlos Zelesny</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.2001117,-25.0827731,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Prof. Edison Pietrobelli</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.2032149,-25.093019,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Cívico-Militar Dr. Epaminondas Novaes Ribas</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.1733195,-25.0683419,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Nossa Sra Da Gloria, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.1186957,-25.0694951,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar José de Alencar</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.4583282,-24.0338909,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Gregório Szeremeta</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.848905,-24.655004,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Prof. Custódio Netto</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.658149,-24.3325,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Dr. Marcelino Nogueira</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.6323574,-24.3315494,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Profª. Maria Aparecida Militão de S. Pereira</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.6295168,-24.317561,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar São Pedro</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.6417099,-24.3250264,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Presidente Vargas</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.6221929,-24.3384127,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Jardim Alegre</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.6393767,-24.3215265,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Jardim Zeballos</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.2603288,-24.0941637,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Frentino Sackser</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.0524586,-24.5313243,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colegio Estadual Marechal Rondon</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.0495794,-24.5713109,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Barão do Rio Branco</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.8351074,-24.2850133,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Antonio José Reis</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.7348392,-24.7666306,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Jardim Maracanã</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.718929,-24.7495431,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Novo Horizonte, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.7677168,-24.7110468,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Graciliano Ramos</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -54.3307282,-24.8586386,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Joao Arnaldo Ritt, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.8009047,-24.5752883,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Luiz Augusto M Rego, C E-Ef M Profis</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.7411525,-24.7358616,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Cruzeiro do Oeste</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.0760626,-23.77806,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Douradina, C E-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.2974838,-23.3814084,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Cívico militar Padre Manuel Da Nóbrega</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.3270142,-23.7766413,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Monteiro Lobato - EF M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.299766,-23.767304,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Zilda Arns, C E Dra- Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.3140126,-23.7803081,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Anchieta</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.0602044,-23.7893724,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Castelo Branco, C E Pres-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -53.0736741,-23.3208267,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Novo Milênio</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.544141,-26.1499842,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Bernardina Schleder</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -51.0997846,-26.2582321,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual João Paulo II</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.8174321,-24.1382402,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Anita Canet</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.7074528,-24.2454038,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Olavo Bilac</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.7109162,-24.2499668,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Newton Sampaio EFM</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.655987,-23.920683,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Miguel Nassif Maluf</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.802221,-23.889094,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Escola Estadual Erico Verissimo - Ensino Fundamental</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.417553,-25.410871,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Vila John Kennedy, C E Da-Ef M</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.9151029,-25.4457872,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Osório Duque Estrada</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.683045,-25.044102,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadua Alto Recreio</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -52.8976949,-25.4557344,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico Militar Júlio Farah</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -50.1810154,-23.8444835,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colégio Estadual Cívico-Militar Professor Segismundo Antunes Netto 1º e 2º Grau</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -49.8252586,-23.6883908,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

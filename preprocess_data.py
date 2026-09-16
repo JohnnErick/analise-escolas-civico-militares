@@ -1,33 +1,56 @@
 """
 Script de processamento e estruturação dos dados educacionais.
 Lê a planilha consolidada 'planilha ref/divulgacao_pr_consolidado.xlsx',
-classifica as escolas de acordo com as diretrizes do projeto,
-converte os dados para formatos analíticos (wide e long) e
-gera artefatos otimizados em Parquet para carregamento ultrarrápido no painel.
+classifica as escolas de acordo com as diretrizes do projeto e mapeamento KML,
+associa coordenadas geográficas e converte os dados para formatos analíticos (wide e long),
+gerando artefatos otimizados em Parquet para carregamento ultrarrápido no painel.
 """
 
 import re
+import unicodedata
 from pathlib import Path
 import pandas as pd
 import numpy as np
 
 BASE_DIR = Path(__file__).resolve().parent
 PLANILHA_PATH = BASE_DIR / "planilha ref" / "divulgacao_pr_consolidado.xlsx"
-PLANILHA_CM_CSV = BASE_DIR / "planilha ref" / "escolas_civico_militares_pr-final.csv"
-PLANILHA_CM_PATH = PLANILHA_CM_CSV if PLANILHA_CM_CSV.exists() else (BASE_DIR / "planilha ref" / "Escolas civico militares.xlsx")
 MAP_CM_PATH = BASE_DIR / "data" / "mapeamento_escolas_civico_militares.csv"
+MUN_PATH = BASE_DIR / "data" / "municipios_pr.csv"
 DATA_DIR = BASE_DIR / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
+# 1. Carrega coordenadas dos municípios do PR
+df_mun = pd.read_csv(MUN_PATH) if MUN_PATH.exists() else pd.DataFrame()
+def norm_mun(nome: str) -> str:
+    if not isinstance(nome, str): return ""
+    nome = unicodedata.normalize("NFKD", nome).encode("ASCII", "ignore").decode("ASCII").upper()
+    return re.sub(r"[^A-Z0-9\s]", "", nome).strip()
 
-# Carrega IDs oficiais de escolas cívico-militares se o mapeamento existir
+mun_coords = {}
+if not df_mun.empty:
+    df_mun["NORM_MUN"] = df_mun["nome"].apply(norm_mun)
+    mun_coords = df_mun.set_index("NORM_MUN")[["latitude", "longitude"]].to_dict(orient="index")
+
+# 2. Carrega mapeamento auditado de escolas cívico-militares com KML
 IDS_CIVICO_MILITARES = set()
+KML_COORDS = {} # id_escola -> (lat, lon)
+
 if MAP_CM_PATH.exists():
     df_map = pd.read_csv(MAP_CM_PATH, sep=";", encoding="utf-8-sig")
-    IDS_CIVICO_MILITARES = set(df_map["ID_ESCOLA"].dropna().astype(int).unique())
+    for _, row in df_map.iterrows():
+        try:
+            if pd.notna(row["ID_ESCOLA"]):
+                id_e = int(row["ID_ESCOLA"])
+                IDS_CIVICO_MILITARES.add(id_e)
+                if pd.notna(row.get("LATITUDE")) and pd.notna(row.get("LONGITUDE")):
+                    KML_COORDS[id_e] = (float(row["LATITUDE"]), float(row["LONGITUDE"]))
+        except (ValueError, TypeError):
+            continue
+
+print(f"Mapeamento carregado: {len(IDS_CIVICO_MILITARES)} escolas cívico-militares com {len(KML_COORDS)} coordenadas exatas.")
 
 def classificar_tipo_gestao(id_escola: int, nome: str) -> str:
-    # 1. Verifica se o ID_ESCOLA está no mapeamento da lista oficial
+    # 1. Verifica se o ID_ESCOLA está no mapeamento oficial auditado do KML
     try:
         if int(id_escola) in IDS_CIVICO_MILITARES:
             return "Cívico-Militar"
@@ -64,26 +87,44 @@ def processar_dados():
         print(f"Processando etapa: {etapa_label} (aba: {sheet_name})")
         df_raw = pd.read_excel(xls, sheet_name=sheet_name)
         
-        # Colunas cadastrais
-        cadastrais = ["SG_UF", "CO_MUNICIPIO", "NO_MUNICIPIO", "ID_ESCOLA", "NO_ESCOLA", "REDE"]
-        for col in cadastrais:
-            if col not in df_raw.columns:
-                print(f"Aviso: coluna {col} ausente na aba {sheet_name}")
-                
-        df_raw = df_raw.copy()
+        # Filtro estrito: apenas Estado do Paraná
+        if "SG_UF" in df_raw.columns:
+            df_raw = df_raw[df_raw["SG_UF"] == "PR"].copy()
+            
         df_raw["ETAPA"] = etapa_label
         df_raw["TIPO_GESTAO"] = df_raw.apply(
             lambda r: classificar_tipo_gestao(r["ID_ESCOLA"], r["NO_ESCOLA"]), axis=1
         )
         
-        # Converte colunas de valores para numérico float para compatibilidade no Parquet
+        # Coordenadas geográficas
+        def extrair_lat(row):
+            id_e = row["ID_ESCOLA"]
+            if id_e in KML_COORDS:
+                return KML_COORDS[id_e][0]
+            mun = norm_mun(row.get("NO_MUNICIPIO", ""))
+            return mun_coords.get(mun, {}).get("latitude", np.nan)
+
+        def extrair_lon(row):
+            id_e = row["ID_ESCOLA"]
+            if id_e in KML_COORDS:
+                return KML_COORDS[id_e][1]
+            mun = norm_mun(row.get("NO_MUNICIPIO", ""))
+            return mun_coords.get(mun, {}).get("longitude", np.nan)
+
+        df_raw["LATITUDE"] = df_raw.apply(extrair_lat, axis=1)
+        df_raw["LONGITUDE"] = df_raw.apply(extrair_lon, axis=1)
+        df_raw["COORDENADA_TIPO"] = df_raw["ID_ESCOLA"].map(
+            lambda x: "EXATA_KML" if x in KML_COORDS else "CENTROIDE_MUNICIPIO"
+        )
+        
+        # Converte colunas de valores para numérico float
         for c in df_raw.columns:
             if c.startswith("VL_"):
                 df_raw[c] = pd.to_numeric(df_raw[c], errors="coerce")
                 
         dfs_wide.append(df_raw.copy())
         
-        # Vamos identificar os anos disponíveis para esta etapa
+        # Anos disponíveis
         cols = df_raw.columns
         anos = sorted(list(set([re.search(r'\d{4}', c).group() for c in cols if re.search(r'\d{4}', c)])))
         
@@ -105,6 +146,9 @@ def processar_dados():
                 "REDE": df_raw["REDE"],
                 "ETAPA": etapa_label,
                 "TIPO_GESTAO": df_raw["TIPO_GESTAO"],
+                "LATITUDE": df_raw["LATITUDE"],
+                "LONGITUDE": df_raw["LONGITUDE"],
+                "COORDENADA_TIPO": df_raw["COORDENADA_TIPO"],
                 "ANO": int(ano),
                 "SAEB_MATEMATICA": df_raw[col_mat] if col_mat in cols else np.nan,
                 "SAEB_PORTUGUES": df_raw[col_port] if col_port in cols else np.nan,
@@ -120,7 +164,7 @@ def processar_dados():
     df_tidy_all.to_parquet(DATA_DIR / "escolas_tidy.parquet", index=False)
     print(f"Salvo: {DATA_DIR / 'escolas_tidy.parquet'} (Total de registros analíticos: {len(df_tidy_all)})")
     
-    # Salva também um wide combinado ou por etapa
+    # Salva wide por etapa
     for sheet_name, df_w in zip(ETAPAS.keys(), dfs_wide):
         etapa_slug = sheet_name.replace("divulgacao_", "")
         df_w.to_parquet(DATA_DIR / f"escolas_wide_{etapa_slug}.parquet", index=False)
@@ -130,4 +174,3 @@ def processar_dados():
 
 if __name__ == "__main__":
     processar_dados()
-

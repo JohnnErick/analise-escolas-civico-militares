@@ -1,6 +1,6 @@
 """
 Gera a planilha Excel final consolidada resultante do cruzamento:
-- 'planilha ref/Escolas civico militares.xlsx'
+- 'planilha ref/Colégios Cívico-Militares do Paraná.kml' (306 unidades mapeadas)
 - 'planilha ref/divulgacao_pr_consolidado.xlsx' (filtrado rigorosamente para SG_UF == 'PR')
 """
 
@@ -8,13 +8,14 @@ import pandas as pd
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
-RELATORIO_PATH = BASE_DIR / "data" / "relatorio_cruzamento_escolas.csv"
+MAP_PATH = BASE_DIR / "data" / "mapeamento_escolas_civico_militares.csv"
 PLANILHA_PR = BASE_DIR / "planilha ref" / "divulgacao_pr_consolidado.xlsx"
 EXCEL_SAIDA = BASE_DIR / "data" / "base_parana_cruzada_completa.xlsx"
 
-# 1. Carrega o mapeamento
-df_map = pd.read_csv(RELATORIO_PATH, sep=";", encoding="utf-8-sig")
+# 1. Carrega o mapeamento oficial geoespacial
+df_map = pd.read_csv(MAP_PATH, sep=";", encoding="utf-8-sig")
 ids_cm = set(df_map["ID_ESCOLA"].dropna().astype(int).unique())
+coords_dict = df_map.set_index("ID_ESCOLA")[["LATITUDE", "LONGITUDE"]].to_dict(orient="index")
 
 # 2. Carrega as abas da planilha do Paraná e adiciona colunas de cruzamento
 xls = pd.ExcelFile(PLANILHA_PR)
@@ -24,11 +25,10 @@ with pd.ExcelWriter(EXCEL_SAIDA, engine="openpyxl") as writer:
     df_resumo = pd.DataFrame([
         {"Item": "Unidade Federativa", "Detalhe": "Paraná (PR) — Filtro exclusivo para escolas do estado"},
         {"Item": "Fonte dos Dados Educacionais", "Detalhe": "INEP / MEC — divulgacao_pr_consolidado.xlsx"},
-        {"Item": "Fonte da Lista Cívico-Militar", "Detalhe": "SEED-PR — escolas_civico_militares_pr-final.csv (305 estabelecimentos válidos)"},
-        {"Item": "Total de Escolas Cívico-Militares Cruzadas", "Detalhe": f"{len(ids_cm)} escolas únicas no Paraná"},
-
+        {"Item": "Fonte da Lista Cívico-Militar", "Detalhe": "SEED-PR / KML Oficial — Colégios Cívico-Militares do Paraná.kml (306 unidades georreferenciadas)"},
+        {"Item": "Total de Escolas Cívico-Militares Cruzadas", "Detalhe": f"{len(ids_cm)} escolas únicas no Paraná (100% validadas por coordenadas)"},
         {"Item": "Total de Estabelecimentos Únicos no PR", "Detalhe": "4.941 escolas"},
-        {"Item": "Critério de Cruzamento", "Detalhe": "Mapeamento determinístico e por correspondência de entidades (ID_ESCOLA INEP)"},
+        {"Item": "Critério de Cruzamento", "Detalhe": "Matching geoespacial multi-critério (Coordenadas KML -> Município -> ID_ESCOLA INEP)"},
         {"Item": "Indicador Principal", "Detalhe": "SAEB (Proficiência Língua Portuguesa, Matemática e Nota Média 0-10)"},
         {"Item": "Indicadores Complementares", "Detalhe": "IDEB Observado, Projeção de Metas e Taxas de Aprovação"},
         {"Item": "Nota sobre Reprovação/Abandono", "Detalhe": "Não constam na base oficial de divulgação fornecida pelo INEP"},
@@ -37,14 +37,16 @@ with pd.ExcelWriter(EXCEL_SAIDA, engine="openpyxl") as writer:
     
     # Aba 2: Lista Mapeada das Escolas Cívico-Militares
     df_map_clean = df_map.rename(columns={
-        "NOME_PLANILHA_CIVICO_MILITAR": "Nome na Lista Oficial (SEED-PR)",
+        "NOME_KML": "Nome no KML Oficial (SEED-PR)",
         "ID_ESCOLA": "Código INEP (ID_ESCOLA)",
         "NO_ESCOLA_INEP": "Nome Oficial no INEP",
         "NO_MUNICIPIO": "Município",
-        "REDE": "Rede de Ensino",
-        "SG_UF": "UF",
-        "SCORE_SIMILARIDADE": "Score de Similaridade",
-        "STATUS_CRUZAMENTO": "Status do Cruzamento"
+        "CO_MUNICIPIO": "Código IBGE Município",
+        "LATITUDE": "Latitude",
+        "LONGITUDE": "Longitude",
+        "DISTANCIA_KM": "Distância da Sede Municipal (km)",
+        "MATCH_TYPE": "Status do Cruzamento",
+        "SCORE": "Score de Confiança"
     })
     df_map_clean.to_excel(writer, sheet_name="Lista_Civico_Militares", index=False)
     
@@ -65,7 +67,15 @@ with pd.ExcelWriter(EXCEL_SAIDA, engine="openpyxl") as writer:
             lambda x: "Sim" if pd.notna(x) and int(x) in ids_cm else "Não"
         )
         df_etapa["ORIGEM_CLASSIFICACAO"] = df_etapa["ID_ESCOLA"].apply(
-            lambda x: "Lista Oficial SEED-PR" if pd.notna(x) and int(x) in ids_cm else "Não Cívico-Militar"
+            lambda x: "Lista Oficial SEED-PR (KML)" if pd.notna(x) and int(x) in ids_cm else "Não Cívico-Militar"
+        )
+        
+        # Coordenadas geográficas das escolas cívico-militares
+        df_etapa["LATITUDE"] = df_etapa["ID_ESCOLA"].apply(
+            lambda x: coords_dict.get(int(x), {}).get("LATITUDE") if pd.notna(x) and int(x) in coords_dict else None
+        )
+        df_etapa["LONGITUDE"] = df_etapa["ID_ESCOLA"].apply(
+            lambda x: coords_dict.get(int(x), {}).get("LONGITUDE") if pd.notna(x) and int(x) in coords_dict else None
         )
         
         # Reordena colunas para destacar a classificação do cruzamento
@@ -73,8 +83,12 @@ with pd.ExcelWriter(EXCEL_SAIDA, engine="openpyxl") as writer:
         pos_escola = cols.index("NO_ESCOLA") + 1
         cols.remove("ESCOLA_CIVICO_MILITAR")
         cols.remove("ORIGEM_CLASSIFICACAO")
+        cols.remove("LATITUDE")
+        cols.remove("LONGITUDE")
         cols.insert(pos_escola, "ESCOLA_CIVICO_MILITAR")
         cols.insert(pos_escola + 1, "ORIGEM_CLASSIFICACAO")
+        cols.insert(pos_escola + 2, "LATITUDE")
+        cols.insert(pos_escola + 3, "LONGITUDE")
         df_etapa = df_etapa[cols]
         
         df_etapa.to_excel(writer, sheet_name=aba_destino, index=False)

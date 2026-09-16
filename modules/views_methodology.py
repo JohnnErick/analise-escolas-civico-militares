@@ -1,4 +1,6 @@
 import streamlit as st
+import pandas as pd
+from pathlib import Path
 
 def render_methodology_view():
     st.header("📖 Metodologia, Dicionário de Dados e Transparência")
@@ -14,8 +16,9 @@ def render_methodology_view():
         st.markdown(
             """
             - **Fontes Primárias**:
-              1. Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP / MEC) — Planilhas Oficiais de Divulgação do IDEB e SAEB para o Estado do Paraná (`planilha ref/divulgacao_pr_consolidado.xlsx`).
-              2. Relação Oficial de Colégios Cívico-Militares do Estado do Paraná (`planilha ref/escolas_civico_militares_pr-final.csv`).
+              1. **INEP / MEC**: Planilhas Oficiais de Divulgação do IDEB e SAEB para o Estado do Paraná (`planilha ref/divulgacao_pr_consolidado.xlsx`).
+              2. **SEED-PR / KML Geoespacial**: Relação Oficial de Colégios Cívico-Militares do Estado do Paraná com coordenadas geográficas auditadas (`planilha ref/Colégios Cívico-Militares do Paraná.kml` e `planilha ref/escolas_civico_militares_pr-final.csv`).
+              3. **IBGE**: Malha e coordenadas centróides dos 399 municípios paranaenses.
             - **Abas Contempladas na Base Consolidada**:
               1. `divulgacao_anos_iniciais`: Anos Iniciais do Ensino Fundamental (1º ao 5º ano) — 2.976 escolas.
               2. `divulgacao_anos_finais`: Anos Finais do Ensino Fundamental (6º ao 9º ano) — 1.965 escolas.
@@ -31,8 +34,7 @@ def render_methodology_view():
             As escolas cívico-militares no Paraná foram instituídas no âmbito do Programa dos Colégios Cívico-Militares do Paraná (SEED-PR), formalizado pela Lei Estadual nº 20.338/2020 e expansões subsequentes.
             
             **Regra Documentada de Classificação:**
-            1. **Mapeamento Oficial**: Cruzamento determinístico e por correspondência de entidades entre a fonte confiável oficial (`escolas_civico_militares_pr-final.csv`) e os códigos de identificação `ID_ESCOLA` do INEP.
-
+            1. **Mapeamento Geoespacial Multi-Critério**: Cruzamento dos 306 pontos georreferenciados do KML com as coordenadas municipais do IBGE e códigos `ID_ESCOLA` do INEP, eliminando ambiguidades e falsos positivos.
             2. **Validação por Nomenclatura Oficial**: Identificação das siglas padronizadas da SEED-PR e INEP:
                - `C E CM`: Colégio Estadual Cívico-Militar;
                - `E E CM`: Escola Estadual Cívico-Militar;
@@ -42,14 +44,13 @@ def render_methodology_view():
                - Expressões literais: `CÍVICO-MILITAR`, `CIVICO MILITAR` ou `MILITAR`.
             3. **Filtro de Exclusão**: Foram expressamente desconsiderados os registros contendo `CMEI` ou `C M E I` (Centros Municipais de Educação Infantil), assegurando que creches e pré-escolas municipais não fossem indevidamente rotuladas.
             4. **Distribuição da Amostra por Etapa (Universo de 306 Colégios Oficiais)**:
-               - **Relação Oficial SEED-PR**: **306 colégios** (305 estabelecimentos ativos no Paraná).
+               - **Relação Oficial SEED-PR (KML)**: **306 colégios** (100% mapeados e georreferenciados).
                - **Anos Finais (6º ao 9º)**: **322 escolas** cadastradas, das quais **315 escolas** possuem notas no SAEB 2023.
                - **Ensino Médio**: **293 escolas** cadastradas, das quais **260 escolas** possuem notas no SAEB 2023.
                - **Anos Iniciais (1º ao 5º)**: **48 escolas** cadastradas, das quais apenas **18 escolas** tinham turmas de 5º ano avaliadas no SAEB 2023 (pois esta etapa é de competência quase 100% municipal).
                - **Total de Escolas Únicas no Paraná**: **343 escolas cívico-militares únicas** com registros históricos consolidados.
             """
         )
-
         
     with st.expander("📊 3. Dicionário de Indicadores Educacionais", expanded=True):
         st.markdown(
@@ -81,23 +82,20 @@ def render_methodology_view():
         st.markdown(
             """
             O projeto é **estritamente voltado para o Estado do Paraná (PR)**.
-            Abaixo está a auditoria do cruzamento realizado entre a planilha contendo a relação oficial 
-            das escolas cívico-militares (`escolas_civico_militares_pr-final.csv`) e a base oficial do INEP (`divulgacao_pr_consolidado.xlsx`).
-
+            Abaixo está a auditoria do cruzamento realizado entre a relação oficial 
+            das escolas cívico-militares (`Colégios Cívico-Militares do Paraná.kml`) e a base oficial do INEP (`divulgacao_pr_consolidado.xlsx`).
             """
         )
         
-        import pandas as pd
-        from pathlib import Path
-        map_path = Path(__file__).resolve().parent.parent / "data" / "relatorio_cruzamento_escolas.csv"
+        map_path = Path(__file__).resolve().parent.parent / "data" / "mapeamento_escolas_civico_militares.csv"
         excel_path = Path(__file__).resolve().parent.parent / "data" / "base_parana_cruzada_completa.xlsx"
         
         if map_path.exists():
             df_map = pd.read_csv(map_path, sep=";", encoding="utf-8-sig")
             st.dataframe(
                 df_map[[
-                    "NOME_PLANILHA_CIVICO_MILITAR", "ID_ESCOLA", "NO_ESCOLA_INEP",
-                    "NO_MUNICIPIO", "REDE", "SG_UF", "STATUS_CRUZAMENTO"
+                    "NOME_KML", "ID_ESCOLA", "NO_ESCOLA_INEP",
+                    "NO_MUNICIPIO", "LATITUDE", "LONGITUDE", "MATCH_TYPE"
                 ]],
                 use_container_width=True,
                 height=350
@@ -111,6 +109,5 @@ def render_methodology_view():
                 data=excel_bytes,
                 file_name="base_parana_cruzada_completa.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                help="Planilha contendo o resumo, a lista mapeada e todas as escolas do Paraná por etapa com a coluna ESCOLA_CIVICO_MILITAR."
+                help="Planilha contendo o resumo, a lista mapeada e todas as escolas do Paraná por etapa com a coluna ESCOLA_CIVICO_MILITAR e coordenadas geográficas."
             )
-

@@ -1,0 +1,307 @@
+﻿INDICE_LINHA;NOME_FONTE;ID_ESCOLA;NOME_INEP;MUNICIPIO;CLASSIFICACAO_MATCH;MOTIVO;SCORE
+0;Colegio Estadual Cívico Militar Prefeito Carlos Massaretto;41025482.0;CARLOS MASSARETTO C E CM PREFEF M P;Apucarana;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+1;Alberto Santos Dumont, C E-Ef M Profis;41025318.0;ALBERTO SANTOS DUMONT C E CMEF M P;Apucarana;ambiguous;Competição próxima entre 'ALBERTO SANTOS DUMONT C E CMEF M P' (Apucarana) e 'ALBERTO SANTOS DUMONT C E CE F M P' (Ramilândia);1.262
+2;Colégio Estadual Cívico Militar Heitor C. A. Furtado;41025652.0;HEITOR C A FURTADO C E CMEF M PROFIS;Apucarana;ambiguous;Competição próxima entre 'HEITOR C A FURTADO C E CMEF M PROFIS' (Apucarana) e 'HEITOR C DE A FURTADO C E C EFM' (Tupãssi);1.175
+3;Jose Canale, C E Cívico-Militar Pe-Ef M e Profissional;41025717.0;JOSE CANALE C E CM PEEF M PROFIS;Apucarana;confirmed;Top match claro (score 0.923 vs 0.637);0.923
+4;Colégio Estadual Cívico Militar Marquês de Caravelas;41046617.0;GENEROSO MARQUES C E CM DREF M;Cambará;ambiguous;Competição próxima entre 'GENEROSO MARQUES C E CM DREF M' (Cambará) e 'EDITE C MARQUES C E CMEF M' (Turvo);0.762
+5;Francisco F Bastos, C E-Ef M;41026632.0;FRANCISCO F BASTOS C E CMEF M PROFIS;Arapongas;confirmed;Top match claro (score 1.175 vs 0.762);1.175
+6;Walfredo S Correa, C E-Ef M;41027086.0;WALFREDO S CORREA C E CMEF M PROFIS;Arapongas;confirmed;Top match claro (score 1.175 vs 0.762);1.175
+7;Jose De Anchieta, C E Pe-Ef M Profis;41025806.0;JOSE DE ANCHIETA C E CM PEEF M PROFIS;Apucarana;ambiguous;Competição próxima entre 'JOSE DE ANCHIETA C E CM PEEF M PROFIS' (Apucarana) e 'JOSE DE ANCHIETA C E CEF M' (Paranavaí);1.175
+8;OSMAR GUARACY FREIRE, C E-EF M P;41026055.0;OSMAR GUARACY FREIRE C E CMEF M P;Apucarana;confirmed;Top match claro (score 1.262 vs 0.437);1.262
+9;Colégio Estadual Polivalente Carlos Domingos Silva;41026152.0;POLIVALENTE C D SILVA C E CMEF M P;Apucarana;confirmed;Top match claro (score 0.815 vs 0.650);0.815
+10;Colégio Estadual Irondi Mantovani Pugliesi;41164920.0;IRONDI MANTOVANI PUGLIESI C E CMEF M;Arapongas;confirmed;Candidato único com score 1.262;1.262
+11;Colégio Estadual Rosa Delúcia Calsavara;41027370.0;ROSA D CALSAVARA C E CMEF M PROFIS;Cambira;confirmed;Top match claro (score 0.923 vs 0.654);0.923
+12;Colégio Estadual Cívico Militar Olavo Bilac;41014375.0;OLAVO BILAC C E CMEF M;Ubiratã;ambiguous;Competição próxima entre 'OLAVO BILAC C E CMEF M' (Ubiratã) e 'OLAVO BILAC C E CMEF M' (Faxinal);1.233
+13;Colégio Estadual Cívico Militar Jandaia do Sul;41027558.0;JANDAIA DO SUL C E CMEF M;Jandaia do Sul;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+14;Colégio Estadual Tadashi Enomoto;41026284.0;TADASHI ENOMOTO C E CMEF M;Apucarana;confirmed;Candidato único com score 1.233;1.233
+15;C.E. Cívico-Militar Professora Jaci Real Prado de Oliveira;41122925.0;JACI REAL P OLIVEIRA C E CM PROFAEFMP;Almirante Tamandaré;confirmed;Top match claro (score 1.048 vs 0.792);1.048
+16;Emilia Buzato, C E-Ef M;41122836.0;EMILIA BUZATO C E CM EF M PROFIS;Campo Magro;confirmed;Top match claro (score 1.350 vs 0.562);1.35
+17;Escola Estadual Prof Rosa Frederica Johnson;41123212.0;ROSA F JOHNSON E E CM PROFA EF;Almirante Tamandaré;confirmed;Top match claro (score 1.017 vs 0.637);1.017
+18;Colégio Estadual Professor Alberto Krause;41122801.0;ALBERTO KRAUSE C E CM PROFEF M P;Almirante Tamandaré;confirmed;Top match claro (score 1.233 vs 0.745);1.233
+19;Ivan F Do Amaral Filho, C E-Ef M;41124669.0;IVAN F DO AMARAL FILHO C E CM EF M P;Campina Grande do Sul;confirmed;Top match claro (score 1.350 vs 0.723);1.35
+20;Colégio Estadual Cívico-Militar Oscar Joseph D'Plácido e Silva;41373456.0;OSCAR J D P E SILVA C E CM EF M;Pinhais;confirmed;Top match claro (score 0.850 vs 0.571);0.85
+21;Planta Deodoro, E E-Ef;41150902.0;PLANTA DEODORO C E CM EF M;Piraquara;confirmed;Top match claro (score 1.350 vs 0.592);1.35
+22;Maria Lopes De Paula, C E Profa-Ef M;41123360.0;MARIA L DE PAULA C E CM PROFAEF M P;Almirante Tamandaré;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+23;Colégio Estadual Cívico-Militar Alfredo Chaves;41125673.0;ALFREDO CHAVES C E CMEF M;Colombo;confirmed;Top match claro (score 1.233 vs 0.562);1.233
+24;Joao Bosco, C E D-Ef M;41126106.0;JOAO BOSCO C E CM DEF M;Colombo;ambiguous;Competição próxima entre 'JOAO BOSCO C E CM DEF M' (Colombo) e 'SAO JOAO BOSCO C E CMEF M P' (Pato Branco);1.233
+25;Rui Barbosa, C E C-M - EFM;41093607.0;RUI BARBOSA C E CMEF M;Pato Branco;ambiguous;Competição próxima entre 'RUI BARBOSA C E CMEF M' (Pato Branco) e 'RUI BARBOSA C E CMEF M PROF' (Colombo);1.233
+26;Vinicius De Moraes, C E-Ef M;41024869.0;VINICIUS DE MORAES C E CMEF M;Maringá;ambiguous;Competição próxima entre 'VINICIUS DE MORAES C E CMEF M' (Maringá) e 'VINICIUS DE MORAES C E CMEF M' (Dois Vizinhos);1.233
+27;Colégio Estadual Cívico Militar Vereador Luiz Maltaca;41134931.0;LUIZ MALTACA C E CM VEREF M PROFIS;Itaperuçu;confirmed;Top match claro (score 0.923 vs 0.625);0.923
+28;Colégio Estadual Semiramis de Barros Braga;41135911.0;SEMIRAMIS DE B BRAGA C E CMEF M PROFI;Pinhais;confirmed;Top match claro (score 0.923 vs 0.608);0.923
+29;Colégio Estadual Elias Abrahao C E E Fund Medio;41352610.0;ELIAS ABRAHAO C E CMEF M PROFIS;Quatro Barras;ambiguous;Competição próxima entre 'ELIAS ABRAHAO C E CMEF M PROFIS' (Quatro Barras) e 'ELIAS ABRAHAO E M PROF EI ENS FUND' (Assaí);0.792
+30;Colégio Estadual Manoel Borges de Macedo;41136829.0;MANOEL BDE MACEDO C E CM PROFEF M P;Rio Branco do Sul;confirmed;Top match claro (score 0.923 vs 0.723);0.923
+31;Dias Da Rocha do FATO;41123506.0;DIAS DA ROCHA C E CMEF M P;Araucária;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+32;Colégio Cívico Militar Prof. Anderson Rangel E. F. M.;41148703.0;ANDERSON RANGEL C E CM PROFEF M;Fazenda Rio Grande;confirmed;Top match claro (score 0.958 vs 0.487);0.958
+33;Colégio Estadual Cívico-Militar- Prof. João Hoinatz De Andrade;41601904.0;JOAO HOINATZ ANDRADE C E CM PROFEF M;Fazenda Rio Grande;confirmed;Top match claro (score 1.262 vs 0.654);1.262
+34;Colégio Estadual General Carneiro;41121600.0;CARNEIRO C E CM GALEF M;Lapa;ambiguous;Competição próxima entre 'CARNEIRO C E CM GALEF M' (Lapa) e 'MILTON CARNEIRO C E CMEF M P' (Curitiba);1.175
+35;Colégio Estadual Cívico Militar Manoel Antônio Da Cunha;41121945.0;MANOEL A DA CUNHA C E CMEF M;Lapa;confirmed;Top match claro (score 0.958 vs 0.758);0.958
+36;Mireille Maria F Z Machado, E E Prof-Ef;41152905.0;MIREILLE M F Z MACHADO E E CM PREF;Mandirituba;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+37;Colégio Estadual Cívico-Militar Eleutério Fernandes de Andrade;41142063.0;ELEUTERIO F DE ANDRADE C E CMEF M P;Quitandinha;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+38;Colégio Estadual Presidente Caetano Munhoz Rocha;41049578.0;CAETANO MUNHOZ DA ROCHA C E CEF M;Ibaiti;ambiguous;Competição próxima entre 'CAETANO MUNHOZ DA ROCHA C E CEF M' (Ibaiti) e 'CAETANO M ROCHA C E CM PRESEF M' (Rio Negro);1.062
+39;Ovande Do Amaral, C E Dr-Ef M;41142837.0;OVANDE DO AMARAL C E CM DREF M;Rio Negro;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+40;Chico Mendes, C E-Ef M;41137493.0;CHICO MENDES C E CMEF M;São José dos Pinhais;confirmed;Top match claro (score 1.233 vs 0.975);1.233
+41;Antonio Vieira, C E Pe-Ef M;41146093.0;ANTONIO VIEIRA C E CM PEEF M;São José dos Pinhais;confirmed;Top match claro (score 1.233 vs 1.033);1.233
+42;Colégio Shirley Catarina Tamalu Machado;41389310.0;SHIRLEY C T MACHADO C E CMEF M PROF;São José dos Pinhais;confirmed;Top match claro (score 0.727 vs 0.530);0.727
+43;Colégio Estadual Zilda Arns Neumann;41601890.0;ZILDA ARNS NEUMANN C E CM DRAEF M P;São José dos Pinhais;ambiguous;Competição próxima entre 'ZILDA ARNS NEUMANN C E CM DRAEF M P' (São José dos Pinhais) e 'ZILDA ARNS NEUMANN C E C DRA EFM' (Carambeí);1.262
+44;Colégio Estadual Rocha Pombo;41158806.0;ROCHA POMBO C E CMEF M;Araucária;confirmed;Top match claro (score 1.233 vs 1.033);1.233
+45;Juventude De Santo Antonio, C E-Ef M;41124014.0;JUVENTUDE DE SANTO ANTONIO C E CMEF M;Balsa Nova;confirmed;Top match claro (score 1.262 vs 0.958);1.262
+46;Colégio Estadual Djalma Marinho;41125053.0;DJALMA MARINHO C E CMEF M PROFIS;Campo Largo;confirmed;Top match claro (score 1.175 vs 0.562);1.175
+47;Joao Xxiii, C E-E F M;41041712.0;JOAO XXIII C E CMEF M;São Jerônimo da Serra;ambiguous;Competição próxima entre 'JOAO XXIII C E CMEF M' (São Jerônimo da Serra) e 'JOAO XXIII C E CMEF M' (Campo Largo);1.233
+48;Macedo Soares, C E-Ef M;41125304.0;MACEDO SOARES C E CMEF M PROFIS;Campo Largo;confirmed;Top match claro (score 1.175 vs 0.762);1.175
+49;Miguel Franco Filho, C E-Ef M;41126670.0;MIGUEL FRANCO FILHO C E CMEF M PROFIS;Contenda;confirmed;Top match claro (score 1.210 vs 0.637);1.21
+50;Colégio Estadual Padre Arnaldo Jansen;41137361.0;ARNALDO JANSEN C E CM PEEF M PROFIS;São José dos Pinhais;confirmed;Top match claro (score 1.175 vs 0.975);1.175
+51;Colégio Estadual Cívico-Militar Guimarães Rosa;41063686.0;GUIMARAES ROSA C E CMEF M;Assis Chateaubriand;confirmed;Top match claro (score 1.233 vs 0.792);1.233
+52;Colégio Estadual Cívico Militar Senador Teotonio Vilela;41064020.0;TEOTONIO VILELA C E CM SENEF M;Assis Chateaubriand;confirmed;Top match claro (score 1.233 vs 1.033);1.233
+53;Escola Estadual Professor Darcy José Costa;41015576.0;DARCY JOSE COSTA C E CM PROFEF M P;Campo Mourão;confirmed;Top match claro (score 1.262 vs 0.758);1.262
+54;Colégio Estadual Dr Osvaldo Cruz-Ensino de 1º e 2º Graus;41015827.0;OSVALDO CRUZ C E CM DREF M;Campo Mourão;probable;Top match claro (score 0.667 vs 0.502);0.667
+55;Colégio Estadual Marechal Rondon - Ensino Fundamental, Médio e Cursos Técnicos;41065662.0;RONDON C E CM MALEF M;Marechal Cândido Rondon;ambiguous;Competição próxima entre 'RONDON C E CM MALEF M' (Marechal Cândido Rondon) e 'RONDON C E CM MALEF M PROFIS' (Campo Mourão);0.508
+56;Unidade Polo, C E-Ef M;41015975.0;UNIDADE POLO C E CMEF M PROFIS;Campo Mourão;ambiguous;Competição próxima entre 'UNIDADE POLO C E CMEF M PROFIS' (Campo Mourão) e 'UNIDADE POLO C EEF M P' (Jandaia do Sul);1.175
+57;Colégio Estadual Cívico Militar Rui Barbosa E E E Fund;41093607.0;RUI BARBOSA C E CMEF M;Pato Branco;ambiguous;Competição próxima entre 'RUI BARBOSA C E CMEF M' (Pato Branco) e 'RUI BARBOSA C E CMEF M PROF' (Colombo);0.958
+58;Colégio Estadual Olavo Bilac;41014375.0;OLAVO BILAC C E CMEF M;Ubiratã;ambiguous;Competição próxima entre 'OLAVO BILAC C E CMEF M' (Ubiratã) e 'OLAVO BILAC C E CMEF M' (Faxinal);1.233
+59;Cataratas, C E-Ef M;41071123.0;CATARATAS C E CMEF M;Cascavel;confirmed;Top match claro (score 1.175 vs 0.888);1.175
+60;Colégio Estadual Brasmadeira;41071298.0;BRASMADEIRA C E CMEF M PROFIS;Cascavel;confirmed;Candidato único com score 1.117;1.117
+61;Colégio Estadual Julia Wanderley;41071654.0;JULIA WANDERLEY C E CM PROFEF M;Cascavel;confirmed;Top match claro (score 1.233 vs 1.033);1.233
+62;Colégio Estadual Cívico-Militar Olivo Fracaro - Ensino Fundamental e Medio;41071956.0;OLIVO FRACARO C E CME F M;Cascavel;ambiguous;Competição próxima entre 'OLIVO FRACARO C E CME F M' (Cascavel) e 'COLEGIO SESI CIC ENSINO FUNDAMENTAL E MEDIO' (Curitiba);0.527
+63;Santos Dumont, C E-Ef M;41003292.0;SANTOS DUMONT C E CMEF M;Santa Cruz de Monte Castelo;ambiguous;Competição próxima entre 'SANTOS DUMONT C E CMEF M' (Santa Cruz de Monte Castelo) e 'SANTOS DUMONT C E CMEF M' (Cascavel);1.233
+64;Colégio Estadual Doutor João Ferreira Neves;41072391.0;JOAO F NEVES C E CM DREF M;Catanduvas;confirmed;Top match claro (score 0.958 vs 0.758);0.958
+65;Colégio Estadual Cívico-Militar Lindoeste-EFM;41074360.0;LINDOESTE C E CMEF M PROFIS;Lindoeste;confirmed;Candidato único com score 1.117;1.117
+66;Santa Tereza Do Oeste, C E-Ef M;41075129.0;SANTA TEREZA DO OESTE C E CMEF M P;Santa Tereza do Oeste;confirmed;Top match claro (score 1.262 vs 0.723);1.262
+67;Carlos A Camargo, C E-Ef M;41070585.0;CARLOS A CAMARGO C E CMEF M PROFIS;Capitão Leônidas Marques;confirmed;Top match claro (score 1.175 vs 0.792);1.175
+68;Colégio Estadual Marechal Humberto de Alencar Castelo Branco - EFM;41007280.0;CASTELO BRANCO E E CM PRESEF;Tapira;ambiguous;Competição próxima entre 'CASTELO BRANCO E E CM PRESEF' (Tapira) e 'HUMBERTO A C BRANCO C E CM MALEF M P' (Cascavel);0.815
+69;José Ângelo Baggio Orso, C E-Ef M;41071590.0;JOSE A B ORSO C E CMEF M PROF;Cascavel;confirmed;Top match claro (score 0.815 vs 0.571);0.815
+70;Colégio Estadual Bairro 14 de Novembro;41071018.0;XIV DE NOVEMBRO C E CMEF M;Cascavel;probable;Top match claro (score 0.637 vs 0.454);0.637
+71;Colégio Estadual Amâncio Moro;41072626.0;AMANCIO MORO C E CM EF M N PROFIS;Corbélia;ambiguous;Competição próxima entre 'AMANCIO MORO C E CM EF M N PROFIS' (Corbélia) e 'AMANCIO MORO C E EF M' (Curitiba);1.233
+72;Colégio Estadual D.Bosco;41009126.0;BOSCO C E CM DEF M;Cianorte;ambiguous;Competição próxima entre 'BOSCO C E CM DEF M' (Cianorte) e 'JOAO BOSCO C E CM DEF M' (Colombo);1.175
+73;Primo Manfrinato, C E-Ef M;41009363.0;PRIMO MANFRINATO C E CMEF M PROFIS;Cianorte;confirmed;Top match claro (score 1.175 vs 0.412);1.175
+74;Castro Alves, C E-Em;41093313.0;CASTRO ALVES C E CMEF M;Pato Branco;confirmed;Top match claro (score 1.233 vs 1.033);1.233
+75;Escola Estadual Professor Leo Kohler;41018800.0;LEO KOHLER E E CM PROFEF;Terra Boa;confirmed;Top match claro (score 1.233 vs 0.562);1.233
+76;Colégio Cívico Militar Prof. Mailon Medeiros;41043286.0;MAILON MEDEIROS C E CM PROFEF M;Bandeirantes;confirmed;Top match claro (score 0.958 vs 0.487);0.958
+77;Andre Seugling, C E-Ef M Profis;41043936.0;ANDRE SEUGLING C E CMEF M;Cornélio Procópio;confirmed;Top match claro (score 1.233 vs 0.545);1.233
+78;CEEFM Monteiro Lobato;41022416.0;MONTEIRO LOBATO C E CMEF M;Sertanópolis;ambiguous;Competição próxima entre 'MONTEIRO LOBATO C E CMEF M' (Sertanópolis) e 'MONTEIRO LOBATO C E CMEF M' (Cornélio Procópio);0.958
+79;Adelia A Lopes, E E Profa-Ef;41041003.0;ADELIA A LOPES C E CM PROFAEF M;Jataizinho;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+80;Colégio Estadual Cívico-Militar João XXIII;41041712.0;JOAO XXIII C E CMEF M;São Jerônimo da Serra;ambiguous;Competição próxima entre 'JOAO XXIII C E CMEF M' (São Jerônimo da Serra) e 'JOAO XXIII C E CMEF M' (Campo Largo);1.233
+81;Colégio Estadual João Turin;41042085.0;JOAO TURIN C E CMEF M;São Sebastião da Amoreira;ambiguous;Competição próxima entre 'JOAO TURIN C E CMEF M' (São Sebastião da Amoreira) e 'JOAO TURIN C E CMEF M PROFIS' (Curitiba);1.233
+82;Paulo Mozart Machado, C E Prof-Ef M;41042336.0;PAULO MOZART MACHADO C E CM PROFEF M;Uraí;confirmed;Top match claro (score 1.262 vs 0.637);1.262
+83;Nobrega Da Cunha, C E-Ef M;41043375.0;NOBREGA DA CUNHA C E CMEF M;Bandeirantes;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+84;Escola Estadual Cívico Militar Professor Antônio Bitonti;41046218.0;ANTONIO BITONTI E E CM PROFEF;Sertaneja;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+85;Arlindo Carvalho De Amorim, C E-Ef M;41127340.0;ARLINDO C DE AMORIM C E CMEF M PROFIS;Curitiba;confirmed;Top match claro (score 0.923 vs 0.723);0.923
+86;Beatriz Faria Ansay, C E-Ef M;41127609.0;BEATRIZ FARIA ANSAY C E CMEFMP;Curitiba;confirmed;Top match claro (score 1.062 vs 0.637);1.062
+87;Colégio Estadual Cívico-Militar Marechal Cândido Rondon;41127897.0;CANDIDO RONDON C E CM MALEF M PROFIS;Curitiba;confirmed;Top match claro (score 1.175 vs 1.000);1.175
+88;Colégio Estadual Cívico-Militar Ermelino de Leão;41129164.0;ERMELINO DE LEAO C E CMEF M PROFIS;Curitiba;confirmed;Top match claro (score 1.175 vs 0.745);1.175
+89;Etelvina C Ribas, C E Profa-Ef M;41129253.0;ETELVINA C RIBAS C E CM PROFAEF M P;Curitiba;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+90;Colégio Estadual Cívico-Militar Getúlio Vargas;41129580.0;GETULIO VARGAS C E CMEF M PROFIS;Curitiba;ambiguous;Competição próxima entre 'GETULIO VARGAS C E CMEF M PROFIS' (Curitiba) e 'GETULIO VARGAS C E C PRESEF M' (Ivaté);1.175
+91;Escola Estadual Gottlieb Müeller;41129628.0;GOTTLIEB MUELLER C E CMEF M PROFIS;Curitiba;confirmed;Candidato único com score 1.175;1.175
+92;Colégio Estadual Cívico-militar João Turin;41042085.0;JOAO TURIN C E CMEF M;São Sebastião da Amoreira;ambiguous;Competição próxima entre 'JOAO TURIN C E CMEF M' (São Sebastião da Amoreira) e 'JOAO TURIN C E CMEF M PROFIS' (Curitiba);1.233
+93;Colégio Estadual Luiz Carlos Paula e Souza;41130669.0;LUIZ CARLOS P E SOUZA C E CM PROFEF M;Curitiba;confirmed;Top match claro (score 1.048 vs 0.571);1.048
+94;Colégio Cívico Militar Manoel A Guimaraes, C E Sen-Ef M;41130782.0;MANOEL A GUIMARAES C E CM SEN EF M P;Curitiba;confirmed;Top match claro (score 1.017 vs 0.637);1.017
+95;Colégio Estadual Professor Olavo Del Claro;41131886.0;OLAVO DEL CLARO C E CM PROFEF M P;Curitiba;confirmed;Top match claro (score 1.262 vs 0.637);1.262
+96;Colegio Estadual Cívico Militar Republica Oriental Do Uruguai;41132882.0;REPUBLICA ORIENTAL URUGUAI C E CMEF M;Curitiba;confirmed;Candidato único com score 1.262;1.262
+97;Sebastiao Saporski, C E-Ef M;41133404.0;SEBASTIAO SAPORSKI C E CMEF M PROFIS;Curitiba;confirmed;Top match claro (score 1.175 vs 0.745);1.175
+98;Segismundo Falarz, C E C-M-Ef M;41133412.0;SEGISMUNDO FALARZ C E CMEF M;Curitiba;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+99;Colégio Cívico Militar Senhorinha de Moraes Sarmento;41133471.0;SENHORINHA M SARMENTO C E CMEF M P;Curitiba;confirmed;Top match claro (score 0.815 vs 0.571);0.815
+100;Yvone Pimentel, C E-Ef M;41134435.0;YVONE PIMENTEL C E CMEF M PROFIS;Curitiba;confirmed;Top match claro (score 1.175 vs 0.545);1.175
+101;Colégio Estadual Cívico-Militar Cruzeiro do Sul;41128664.0;CRUZEIRO DO SUL C E CMEF M P;Curitiba;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+102;Guido Arzua, C E Prof-Ef M;41531876.0;GUIDO ARZUA C E CMEF M P;Curitiba;confirmed;Top match claro (score 1.233 vs 0.545);1.233
+103;Colégio Estadual Cívico Militar Jayme Canet;41130065.0;JAYME CANET C E CMEF M P;Curitiba;confirmed;Top match claro (score 1.233 vs 0.940);1.233
+104;Joao Loyola, C E Prof-Ef M;41130146.0;JOAO LOYOLA C E CM PROFEF M P;Curitiba;confirmed;Top match claro (score 1.233 vs 0.792);1.233
+105;Joao Paulo I, C E Papa-Ef M;41057694.0;JOAO PAULO II C E CMEF M;Arapoti;ambiguous;Competição próxima entre 'JOAO PAULO II C E CMEF M' (Arapoti) e 'JOAO PAULO I C E CM PAPAEF M P' (Curitiba);0.958
+106;Colégio Estadual Cívico-Militar Padre João Wislinski;41130200.0;JOAO WISLINSKI C E CM PEEF M N P;Curitiba;confirmed;Top match claro (score 1.233 vs 0.792);1.233
+107;Julio Mesquita, C E Prof-Ef M Profis;41130359.0;JULIO MESQUITA C E CM PROFEF M PROFIS;Curitiba;confirmed;Top match claro (score 1.175 vs 0.825);1.175
+108;Lamenha Lins, C E Pres-Em Profis;41130421.0;LAMENHA LINS C E CM PRESEF M P;Curitiba;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+109;Colégio Estadual Prof° Luiza Ross;41130685.0;LUIZA ROSS C E CM PROFAEF M P;Curitiba;confirmed;Top match claro (score 1.233 vs 0.592);1.233
+110;Colégio Estadual Milton Carneiro;41131223.0;MILTON CARNEIRO C E CMEF M P;Curitiba;confirmed;Top match claro (score 1.233 vs 0.792);1.233
+111;Colégio Estadual Cívico-Militar Pinheiro do Paraná;41132475.0;PINHEIRO DO PARANA C E CMEF M P;Curitiba;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+112;Colégio Estadual Cívico Militar Santa Felicidade;41133137.0;SANTA FELICIDADE C E CMEF M P;Curitiba;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+113;Santo Antônio;41104897.0;SANTO ANTONIO C E CMEF M;Pinhão;ambiguous;Competição próxima entre 'SANTO ANTONIO C E CMEF M' (Pinhão) e 'SANTO ANTONIO C E CMEF M' (Curitiba);1.233
+114;Colégio Estadual Cívico Militar Vinícius de Moraes;41024869.0;VINICIUS DE MORAES C E CMEF M;Maringá;ambiguous;Competição próxima entre 'VINICIUS DE MORAES C E CMEF M' (Maringá) e 'VINICIUS DE MORAES C E CMEF M' (Dois Vizinhos);1.233
+115;Jorge De Lima, E E-Ef;41089006.0;JORGE DE LIMA E E CMEF;Salto do Lontra;confirmed;Top match claro (score 1.233 vs 0.562);1.233
+116;Colégio Estadual Cívico Militar Leonardo da Vinci - Ensino Fundamental, Médio e Profissional;41084772.0;LEONARDO DA VINCI C E CMEF M N PROFIS;Dois Vizinhos;probable;Top match claro (score 0.654 vs 0.442);0.654
+117;Carmelita S Dias, C E Profa-Ef M;41076125.0;CARMELITA S DIAS C E CM PROFAEF M P;Foz do Iguaçu;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+118;Colégio Estadual Presidente Castelo Branco;41007280.0;CASTELO BRANCO E E CM PRESEF;Tapira;ambiguous;Competição próxima entre 'CASTELO BRANCO E E CM PRESEF' (Tapira) e 'CASTELO BRANCO C E CM PRESE F M P' (Clevelândia);1.233
+119;Colégio Estadual Pres. Costa e Silva;41076265.0;COSTA E SILVA C E CM PRESEF M PROFIS;Foz do Iguaçu;ambiguous;Competição próxima entre 'COSTA E SILVA C E CM PRESEF M PROFIS' (Foz do Iguaçu) e 'COSTA E SILVA C E PRESEF M N' (Sengés);1.175
+120;Colégio Estadual Cívico-Militar Tancredo de Almeida Neves;41102959.0;TANCREDO DE ALMEIDA NEVES C E EF M;Laranjeiras do Sul;confirmed;Top match claro (score 1.150 vs 0.958);1.15
+121;Colégio Estadual Tarquínio Santos;41076877.0;TARQUINIO SANTOS C E CMEF M PROFIS;Foz do Iguaçu;confirmed;Top match claro (score 1.175 vs 0.762);1.175
+122;Colégio Estadual Cívico Militar Ipê Roxo;41378571.0;IPE ROXO C E CMEF M PROFIS;Foz do Iguaçu;confirmed;Top match claro (score 1.175 vs 0.650);1.175
+123;Colégio Estadual Sol de Maio;41378598.0;SOL DE MAIO C E CMEF M PROFIS;Foz do Iguaçu;confirmed;Top match claro (score 1.175 vs 0.562);1.175
+124;Colégio Estadual Tancredo Neves;41076869.0;TANCREDO DE A NEVES C E CMEF M N P;Foz do Iguaçu;ambiguous;Competição próxima entre 'TANCREDO DE A NEVES C E CMEF M N P' (Foz do Iguaçu) e 'TANCREDO NEVES C E CMEF M' (Coronel Vivida);1.233
+125;Colégio Cívico-Militar Naira Fellini;41144333.0;NAIRA FELLINI C E CMEF M PROFIS;Medianeira;confirmed;Top match claro (score 0.923 vs 0.487);0.923
+126;Colégio Estadual Cívico Militar Angelo Antonio Benedet;41372395.0;ANGELO ANTONIO BENEDET C E CMEF M P;Santa Terezinha de Itaipu;confirmed;Top match claro (score 1.262 vs 0.637);1.262
+127;Colégio Estadual Nestor Victor dos Santos;41079116.0;NESTOR V DOS SANTOS C E CMEF M PROFIS;São Miguel do Iguaçu;confirmed;Top match claro (score 0.923 vs 0.723);0.923
+128;Colégio Estadual Carlos Drummond de Andrade;41063619.0;CARLOS DRUMMOND DE ANDRADE E E EF;Assis Chateaubriand;confirmed;Top match claro (score 1.150 vs 0.923);1.15
+129;Colegio Estadual Do Campo Presidente Kennedy;41077776.0;KENNEDY C E C CM PRESEF M;Serranópolis do Iguaçu;ambiguous;Competição próxima entre 'KENNEDY C E C CM PRESEF M' (Serranópolis do Iguaçu) e 'KENNEDY C E CM PRESEF M PROF NORMAL' (Rolândia);0.792
+130;Colégio Estadual Santa Rita;41148550.0;SANTA RITA E E CMEF;Foz do Iguaçu;confirmed;Top match claro (score 1.233 vs 1.033);1.233
+131;Colégio Estadual Marechal Artur da Costa e Silva;41076265.0;COSTA E SILVA C E CM PRESEF M PROFIS;Foz do Iguaçu;confirmed;Top match claro (score 0.923 vs 0.758);0.923
+132;Colégio Estadual Cívico-Militar Candido Portinari;41079590.0;CANDIDO PORTINARI C E CMEF M;Ampére;confirmed;Top match claro (score 1.233 vs 0.883);1.233
+133;Vicente De Carli, C E Prof-Ef M;41086600.0;VICENTE DE CARLI C E CM PROFEF M;Francisco Beltrão;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+134;Colégio Estadual Beatriz Biavatti;41144058.0;BEATRIZ BIAVATTI C E CMEF M;Francisco Beltrão;confirmed;Top match claro (score 1.233 vs 0.545);1.233
+135;Escola Estadual Dom Carlos Eduardo;41082249.0;CARLOS EDUARDO C E CM DEF M;Realeza;confirmed;Top match claro (score 1.233 vs 0.825);1.233
+136;Manoel Ribas, E E Interventor-Ef;41089545.0;MANOEL RIBAS C E CM INTERVENTOREF M;Santo Antônio do Sudoeste;ambiguous;Competição próxima entre 'MANOEL RIBAS C E CM INTERVENTOREF M' (Santo Antônio do Sudoeste) e 'MANOEL RIBAS C E CMEF M' (Guarapuava);0.958
+137;Colégio João Zacco;41081340.0;JOAO ZACCO PARANA C E CMEF M;Planalto;confirmed;Top match claro (score 0.923 vs 0.654);0.923
+138;Colégio Cívico-Militar Vila Guaira, C E-Ef M;41012747.0;VILA GUAIRA C E CMEF M;Goioerê;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+139;Colégio Estadual Cívico Militar Olavo Bilac;41014375.0;OLAVO BILAC C E CMEF M;Ubiratã;ambiguous;Competição próxima entre 'OLAVO BILAC C E CMEF M' (Ubiratã) e 'OLAVO BILAC C E CMEF M' (Faxinal);1.233
+140;Escola Ribeiro de Campos, E E C-M-Ef;41012631.0;RIBEIRO DE CAMPOS E E CMEF;Goioerê;confirmed;Top match claro (score 0.958 vs 0.437);0.958
+141;COLÉGIO ESTADUAL VEREADOR HEITOR ROCHA KRAMER - EFM.;41100484.0;HEITOR ROCHA KRAMER C E CM VEREF M;Guarapuava;confirmed;Top match claro (score 1.048 vs 0.571);1.048
+142;Mahatma Gandhi, C E-Ef M;41100778.0;MAHATMA GANDHI C E CMEF M PROFIS;Guarapuava;confirmed;Top match claro (score 1.175 vs 0.592);1.175
+143;Colégio Estadual Manoel Ribas;41089545.0;MANOEL RIBAS C E CM INTERVENTOREF M;Santo Antônio do Sudoeste;ambiguous;Competição próxima entre 'MANOEL RIBAS C E CM INTERVENTOREF M' (Santo Antônio do Sudoeste) e 'MANOEL RIBAS C E CMEF M' (Guarapuava);1.233
+144;Colégio Estadual Cívico-Militar Santo Antônio;41104897.0;SANTO ANTONIO C E CMEF M;Pinhão;ambiguous;Competição próxima entre 'SANTO ANTONIO C E CMEF M' (Pinhão) e 'SANTO ANTONIO C E CMEF M' (Curitiba);1.233
+145;COLÉGIO ESTADUAL ENGENHEIRO MICHEL GASTON PROSPER AUGUSTA REYDAMS;41104447.0;MICHEL G P A REYDAMS C E CM ENGEF M;Reserva do Iguaçu;confirmed;Candidato único com score 0.667;0.667
+146;Colégio Estadual Edite Cordeiro Marques;41106628.0;EDITE C MARQUES C E CMEF M;Turvo;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+147;Colégio Estadual Professora Leni Marlene Jacob;41100689.0;LENI MARLENE JACOB C E CM PROFAEF M P;Guarapuava;confirmed;Top match claro (score 1.262 vs 0.425);1.262
+148;Colégio Estadual Parigot de Souza;41023382.0;PEDRO V PARIGOT SOUZA C E CMEF M P;Marialva;ambiguous;Competição próxima entre 'PEDRO V PARIGOT SOUZA C E CMEF M P' (Marialva) e 'PARIGOT DE SOUZA C E CMEF M N PROFIS' (Inácio Martins);1.175
+149;Caxias, C E Dq-Ef M Profis;41023811.0;CAXIAS C E CM DQ DEEF M PROFIS;Maringá;ambiguous;Competição próxima entre 'CAXIAS C E CM DQ DEEF M PROFIS' (Maringá) e 'CAXIAS E E C DQ DE EF' (Planalto);1.175
+150;Joao De M Pessoa, C E-Ef M;41113250.0;JOAO DE M PESSOA C E CMEF M;Irati;confirmed;Top match claro (score 1.233 vs 0.883);1.233
+151;Colégio Estadual Cívico Militar Nicolau Copérnico - EF M;41114027.0;NICOLAU COPERNICO C E CMEF M;Mallet;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+152;Colégio Estadual Cívico Militar Barão de Capanema - Ensino Fundamental e Médio;41156269.0;COLEGIO SESI CAPANEMA ENSINO MEDIO;Capanema;ambiguous;Competição próxima entre 'COLEGIO SESI CAPANEMA ENSINO MEDIO' (Capanema) e 'COLEGIO SESI CIC ENSINO FUNDAMENTAL E MEDIO' (Curitiba);0.663
+153;Colégio Estadual Cívico Militar Profª Maria Ignácia;41114469.0;MARIA IGNACIA C E CM PROFAEF M;Rebouças;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+154;Colégio Estadual Dr Afonso Alves de Camargo;41001060.0;AFONSO CAMARGO C E CM PRESEF M;Loanda;ambiguous;Competição próxima entre 'AFONSO CAMARGO C E CM PRESEF M' (Loanda) e 'AFONSO A DE CAMARGO C E CM DREF M P' (Rio Azul);0.958
+155;Colégio Estadual Cívico-Militar Anita Garibaldi;41038100.0;ANITA GARIBALDI C E CMEF M PROFIS;Jardim Alegre;confirmed;Top match claro (score 1.175 vs 1.000);1.175
+156;Colégio Estadual Nereu Ramos;41039068.0;NEREU RAMOS E E CMEF;Manoel Ribas;confirmed;Top match claro (score 1.233 vs 0.883);1.233
+157;Vicente Machado, C E C-Ef M;41040694.0;VICENTE MACHADO C E CMEF M;São Pedro do Ivaí;confirmed;Top match claro (score 1.233 vs 0.883);1.233
+158;Colégio Estadual Cívico Militar Antônio Diniz Pereira;41037324.0;ANTONIO DINIZ PEREIRA C E CMEF M;Ivaiporã;confirmed;Top match claro (score 1.262 vs 0.723);1.262
+159;Jose De Mattos Leao, C E-Ef M;41040317.0;JOSE DE MATTOS LEAO C E CMEF M;São João do Ivaí;confirmed;Top match claro (score 1.262 vs 1.062);1.262
+160;Colégio Estadual Dr. Generoso Marques;41046617.0;GENEROSO MARQUES C E CM DREF M;Cambará;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+161;Hercília de Paula e Silva, CECM Profª - EFM e Profissional;41050886.0;HERCILIA P E SILVA C E CM PROFAEF M;Carlópolis;confirmed;Top match claro (score 0.727 vs 0.538);0.727
+162;Colégio Estadual Cívico-Militar José Pavan - EFM;41047192.0;JOSE PAVAN C E CMEF M;Jacarezinho;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+163;Colégio Estadual Cívico Militar Doutor João da Rocha Chueiri;41047800.0;JOAO DA R CHUEIRI C E CM DREF M P;Ribeirão Claro;confirmed;Top match claro (score 0.958 vs 0.654);0.958
+164;Colégio Estadual Cívico Militar Ruth Martinez Correa;41045610.0;RUTH M CORREA C E CMEF M PROF;Ribeirão do Pinhal;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+165;Colégio Estadual Cívico-Militar Edith de Souza Prado de Oliveira;41048326.0;EDITH S PRADO DE OLIVEIRA C E CMEF M;Santo Antônio da Platina;confirmed;Top match claro (score 1.048 vs 0.571);1.048
+166;Colégio Cívico-militar Moralina Eleutério;41048563.0;MORALINA ELEUTERIO C E CM DONAEF M;Santo Antônio da Platina;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+167;Escola Estadual Stella Maris;41042778.0;STELLA MARIS C E CMEF M;Andirá;confirmed;Candidato único com score 1.233;1.233
+168;Colégio Estadual Dona Carolina Lupion;41046552.0;CAROLINA LUPION C E CM DONAEF M;Cambará;confirmed;Top match claro (score 1.233 vs 1.033);1.233
+169;Colégio Estadual Cívico Militar Anésio de Almeida Leite;41046960.0;ANESIO DE A LEITE C E CMEF M PROFIS;Jacarezinho;confirmed;Top match claro (score 0.923 vs 0.637);0.923
+170;Antonio Raminelli, C E C M -E F M P;41028430.0;ANTONIO RAMINELLI C E CMEF M PROFIS;Cambé;confirmed;Top match claro (score 1.175 vs 0.762);1.175
+171;Colégio Estadual Cívico Militar Érico Veríssimo - Ensino fundamental e médio;41102274.0;ERICO VERISSIMO C E CMEF M;Laranjeiras do Sul;ambiguous;Competição próxima entre 'ERICO VERISSIMO C E CMEF M' (Laranjeiras do Sul) e 'ERICO VERISSIMO C E CMEF M PROFIS' (Cambé);0.727
+172;11 De Outubro, C E-Ef M;41028996.0;11 DE OUTUBRO C E CMEF M PROFIS;Cambé;confirmed;Top match claro (score 1.175 vs 0.562);1.175
+173;Basilio De Lucca, C E-Ef M;41029151.0;BASILIO DE LUCCA C E CMEF M;Ibiporã;confirmed;Top match claro (score 1.233 vs 0.562);1.233
+174;Ulysses Guimaraes, E E-Ef;41144252.0;ULYSSES GUIMARAES C E CMEF M;Ibiporã;confirmed;Top match claro (score 1.233 vs 1.033);1.233
+175;Colégio Estadual Cívico-Militar Professora Adelia Dionisia Barbosa;41029500.0;ADELIA D BARBOSA C E CM PROFAEF M P;Londrina;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+176;Josemaria Escriva, E E Mons-Ef;41030451.0;JOSEMARIA ESCRIVA C E CM MONSEF M;Londrina;confirmed;Top match claro (score 0.958 vs 0.425);0.958
+177;Fernando De B Pinto, CECM Dr-EfEm;41030966.0;FERNANDO DE B PINTO C E CM DREF M;Londrina;confirmed;Candidato único com score 0.815;0.815
+178;Tsuru Oguido, C E C-M - Ef M;41033280.0;TSURU OGUIDO C E CMEF M;Londrina;confirmed;Candidato único com score 1.233;1.233
+179;Vani Ruiz Viessi;41033370.0;VANI RUIZ VIESSI C E CM PROFAEF M;Londrina;confirmed;Candidato único com score 1.262;1.262
+180;Colégio Estadual Cívico Militar Vista Bela;41159586.0;VISTA BELA C E CMEF M PROFIS;Londrina;ambiguous;Competição próxima entre 'VISTA BELA C E CMEF M PROFIS' (Londrina) e 'BELA VISTA E EEF' (Telêmaco Borba);1.175
+181;Francisco Villanueva,C E Prof-E F M P;41020286.0;FRANCISCO J PERIOTO E E CM PROFEF;Mandaguaçu;ambiguous;Competição próxima entre 'FRANCISCO J PERIOTO E E CM PROFEF' (Mandaguaçu) e 'FRANCISCO VILLANUEVAC E CM PROFEF M P' (Rolândia);0.762
+182;Colégio Estadual Presidente Kennedy;41077776.0;KENNEDY C E C CM PRESEF M;Serranópolis do Iguaçu;ambiguous;Competição próxima entre 'KENNEDY C E C CM PRESEF M' (Serranópolis do Iguaçu) e 'KENNEDY C E CM PRESEF M PROF NORMAL' (Rolândia);1.175
+183;Jose Alexandre Chiarelli, Ce Prof-Ef M;41152913.0;JOSE ALEX CHIARELLI C E CM PROFEF M P;Rolândia;confirmed;Top match claro (score 0.923 vs 0.637);0.923
+184;Colégio Estadual Cívico-Militar Monteiro Lobato;41022416.0;MONTEIRO LOBATO C E CMEF M;Sertanópolis;ambiguous;Competição próxima entre 'MONTEIRO LOBATO C E CMEF M' (Sertanópolis) e 'MONTEIRO LOBATO C E CMEF M' (Cornélio Procópio);1.233
+185;Escola Estadual Anastácio Cerezine;41021100.0;ANASTACIO CEREZINE E E CMEF;Alvorada do Sul;confirmed;Candidato único com score 1.233;1.233
+186;Lauro G Da V Pessoa, E E Prof-Ef;41031709.0;LAURO G DA V PESSOA E E CM PROFEF;Londrina;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+187;Colégio Estadual Newton Guimarães;41032225.0;NEWTON GUIMARAES C E CM PROFEF M;Londrina;confirmed;Top match claro (score 1.233 vs 0.883);1.233
+188;Colégio Estadual Cívico-Militar Barão do Rio Branco;41032853.0;RIO BRANCO C E CM BAR DOEF M;Londrina;ambiguous;Competição próxima entre 'RIO BRANCO C E CM BAR DOEF M' (Londrina) e 'RIO BRANCO C E CM BAR DOEF M' (Palotina);1.233
+189;João Rodrigues Da Silva, C E Prof-Ef M;41358872.0;JOAO R DA SILVA E E CM PROFEF;Londrina;confirmed;Top match claro (score 0.958 vs 0.723);0.958
+190;Andrea Nuzzi, C E Maestro-Ef M;41028406.0;ANDREA NUZZI C E CM MAESTROEF M P;Cambé;confirmed;Top match claro (score 0.958 vs 0.608);0.958
+191;Colégio Estadual Attílio Codato - Ensino Fundamental e Médio;41028457.0;ATTILIO CODATO C E CMEF M;Cambé;confirmed;Top match claro (score 0.727 vs 0.521);0.727
+192;Colégio Civíco-Militar Estadual Professora Helena Kolody;41028732.0;HELENA KOLODY C E CM PROFEF M;Cambé;confirmed;Top match claro (score 0.815 vs 0.615);0.815
+193;Manuel Bandeira, C E-Ef Em;41028902.0;MANUEL BANDEIRA C E CMEF M PROFIS;Cambé;ambiguous;Competição próxima entre 'MANUEL BANDEIRA C E CMEF M PROFIS' (Cambé) e 'MANUEL BANDEIRA E EEF' (Alto Piquiri);1.175
+194;Colégio Estadual Carlos de Almeida;41030125.0;CARLOS DE ALMEIDA C E CMEF M PROFIS;Londrina;confirmed;Top match claro (score 1.175 vs 0.762);1.175
+195;Escola Estadual Professora Célia Moraes Oliveira;41030265.0;CELIA M DE OLIVEIRA C E CM PROFEF M P;Londrina;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+196;Colégio Estadual Professor Doutor Heber Soares Vargas;41030800.0;HEBER S VARGAS C E CM PROF DREF M P;Londrina;confirmed;Top match claro (score 0.958 vs 0.654);0.958
+197;Hugo Simas, C E-Ef M;41031237.0;HUGO SIMAS C E CMEF M PROFIS;Londrina;confirmed;Top match claro (score 1.175 vs 0.767);1.175
+198;Colégio Estadual Humberto P Coutinho;41031253.0;HUMBERTO P COUTINHO C E CMEF M PROFIS;Londrina;confirmed;Top match claro (score 1.175 vs 0.762);1.175
+199;Colégio Estadual Margarida de Barros Lisboa;41031873.0;MARGARIDA B LISBOA C E CM PROFAEF M;Londrina;confirmed;Top match claro (score 0.958 vs 0.454);0.958
+200;Nilo Pecanha, C E-Ef M;41032241.0;NILO PECANHA C E CMEF M PROFIS;Londrina;ambiguous;Competição próxima entre 'NILO PECANHA C E CMEF M PROFIS' (Londrina) e 'NILO PECANHA C E CEF M' (Ivaiporã);1.175
+201;R. Rudolf Keilhold, 173;;;;not_found;Linha de endereço físico na lista oficial (endereço do Colégio Estadual Nilo Peçanha);0.0
+202;Colégio Estadual Do Patrimônio Regina;41597915.0;PATRIMONIO REGINA C E CM DOEF M;Londrina;confirmed;Top match claro (score 1.233 vs 0.562);1.233
+203;Colegio Estadual Profº. Thiago Terra;41355156.0;THIAGO TERRA C E CMEF M PROF;Londrina;confirmed;Top match claro (score 0.958 vs 0.437);0.958
+204;Colégio Estadual Pe Wistremundo R. P. Garcia;41030486.0;WISTREMUNDO R P GARCIA C E CM PEEFM P;Londrina;confirmed;Top match claro (score 1.233 vs 0.562);1.233
+205;Colégio Estadual Dr. Lauro Portugal Tavares;41033620.0;LAURO P TAVARES C E CM DREF M;Rolândia;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+206;Colégio Estadual Serafim França;41019229.0;SERAFIM FRANCA C E CMEF M PROFIS;Astorga;confirmed;Top match claro (score 1.175 vs 0.745);1.175
+207;Colégio Estadual Cecília Meireles;41020910.0;CECILIA MEIRELES E E CMEF;Santa Fé;ambiguous;Competição próxima entre 'CECILIA MEIRELES E E CMEF' (Santa Fé) e 'CECILIA MEIRELES C E CMEF M PROFIS' (Colorado);1.233
+208;Colégio Estadual São Vicente Pallotti;41023161.0;SAO VICENTE PALLOTTI C E CMEF M P;Mandaguari;confirmed;Top match claro (score 1.262 vs 0.758);1.262
+209;Colégio estadual Pedro Viriato Parigot de Souza;41023382.0;PEDRO V PARIGOT SOUZA C E CMEF M P;Marialva;ambiguous;Competição próxima entre 'PEDRO V PARIGOT SOUZA C E CMEF M P' (Marialva) e 'PEDRO VIRIATO PARIGOT SOUZA E M REI EF' (Arapuã);1.048
+210;Colégio Estadual Alberto J. Byington Jr.;41023552.0;ALBERTO J BYINGTON JR C ECMEF M PROFI;Maringá;confirmed;Top match claro (score 1.010 vs 0.637);1.01
+211;Colégio Estadual Duque de Caxias cívico-militar;41026500.0;CAXIAS E M R DUQUE DEEF;Arapongas;ambiguous;Competição próxima entre 'CAXIAS E M R DUQUE DEEF' (Arapongas) e 'CAXIAS C E CM DQEF M PROF' (Irati);0.883
+212;Colégio Estadual Ipiranga;41024079.0;IPIRANGA C E CMEF M;Maringá;confirmed;Top match claro (score 1.175 vs 0.917);1.175
+213;Colégio Estadual Tomaz Edison de Andrade Vieira;41024796.0;TOMAZ E DE A VIEIRA C E CMEF M PROFIS;Maringá;confirmed;Top match claro (score 0.792 vs 0.571);0.792
+214;Colégio Estadual Vinícius de Moraes;41024869.0;VINICIUS DE MORAES C E CMEF M;Maringá;ambiguous;Competição próxima entre 'VINICIUS DE MORAES C E CMEF M' (Maringá) e 'VINICIUS DE MORAES C E CMEF M' (Dois Vizinhos);1.233
+215;Colégio Estadual Vercindes Gerotto dos Reis;41025040.0;VERCINDES G DOS REIS C E CMEF M PROFI;Paiçandu;confirmed;Top match claro (score 0.923 vs 0.637);0.923
+216;Colégio Estadual Cora Coralina;41145500.0;CORA CORALINA C E CMEF M PROFIS;Sarandi;ambiguous;Competição próxima entre 'CORA CORALINA C E CMEF M PROFIS' (Sarandi) e 'CORA CORALINA C E CEF M' (Jardim Alegre);1.175
+217;Colégio Estadual do Jardim Independência;41025105.0;JARDIM INDEPENDENCIA C E DOEF M PROFIS;Sarandi;confirmed;Top match claro (score 0.975 vs 0.762);0.975
+218;Escola Estadual Cecília Meireles;41020910.0;CECILIA MEIRELES E E CMEF;Santa Fé;ambiguous;Competição próxima entre 'CECILIA MEIRELES E E CMEF' (Santa Fé) e 'CECILIA MEIRELES C E CMEF M PROFIS' (Colorado);1.233
+219;Escola Estadual Pres. Arthur da Costa e Silva;41022750.0;ARTHUR C E SILVA E E CM PRESEF;Floresta;ambiguous;Competição próxima entre 'ARTHUR C E SILVA E E CM PRESEF' (Floresta) e 'ARTHUR DA C SILVA C E CM MALEF M P' (Medianeira);0.958
+220;Escola Estadual Cívico-Militar F. J. Perioto – Ensino Fundamental;41133129.0;SANTA CRUZ ESC EST ENSINO FUNDAMENTAL;Curitiba;ambiguous;Competição próxima entre 'SANTA CRUZ ESC EST ENSINO FUNDAMENTAL' (Curitiba) e 'FRANCISCO J PERIOTO E E CM PROFEF' (Mandaguaçu);0.683
+221;Manoel F Almeida, E E Dr-Ef;41021010.0;MANOEL F ALMEIDA E E CM DREF;Santo Inácio;confirmed;Top match claro (score 1.233 vs 0.792);1.233
+222;Colégio Estadual Presidente Afonso Camargo;41001060.0;AFONSO CAMARGO C E CM PRESEF M;Loanda;ambiguous;Competição próxima entre 'AFONSO CAMARGO C E CM PRESEF M' (Loanda) e 'AFONSO A DE CAMARGO C E CM DREF M P' (Rio Azul);1.233
+223;Colégio Estadual Cívico-Militar Vale do Tigre;41001672.0;VALE DO TIGRE C E CMEF M;Nova Londrina;confirmed;Top match claro (score 1.233 vs 0.562);1.233
+224;Colégio Estadual Alberico M da Silva;41003330.0;ALBERICO M DA SILVA C E CMEF M;Santa Isabel do Ivaí;confirmed;Top match claro (score 1.233 vs 0.792);1.233
+225;Colégio Estadual Cívico Militar Santos Dumont;41003292.0;SANTOS DUMONT C E CMEF M;Santa Cruz de Monte Castelo;ambiguous;Competição próxima entre 'SANTOS DUMONT C E CMEF M' (Santa Cruz de Monte Castelo) e 'SANTOS DUMONT C E CMEF M' (Cascavel);1.233
+226;Moyses Lupion, C E-Ef M;41138880.0;MOYSES LUPION C E CMEF M N PROFIS;Antonina;confirmed;Top match claro (score 1.175 vs 0.883);1.175
+227;29 De Abril, C E-Ef M;41010710.0;11 DE ABRIL C EEF M;Tapejara;ambiguous;Competição próxima entre '11 DE ABRIL C EEF M' (Tapejara) e '29 DE NOVEMBRO C EEF M' (Araruna);0.562
+228;Escola Estadual Professora Abigail Dos Santos Correa;41139895.0;ABIGAIL DOS S CORREA E E CM PROFAEF;Matinhos;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+229;Colégio Estadual Cívico Militar Dídio Augusto de Camargo Viana;41140605.0;DIDIO A DE C VIANA E E CMEF;Paranaguá;confirmed;Top match claro (score 0.815 vs 0.583);0.815
+230;Escola Estadual Cívico Militar Faria Sobrinho;41140664.0;FARIA SOBRINHO E E CMEF;Paranaguá;confirmed;Top match claro (score 1.233 vs 0.562);1.233
+231;Colégio Estadual Cívico-Militar Helena Viana Sundin, Ensino Fundamental e Ensino Médio;41140729.0;HELENA VIANA SUNDIN C E CMEF M;Paranaguá;confirmed;Top match claro (score 0.825 vs 0.502);0.825
+232;Colegio Estadual Hélio Antônio De Souza;41361563.0;HELIO ANTONIO DE SOUZA C E CMEF M;Pontal do Paraná;confirmed;Top match claro (score 1.262 vs 0.637);1.262
+233;Colégio Estadual Sertãozinho;41140052.0;SERTAOZINHO C E CMEF M N PROFIS;Matinhos;confirmed;Candidato único com score 1.117;1.117
+234;Colégio Estadual Cívico Militar Flauzina Dias Viegas;41002148.0;FLAUZINA DIAS VIEGAS C E CMEF M;Paranavaí;confirmed;Top match claro (score 1.262 vs 0.637);1.262
+235;Colégio Estadual Leonel Franca;41002296.0;LEONEL FRANCA C E CMEF M PROFIS;Paranavaí;confirmed;Top match claro (score 1.175 vs 0.745);1.175
+236;Colégio Estadual Sílvio Vidal;41002636.0;SILVIO VIDAL C E CMEF M PROFIS;Paranavaí;confirmed;Top match claro (score 1.175 vs 0.562);1.175
+237;Escola Estadual Agostinho Stefanello;41000021.0;AGOSTINHO STEFANELLO E E CMEF;Alto Paraná;confirmed;Top match claro (score 1.233 vs 0.562);1.233
+238;Colégio Estadual Santo Inácio de Loyola;41004051.0;SANTO INACIO DE LOYOLA C E CMEF M;Terra Rica;confirmed;Top match claro (score 1.262 vs 1.062);1.262
+239;Colégio Estadual Cívico-Militar l Nova Visão;41091396.0;NOVA VISAO C E CMEF M PROFIS;Chopinzinho;confirmed;Top match claro (score 1.175 vs 0.592);1.175
+240;Colégio Estadual Pres. Castelo Branco;41007280.0;CASTELO BRANCO E E CM PRESEF;Tapira;ambiguous;Competição próxima entre 'CASTELO BRANCO E E CM PRESEF' (Tapira) e 'CASTELO BRANCO C E CM PRESE F M P' (Clevelândia);1.233
+241;Tancredo Neves, C E-Ef M;41076869.0;TANCREDO DE A NEVES C E CMEF M N P;Foz do Iguaçu;ambiguous;Competição próxima entre 'TANCREDO DE A NEVES C E CMEF M N P' (Foz do Iguaçu) e 'TANCREDO NEVES C E CMEF M' (Coronel Vivida);1.233
+242;Sebastiao Parana, C E-Ef M;41109422.0;SEBASTIAO PARANA C E CMEF M PROFIS;Palmas;confirmed;Top match claro (score 1.175 vs 0.975);1.175
+243;Colégio Estadual Cívico Militar Monsenhor Eduardo;41082249.0;CARLOS EDUARDO C E CM DEF M;Realeza;ambiguous;Competição próxima entre 'CARLOS EDUARDO C E CM DEF M' (Realeza) e 'EDUARDO C E CM MONSEF M PROFIS' (Palmas);0.762
+244;Carmela Bortot, E E-Ef;41093305.0;CARMELA BORTOT C E CMEF M;Pato Branco;confirmed;Top match claro (score 1.233 vs 0.562);1.233
+245;Castro Alves, C E-Ef M;41093313.0;CASTRO ALVES C E CMEF M;Pato Branco;confirmed;Top match claro (score 1.233 vs 1.033);1.233
+246;Colégio Estadual Rui Barbosa;41093607.0;RUI BARBOSA C E CMEF M;Pato Branco;ambiguous;Competição próxima entre 'RUI BARBOSA C E CMEF M' (Pato Branco) e 'RUI BARBOSA C E CMEF M PROF' (Colombo);1.233
+247;Escola Estadual Irmão Isidoro Dumont - EF;41092694.0;ISIDORO DUMONT E E CM IREF;Itapejara d'Oeste;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+248;Colégio Estadual São João Bosco - EFM;41093666.0;SAO JOAO BOSCO C E CMEF M P;Pato Branco;confirmed;Top match claro (score 1.262 vs 0.958);1.262
+249;Colégio Estadual João C. da Costa;41095537.0;JOAO C DA COSTA C E CMEF M;Palmital;confirmed;Top match claro (score 1.233 vs 1.033);1.233
+250;Colégio Estadual Cívico Militar Dom Pedro I;41056540.0;SAO PEDRO C E CMEF M;Telêmaco Borba;ambiguous;Competição próxima entre 'SAO PEDRO C E CMEF M' (Telêmaco Borba) e 'PEDRO I C E CM DEF M PROFIS' (Pitanga);1.117
+251;Colégio Estadual Cívico Militar Eurico Batista Rosas;41352718.0;EURICO BATISTA ROSAS C E CMEF M;Carambeí;confirmed;Top match claro (score 1.262 vs 0.573);1.262
+252;Colégio Estadual Cívico-Militar Joana Torres Pereira;41060253.0;JOANA T PEREIRA C E CM PROFA EF M;Castro;confirmed;Top match claro (score 1.017 vs 0.625);1.017
+253;Colégio Estadual Prof. Nicolau Hampf;41373960.0;NICOLAU HAMPF C E CM PROFEF M;Castro;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+254;Colégio Estadual Cívico-Militar Alcides Munhoz;41109570.0;ALCIDES MUNHOZ C E CMEF M;Imbituva;confirmed;Top match claro (score 1.233 vs 0.562);1.233
+255;Colégio Estadual Cívico-Militar São Judas Tadeu;41061748.0;SAO JUDAS TADEU C E CMEF M PROF;Palmeira;ambiguous;Competição próxima entre 'SAO JUDAS TADEU C E CMEF M PROF' (Palmeira) e 'SAO JUDAS TADEU E E C EF' (Santa Izabel do Oeste);1.262
+256;Colégio Estadual Cívico-Militar Prof• Leandro Manoel da Costa;41058844.0;LEANDRO M DA COSTA C E CM PROFEF M P;Piraí do Sul;confirmed;Top match claro (score 0.958 vs 0.654);0.958
+257;Colégio Estadual Cívico-Militar General Antônio Sampaio;41062000.0;ANTONIO SAMPAIO C E CM GALEF M;Ponta Grossa;confirmed;Top match claro (score 1.233 vs 0.975);1.233
+258;Colégio Estadual Cívico-Militar Professor Colares;41062302.0;COLARES C E CM PROFEF M;Ponta Grossa;confirmed;Candidato único com score 1.175;1.175
+259;Colégio Estadual Cívico-Militar José Elias da Rocha;41062833.0;JOSE ELIAS DA ROCHA C E CMEF M PROFIS;Ponta Grossa;confirmed;Top match claro (score 1.210 vs 0.758);1.21
+260;Colégio Estadual Cívico-Militar Frei Doroteu de Padua;41063236.0;DOROTEU DE PADUA C E CM FREF M PROFIS;Ponta Grossa;confirmed;Candidato único com score 0.923;0.923
+261;Colégio Estadual Cívico-Militar Coronel Amazonas;41122453.0;AMAZONAS C E CM CELEF M P;Porto Amazonas;confirmed;Top match claro (score 1.175 vs 0.767);1.175
+262;Colégio Estadual Cívico Militar General Osório;41063155.0;OSORIO C E CM GALEF M PROFIS;Ponta Grossa;ambiguous;Competição próxima entre 'OSORIO C E CM GALEF M PROFIS' (Ponta Grossa) e 'OSORIO DUQUE ESTRADA C E CMEF M' (Diamante do Sul);1.117
+263;Colégio cívico militar do Paraná Becker e Silva;41062108.0;BECKER E SILVA C E CM PROFEF M PROFIS;Ponta Grossa;confirmed;Top match claro (score 0.792 vs 0.583);0.792
+264;Colégio Estadual Cívico-Militar Padre Carlos Zelesny;41062191.0;CARLOS ZELESNY C E CM PEEF M;Ponta Grossa;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+265;Colégio Estadual Cívico Militar Prof. Edison Pietrobelli;41354273.0;EDISON PIETROBELLI E E CM PROFEF;Ponta Grossa;confirmed;Top match claro (score 1.233 vs 0.883);1.233
+266;Colégio Cívico-Militar Dr. Epaminondas Novaes Ribas;41062469.0;EPAMINONDAS N RIBAS C E CM DREF M P;Ponta Grossa;confirmed;Top match claro (score 0.815 vs 0.571);0.815
+267;Nossa Sra Da Gloria, C E-Ef M;41063139.0;NOSSA SRA DA GLORIA C E CMEF M;Ponta Grossa;confirmed;Top match claro (score 1.262 vs 0.912);1.262
+268;Colégio Estadual Cívico Militar José de Alencar;41049098.0;JOSE DE ALENCAR C E CMEF M;Curiúva;ambiguous;Competição próxima entre 'JOSE DE ALENCAR C E CMEF M' (Curiúva) e 'JOSE DE ALENCAR C E C E F M N' (Braganey);1.233
+269;Colégio Estadual Cívico-Militar Gregório Szeremeta;41145690.0;GREGORIO SZEREMETA C E CMEF M;Reserva;confirmed;Top match claro (score 1.233 vs 0.562);1.233
+270;Colégio Estadual Prof. Custódio Netto;41056140.0;CUSTODIO NETTO C E CM PROFEF M PROFIS;Telêmaco Borba;confirmed;Top match claro (score 1.175 vs 0.762);1.175
+271;Colégio Estadual Dr. Marcelino Nogueira;41056361.0;MARCELINO NOGUEIRA C E CM DREF M;Telêmaco Borba;ambiguous;Competição próxima entre 'MARCELINO NOGUEIRA C E CM DREF M' (Telêmaco Borba) e 'MARCELINO NOGUEIRA E M CM DREF' (Ribeirão do Pinhal);1.233
+272;Colégio Estadual Profª. Maria Aparecida Militão de S. Pereira;41056388.0;MARIA AP M S PEREIRA C E CM PROFAEF M;Telêmaco Borba;confirmed;Top match claro (score 0.792 vs 0.615);0.792
+273;Colégio Estadual Cívico-Militar São Pedro;41056540.0;SAO PEDRO C E CMEF M;Telêmaco Borba;ambiguous;Competição próxima entre 'SAO PEDRO C E CMEF M' (Telêmaco Borba) e 'SAO PEDRO E E C EF' (Santa Izabel do Oeste);1.233
+274;Colégio Estadual Cívico Militar Presidente Vargas;41021592.0;VARGAS C E CM PRESEF M;Bela Vista do Paraíso;ambiguous;Competição próxima entre 'VARGAS C E CM PRESEF M' (Bela Vista do Paraíso) e 'HEBER S VARGAS C E CM PROF DREF M P' (Londrina);1.175
+275;Colégio Estadual Jardim Alegre;41056264.0;JARDIM ALEGRE C E CMEF M PROFIS;Telêmaco Borba;confirmed;Top match claro (score 1.175 vs 0.940);1.175
+276;Colégio Estadual Jardim Zeballos;41360826.0;JARDIM ZEBALLOS C E CMEF M PROFIS;Guaíra;confirmed;Top match claro (score 1.175 vs 0.762);1.175
+277;Colégio Estadual Frentino Sackser;41065425.0;FRENTINO SACKSER C E CMEF M PROF;Marechal Cândido Rondon;confirmed;Candidato único com score 1.233;1.233
+278;Colegio Estadual Marechal Rondon;41065662.0;RONDON C E CM MALEF M;Marechal Cândido Rondon;ambiguous;Competição próxima entre 'RONDON C E CM MALEF M' (Marechal Cândido Rondon) e 'RONDON C E CM MALEF M PROFIS' (Campo Mourão);1.175
+279;Colégio Estadual Barão do Rio Branco;41032853.0;RIO BRANCO C E CM BAR DOEF M;Londrina;ambiguous;Competição próxima entre 'RIO BRANCO C E CM BAR DOEF M' (Londrina) e 'RIO BRANCO C E CM BAR DOEF M' (Palotina);1.233
+280;Colégio Estadual Cívico-Militar Antonio José Reis;41068203.0;ANTONIO J REIS C E CMEF M;Toledo;confirmed;Top match claro (score 0.958 vs 0.637);0.958
+281;Colégio Estadual Cívico Militar Jardim Maracanã;41068653.0;JARDIM MARACANA C E CMEF M;Toledo;confirmed;Top match claro (score 1.233 vs 0.745);1.233
+282;Novo Horizonte, C E-Ef M;41068980.0;NOVO HORIZONTE C E CMEF M PROFIS;Toledo;ambiguous;Competição próxima entre 'NOVO HORIZONTE C E CMEF M PROFIS' (Toledo) e 'NOVO HORIZONTE C EEF M' (Campo Mourão);1.175
+283;Escola Estadual Graciliano Ramos;41067029.0;GRACILIANO RAMOS E E CMEF;Santa Helena;confirmed;Top match claro (score 1.233 vs 0.883);1.233
+284;Joao Arnaldo Ritt, C E-Ef M;41068688.0;JOAO ARNALDO RITT C E CMEF M;Toledo;confirmed;Top match claro (score 1.262 vs 0.654);1.262
+285;Luiz Augusto M Rego, C E-Ef M Profis;41068807.0;LUIZ AUGUSTO M REGO C E CMEF M PROFIS;Toledo;confirmed;Top match claro (score 1.210 vs 0.625);1.21
+286;Colégio Estadual Cívico-Militar Cruzeiro do Oeste;41005090.0;CRUZEIRO DO OESTE C E CMEF M PROFIS;Cruzeiro do Oeste;confirmed;Top match claro (score 1.175 vs 0.762);1.175
+287;Douradina, C E-Ef M;41005384.0;DOURADINA C E CMEF M PROFIS;Douradina;confirmed;Candidato único com score 1.117;1.117
+288;Colégio Cívico militar Padre Manuel Da Nóbrega;41008316.0;MANUEL DA NOBREGA C E CM PEEF M P;Umuarama;confirmed;Top match claro (score 0.958 vs 0.758);0.958
+289;Colégio Estadual Monteiro Lobato - EF M;41022416.0;MONTEIRO LOBATO C E CMEF M;Sertanópolis;ambiguous;Competição próxima entre 'MONTEIRO LOBATO C E CMEF M' (Sertanópolis) e 'MONTEIRO LOBATO C E CMEF M' (Cornélio Procópio);1.233
+290;Zilda Arns, C E Dra- Ef M;41008472.0;ZILDA ARNS C E CM DRA EF M;Umuarama;confirmed;Top match claro (score 1.350 vs 1.175);1.35
+291;Colégio Estadual Anchieta;41004957.0;ANCHIETA C E CMEF M N;Cruzeiro do Oeste;ambiguous;Competição próxima entre 'ANCHIETA C E CMEF M N' (Cruzeiro do Oeste) e 'JOSE DE ANCHIETA C E CM PEEF M PROFIS' (Apucarana);1.175
+292;Castelo Branco, C E Pres-Ef M;41007280.0;CASTELO BRANCO E E CM PRESEF;Tapira;ambiguous;Competição próxima entre 'CASTELO BRANCO E E CM PRESEF' (Tapira) e 'CASTELO BRANCO C E CM PRESE F M P' (Clevelândia);1.233
+293;Colégio Estadual Cívico-Militar Novo Milênio;41358791.0;NOVO MILENIO C E CMEF M;Bituruna;confirmed;Top match claro (score 1.233 vs 0.883);1.233
+294;Colégio Estadual Bernardina Schleder;41117905.0;BERNARDINA SCHLEDER C E CMEF M;União da Vitória;confirmed;Top match claro (score 1.233 vs 0.412);1.233
+295;Colégio Estadual João Paulo II;41057694.0;JOAO PAULO II C E CMEF M;Arapoti;ambiguous;Competição próxima entre 'JOAO PAULO II C E CMEF M' (Arapoti) e 'JOAO PAULO I C E CM PAPAEF M P' (Curitiba);1.233
+296;Colégio Estadual Anita Canet;41058348.0;ANITA CANET C E CMEF M;Jaguariaíva;confirmed;Top match claro (score 1.233 vs 1.033);1.233
+297;Colégio Estadual Olavo Bilac;41014375.0;OLAVO BILAC C E CMEF M;Ubiratã;ambiguous;Competição próxima entre 'OLAVO BILAC C E CMEF M' (Ubiratã) e 'OLAVO BILAC C E CMEF M' (Faxinal);1.233
+298;Colégio Estadual Cívico-Militar Newton Sampaio EFM;41052250.0;NEWTON SAMPAIO C E CMEF M;São José da Boa Vista;confirmed;Top match claro (score 1.233 vs 0.762);1.233
+299;Colégio Estadual Miguel Nassif Maluf;41053494.0;MIGUEL NASSIF MALUF C E CMEF M;Wenceslau Braz;confirmed;Top match claro (score 1.262 vs 0.617);1.262
+300;Escola Estadual Erico Verissimo - Ensino Fundamental;41102274.0;ERICO VERISSIMO C E CMEF M;Laranjeiras do Sul;ambiguous;Competição próxima entre 'ERICO VERISSIMO C E CMEF M' (Laranjeiras do Sul) e 'ERICO VERISSIMO C E CMEF M PROFIS' (Cambé);0.815
+301;Vila John Kennedy, C E Da-Ef M;41106172.0;VILA JOHN KENNEDY C E CM DAEF M;Quedas do Iguaçu;confirmed;Top match claro (score 1.262 vs 0.654);1.262
+302;Colégio Estadual Osório Duque Estrada;41073037.0;OSORIO DUQUE ESTRADA C E CMEF M;Diamante do Sul;confirmed;Top match claro (score 1.262 vs 0.637);1.262
+303;Colégio Estadua Alto Recreio;41105176.0;ALTO RECREIO C E CMEF M;Quedas do Iguaçu;confirmed;Top match claro (score 0.815 vs 0.421);0.815
+304;Colégio Estadual Cívico Militar Júlio Farah;41049764.0;JULIO FARAH C E CMEF M;Ibaiti;confirmed;Top match claro (score 1.233 vs 0.745);1.233
+305;Colégio Estadual Cívico-Militar Professor Segismundo Antunes Netto 1º e 2º Grau;41052684.0;SEGISMUNDO A NETTO C E CM PROFEF M N;Siqueira Campos;probable;Top match claro (score 0.667 vs 0.502);0.667

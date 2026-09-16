@@ -239,3 +239,47 @@ def make_ideb_vs_projecao_scatter(df: pd.DataFrame, title: str):
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
     )
     return fig
+
+def make_school_map(df: pd.DataFrame, metric_col: str, metric_label: str, title: str):
+    """
+    Gera mapa interativo de dispersão geográfica das escolas do Paraná com suporte defensivo ao Plotly 6/7.
+    """
+    df_valid = df.dropna(subset=["LATITUDE", "LONGITUDE", "TIPO_GESTAO"]).copy()
+    if df_valid.empty:
+        return None
+
+    hover_dict = {
+        "NO_MUNICIPIO": True,
+        "TIPO_GESTAO": True,
+        "ETAPA": True,
+        "LATITUDE": False,
+        "LONGITUDE": False
+    }
+    if metric_col in df_valid.columns:
+        hover_dict[metric_col] = ":.2f"
+
+    map_kwargs = dict(
+        data_frame=df_valid,
+        lat="LATITUDE",
+        lon="LONGITUDE",
+        color="TIPO_GESTAO",
+        color_discrete_map=COLOR_MAP,
+        hover_name="NO_ESCOLA",
+        hover_data=hover_dict,
+        zoom=6.0,
+        center={"lat": -24.75, "lon": -51.5},
+        title=title,
+        opacity=0.8
+    )
+
+    if hasattr(px, "scatter_map"):
+        fig = px.scatter_map(map_style="carto-positron", **map_kwargs)
+    else:
+        fig = px.scatter_mapbox(mapbox_style="carto-positron", **map_kwargs)
+
+    fig.update_layout(
+        margin=dict(l=10, r=10, t=40, b=10),
+        legend=dict(orientation="h", yanchor="bottom", y=1.01, xanchor="right", x=1)
+    )
+    return fig
+
