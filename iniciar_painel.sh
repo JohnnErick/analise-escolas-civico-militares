@@ -30,4 +30,4 @@ if [ ! -d ".venv" ]; then
 fi
 
 echo "🚀 Iniciando painel no navegador..."
-.venv/bin/streamlit run app.py
+.venv/bin/streamlit run app.py --server.headless false

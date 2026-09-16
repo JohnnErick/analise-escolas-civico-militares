@@ -2,10 +2,9 @@
 gatherUsageStats = false
 
 [server]
-headless = false
+headless = true
 enableCORS = false
 enableXsrfProtection = true
-port = 8501
 
 [theme]
 base = "light"

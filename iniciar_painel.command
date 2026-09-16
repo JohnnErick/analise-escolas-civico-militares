@@ -51,4 +51,4 @@ echo "🚀 Abrindo o painel no seu navegador de internet..."
 echo "💡 Dica: Para encerrar o painel, basta fechar esta janela do Terminal."
 echo ""
 
-.venv/bin/streamlit run app.py
+.venv/bin/streamlit run app.py --server.headless false

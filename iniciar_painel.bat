@@ -43,5 +43,5 @@ echo 🚀 Abrindo o painel no seu navegador de internet...
 echo 💡 Dica: Para encerrar o painel, basta fechar esta janela.
 echo.
 
-call .venv\Scripts\streamlit.exe run app.py
+call .venv\Scripts\streamlit.exe run app.py --server.headless false
 pause
