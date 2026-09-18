@@ -460,3 +460,107 @@ def make_school_map(df: pd.DataFrame, metric_col: str, metric_label: str, title:
     )
     return fig
 
+def make_before_after_slope_chart(
+    df: pd.DataFrame,
+    metric_col: str,
+    y_label: str,
+    year_before: int = 2019,
+    year_after: int = 2023,
+    group_col: str = "GRUPO_COMPARA",
+    title: str = "Trajetória: Antes vs Depois da Implantação"
+):
+    if group_col not in df.columns or metric_col not in df.columns or "ANO" not in df.columns:
+        return None
+    sub = df[df["ANO"].isin([year_before, year_after])].dropna(subset=[metric_col, group_col])
+    if sub.empty:
+        return None
+        
+    means = sub.groupby(["ANO", group_col])[metric_col].agg(media="mean", contagem="count").reset_index()
+    grupos = sorted(means[group_col].unique().tolist())
+    if "Cívico-Militar" in grupos:
+        grupos.remove("Cívico-Militar")
+        grupos = ["Cívico-Militar"] + grupos
+
+    fig = go.Figure()
+    x_categories = [f"{year_before} (Linha de Base)", f"{year_after} (Pós-Programa)"]
+    
+    for g in grupos:
+        g_data = means[means[group_col] == g].sort_values("ANO")
+        if len(g_data) < 2:
+            continue
+        try:
+            val_before = g_data[g_data["ANO"] == year_before]["media"].values[0]
+            val_after = g_data[g_data["ANO"] == year_after]["media"].values[0]
+            n_after = g_data[g_data["ANO"] == year_after]["contagem"].values[0]
+            delta = val_after - val_before
+            
+            cor = COLOR_MAP.get(g, "#555555")
+            
+            fig.add_trace(go.Scatter(
+                x=x_categories,
+                y=[val_before, val_after],
+                mode="lines+markers+text",
+                name=f"{g} (Δ {delta:+.2f})",
+                line=dict(color=cor, width=4 if g == "Cívico-Militar" else 3),
+                marker=dict(size=12, symbol="circle"),
+                text=[f"{val_before:.2f}", f"{val_after:.2f} (Δ {delta:+.2f})"],
+                textposition=["top left", "top right"],
+                hovertemplate=f"<b>{g}</b><br>Antes ({year_before}): {val_before:.2f}<br>Depois ({year_after}): {val_after:.2f}<br>Variação: {delta:+.2f} ({n_after} escolas)<extra></extra>"
+            ))
+        except (IndexError, KeyError):
+            continue
+        
+    fig.update_layout(
+        title=title,
+        xaxis_title="",
+        yaxis_title=y_label,
+        template=CHART_THEME,
+        margin=dict(l=40, r=40, t=50, b=40),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
+    )
+    return fig
+
+def make_delta_distribution_histogram(
+    df: pd.DataFrame,
+    metric_col: str,
+    x_label: str,
+    year_before: int = 2019,
+    year_after: int = 2023,
+    group_col: str = "GRUPO_COMPARA",
+    title: str = "Distribuição do Ganho/Perda Individual (Δ por Escola)"
+):
+    if group_col not in df.columns or metric_col not in df.columns or "ANO" not in df.columns or "ID_ESCOLA" not in df.columns:
+        return None
+        
+    sub = df[df["ANO"].isin([year_before, year_after])].dropna(subset=[metric_col, group_col, "ID_ESCOLA"])
+    if sub.empty:
+        return None
+        
+    pivot = sub.pivot_table(index=["ID_ESCOLA", group_col], columns="ANO", values=metric_col).dropna()
+    if year_before not in pivot.columns or year_after not in pivot.columns:
+        return None
+        
+    pivot["DELTA"] = pivot[year_after] - pivot[year_before]
+    df_delta = pivot.reset_index()
+    
+    fig = px.histogram(
+        df_delta,
+        x="DELTA",
+        color=group_col,
+        color_discrete_map=COLOR_MAP,
+        barmode="overlay",
+        marginal="box",
+        opacity=0.65,
+        title=title,
+        labels={"DELTA": f"Variação (Δ {year_after} - {year_before})", group_col: "Grupo"},
+        template=CHART_THEME
+    )
+    fig.add_vline(x=0, line_dash="dash", line_color="black", annotation_text="Sem Variação (Δ = 0)")
+    fig.update_layout(
+        margin=dict(l=40, r=40, t=50, b=40),
+        xaxis_title=f"Variação individual ({x_label})",
+        yaxis_title="Quantidade de Escolas",
+        legend=dict(title="Grupo", orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
+    )
+    return fig
+

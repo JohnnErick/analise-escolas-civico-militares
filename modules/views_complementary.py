@@ -95,6 +95,21 @@ def render_complementary_view(df: pd.DataFrame):
         st.subheader("Taxa de Aprovação Escolar (%)")
         render_kpi_cards(df, "TAXA_APROVACAO", "Taxa de Aprovação", format_str="{:.1f}%")
         
+        # Cria cópia com Taxa de Não-Aprovação
+        df_aprov = df.copy()
+        if "TAXA_APROVACAO" in df_aprov.columns:
+            df_aprov["TAXA_NAO_APROVACAO"] = 100.0 - df_aprov["TAXA_APROVACAO"]
+            
+        with st.expander("⚠️ Ver Taxa de Não-Aprovação (Reprovações + Abandonos Somados)", expanded=False):
+            st.markdown(
+                r"""
+                Como a planilha oficial de divulgação do IDEB não discrimina reprovações de abandonos escolares, 
+                a **Taxa de Não-Aprovação** ($100\% - \text{Aprovação}$) representa o índice consolidado de retenção e evasão da unidade escolar.
+                """
+            )
+            render_kpi_cards(df_aprov, "TAXA_NAO_APROVACAO", "Não-Aprovação (Reprovação + Abandono)", format_str="{:.1f}%")
+            st.caption("Fonte: Calculado a partir de 100% menos a taxa de aprovação oficial do INEP.")
+        
         c1, c2 = st.columns(2)
         with c1:
             fig_box = make_boxplot_comparison(

@@ -102,13 +102,44 @@ def render_explorer_view(df_filtrado: pd.DataFrame):
             c3.metric("Rede de Ensino", info_escola["REDE"])
             c4.metric("Classificação", info_escola["TIPO_GESTAO"])
             
+            # Contexto Territorial no ano mais recente
+            ano_recente = escola_df["ANO"].max()
+            etapa_recente = escola_df[escola_df["ANO"] == ano_recente]["ETAPA"].values[0] if not escola_df.empty else ""
+            rec_row = escola_df[escola_df["ANO"] == ano_recente].iloc[0]
+            
+            df_mun_peer = df_all[(df_all["NO_MUNICIPIO"] == info_escola["NO_MUNICIPIO"]) & (df_all["ETAPA"] == etapa_recente) & (df_all["ANO"] == ano_recente)]
+            df_est_peer = df_all[(df_all["ETAPA"] == etapa_recente) & (df_all["ANO"] == ano_recente)]
+            
+            st.markdown(f"##### 📍 Comparativo Local: Escola vs Município e Estado (Ano {ano_recente} — {etapa_recente})")
+            
+            v_saeb = rec_row.get("SAEB_NOTA_MEDIA", np.nan)
+            m_mun_saeb = df_mun_peer["SAEB_NOTA_MEDIA"].mean() if not df_mun_peer.empty else np.nan
+            m_est_saeb = df_est_peer["SAEB_NOTA_MEDIA"].mean() if not df_est_peer.empty else np.nan
+            d_mun = (v_saeb - m_mun_saeb) if (pd.notna(v_saeb) and pd.notna(m_mun_saeb)) else np.nan
+            
+            v_aprov = rec_row.get("TAXA_APROVACAO", np.nan)
+            m_mun_aprov = df_mun_peer["TAXA_APROVACAO"].mean() if not df_mun_peer.empty else np.nan
+            
+            k1, k2, k3, k4 = st.columns(4)
+            with k1:
+                st.metric("Nota Média SAEB", f"{v_saeb:.2f}" if pd.notna(v_saeb) else "Sem nota")
+            with k2:
+                st.metric(f"Média em {info_escola['NO_MUNICIPIO']}", f"{m_mun_saeb:.2f}" if pd.notna(m_mun_saeb) else "-", help=f"Média das {len(df_mun_peer)} escolas da etapa no município")
+            with k3:
+                d_str = f"{d_mun:+.2f}" if pd.notna(d_mun) else "-"
+                st.metric("Diferença vs Município", d_str, delta=d_str if pd.notna(d_mun) else None, delta_color="off")
+            with k4:
+                st.metric("Média Estadual (PR)", f"{m_est_saeb:.2f}" if pd.notna(m_est_saeb) else "-")
+                
             st.markdown(f"#### Histórico de Desempenho: **{info_escola['NO_ESCOLA']}**")
             
             # Histórico das notas em tabela
             tabela_historico = escola_df[[
-                "ANO", "ETAPA", "SAEB_PORTUGUES", "SAEB_MATEMATICA",
-                "SAEB_NOTA_MEDIA", "IDEB_OBSERVADO", "IDEB_PROJECAO", "TAXA_APROVACAO"
+                c for c in ["ANO", "ETAPA", "SAEB_PORTUGUES", "SAEB_MATEMATICA",
+                "SAEB_NOTA_MEDIA", "IDEB_OBSERVADO", "IDEB_PROJECAO", "TAXA_APROVACAO"] if c in escola_df.columns
             ]].copy()
+            
+            tabela_historico["TAXA_NAO_APROVACAO"] = 100.0 - tabela_historico["TAXA_APROVACAO"]
             
             st.dataframe(
                 tabela_historico.style.format({
@@ -117,11 +148,13 @@ def render_explorer_view(df_filtrado: pd.DataFrame):
                     "SAEB_NOTA_MEDIA": "{:.2f}",
                     "IDEB_OBSERVADO": "{:.2f}",
                     "IDEB_PROJECAO": "{:.2f}",
-                    "TAXA_APROVACAO": "{:.1f}%"
-                }),
+                    "TAXA_APROVACAO": "{:.1f}%",
+                    "TAXA_NAO_APROVACAO": "{:.1f}%"
+                }, na_rep="-"),
                 use_container_width=True,
                 hide_index=True
             )
+            st.caption("ℹ️ **Taxa de Não-Aprovação:** Corresponde a 100% menos a taxa de aprovação (soma de reprovações e abandonos/evasão).")
             
             # Gráfico de evolução da escola
             if not escola_df.dropna(subset=["SAEB_PORTUGUES", "SAEB_MATEMATICA"]).empty:

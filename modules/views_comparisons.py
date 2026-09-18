@@ -33,7 +33,14 @@ def render_comparisons_view(df: pd.DataFrame, df_raw: pd.DataFrame):
             "📋 Taxa de Aprovação Escolar (%)",
             "{:.1f}%",
             "Taxa de Aprovação (%)",
-            "Percentual de estudantes aprovados no ano letivo. Comenta-se amplamente no debate educacional sobre taxas de aprovação próximas a 100% e sua relação com notas reais em avaliações padronizadas."
+            "Percentual de estudantes promovidos no ano letivo. Comenta-se amplamente no debate educacional sobre taxas de aprovação próximas a 100% e sua relação com proficiências reais em avaliações padronizadas."
+        ),
+        (
+            "TAXA_NAO_APROVACAO",
+            "⚠️ Taxa de Não-Aprovação (Reprovação + Abandono %)",
+            "{:.1f}%",
+            "Não-Aprovação (%)",
+            "Percentual de retenção ou evasão (calculado por 100% - Taxa de Aprovação). Como a base de divulgação do IDEB não decompõe reprovação e abandono, este indicador sintetiza o fluxo de interrupção escolar."
         ),
         (
             "SAEB_NOTA_MEDIA",
@@ -126,6 +133,10 @@ def render_comparisons_view(df: pd.DataFrame, df_raw: pd.DataFrame):
             df_work["DELTA_META_IDEB"] = df_work["IDEB_OBSERVADO"] - df_work["IDEB_PROJECAO"]
         else:
             df_work["DELTA_META_IDEB"] = np.nan
+            
+    # Cria coluna de Não-Aprovação (100% - Taxa de Aprovação)
+    if "TAXA_APROVACAO" in df_work.columns:
+        df_work["TAXA_NAO_APROVACAO"] = 100.0 - df_work["TAXA_APROVACAO"]
             
     if filtro_amostra == "Apenas com Notas SAEB":
         df_work = df_work[df_work["SAEB_PORTUGUES"].notna() & df_work["SAEB_MATEMATICA"].notna()]
