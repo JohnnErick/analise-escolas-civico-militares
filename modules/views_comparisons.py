@@ -369,18 +369,27 @@ def render_comparisons_view(df: pd.DataFrame, df_raw: pd.DataFrame):
         df_cm_only = df_comp[df_comp["GRUPO_COMPARA"] == "Cívico-Militar"].dropna(subset=[metric_col])
         if not df_cm_only.empty:
             c_top, c_bot = st.columns(2)
-            cols_show = ["NO_ESCOLA", "NO_MUNICIPIO", metric_col, "SAEB_NOTA_MEDIA", "TAXA_APROVACAO"]
-            cols_show = [c for c in cols_show if c in df_cm_only.columns]
+            cols_show = ["NO_ESCOLA", "NO_MUNICIPIO"]
+            for col_cand in [metric_col, "SAEB_NOTA_MEDIA", "TAXA_APROVACAO"]:
+                if col_cand in df_cm_only.columns and col_cand not in cols_show:
+                    cols_show.append(col_cand)
+
+            fmt_dict = {
+                metric_col: format_str,
+                "SAEB_NOTA_MEDIA": "{:.2f}",
+                "TAXA_APROVACAO": "{:.1f}%",
+                "TAXA_NAO_APROVACAO": "{:.1f}%",
+                "IDEB_OBSERVADO": "{:.2f}",
+                "SAEB_PORTUGUES": "{:.2f}",
+                "SAEB_MATEMATICA": "{:.2f}",
+            }
+            fmt_show = {c: fmt_dict[c] for c in cols_show if c in fmt_dict}
             
             with c_top:
                 st.markdown(f"##### 🔼 Top 10 Escolas Cívico-Militares ({metric_label})")
                 top10 = df_cm_only.sort_values(metric_col, ascending=False).head(10)[cols_show]
                 st.dataframe(
-                    top10.style.format({
-                        metric_col: format_str,
-                        "SAEB_NOTA_MEDIA": "{:.2f}",
-                        "TAXA_APROVACAO": "{:.1f}%"
-                    }, na_rep="-"),
+                    top10.style.format(fmt_show, na_rep="-"),
                     use_container_width=True,
                     hide_index=True
                 )
@@ -389,11 +398,7 @@ def render_comparisons_view(df: pd.DataFrame, df_raw: pd.DataFrame):
                 st.markdown(f"##### 🔽 10 Menores Índices entre Cívico-Militares ({metric_label})")
                 bot10 = df_cm_only.sort_values(metric_col, ascending=True).head(10)[cols_show]
                 st.dataframe(
-                    bot10.style.format({
-                        metric_col: format_str,
-                        "SAEB_NOTA_MEDIA": "{:.2f}",
-                        "TAXA_APROVACAO": "{:.1f}%"
-                    }, na_rep="-"),
+                    bot10.style.format(fmt_show, na_rep="-"),
                     use_container_width=True,
                     hide_index=True
                 )
