@@ -97,13 +97,14 @@ analise-escolas/
 │   ├── data_loader.py       # Carregamento e filtros com cache
 │   ├── charts.py            # Visualizações Plotly e mapa interativo
 │   ├── components.py        # KPIs, cartões métricos e tabelas
-│   ├── views_comparisons.py # ⚖️ Central de Comparações & Targets Dinâmicos
-│   ├── views_saeb.py        # 🎯 Aba SAEB Detalhado
-│   ├── views_complementary.py # 📋 Aba Aprovação & Rendimento (IDEB)
-│   ├── views_temporal.py    # 📈 Aba Séries Históricas com Benchmarks
-│   ├── views_geo.py         # 🗺️ Aba Comparativo Municipal e Mapa
-│   ├── views_explorer.py    # 🔎 Aba Explorador de Microdados e Ficha Individual
-│   └── views_methodology.py # 📖 Aba Metodologia e Transparência
+│   ├── views_overview.py    # 📊 Visão Geral: Resumo documental e evolução temporal 2020-2026
+│   ├── views_map.py         # 🗺️ Mapa: Distribuição geográfica interativa com filtros
+│   ├── views_school_list.py # 🏫 Escolas: Tabela pesquisável com ordenação neutra
+│   ├── views_school_detail.py # 🔍 Detalhe da Escola: Ficha cadastral, timeline CCM e indicadores
+│   ├── views_comparisons.py # ⚖️ Comparações: Benchmarks dinâmicos de aprovação, fluxo e índices SAEB/IDEB
+│   ├── views_evolution.py   # 📈 Evolução: Análise de linha de base pré-intervenção
+│   ├── views_methodology.py # 📖 Metodologia e Limitações formais
+│   └── views_transparency.py # 💾 Dados Abertos e Downloads em CSV
 └── scripts/
     └── spatial_matching_kml.py # Algoritmo de matching geoespacial KML x INEP
 ```

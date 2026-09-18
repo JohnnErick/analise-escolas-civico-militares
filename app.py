@@ -1,19 +1,42 @@
+import sys
+import importlib
 import streamlit as st
 import pandas as pd
-from modules.data_loader import load_tidy_data, get_filter_options, apply_filters
+
+# Recarrega submódulos locais caso o processo do Streamlit já os tenha em memória
+for _mod in [
+    "modules.data_loader",
+    "modules.components",
+    "modules.charts",
+    "modules.views_overview",
+    "modules.views_map",
+    "modules.views_school_list",
+    "modules.views_school_detail",
+    "modules.views_comparisons",
+    "modules.views_evolution",
+    "modules.views_methodology",
+    "modules.views_transparency"
+]:
+    if _mod in sys.modules:
+        try:
+            importlib.reload(sys.modules[_mod])
+        except Exception:
+            pass
+
 from modules.components import render_header, render_investigation_banner
+from modules.views_overview import render_overview_view
+from modules.views_map import render_map_view
+from modules.views_school_list import render_school_list_view
+from modules.views_school_detail import render_school_detail_view
 from modules.views_comparisons import render_comparisons_view
-from modules.views_saeb import render_saeb_view
-from modules.views_temporal import render_temporal_view
-from modules.views_complementary import render_complementary_view
-from modules.views_geo import render_geo_view
-from modules.views_explorer import render_explorer_view
-from modules.views_directory import render_directory_view
+from modules.views_evolution import render_evolution_view
 from modules.views_methodology import render_methodology_view
+from modules.views_transparency import render_transparency_view
+from modules.data_loader import load_cadastro
 
 # Configuração da página
 st.set_page_config(
-    page_title="Painel de Análise: Escolas Cívico-Militares",
+    page_title="Painel de Investigação: Colégios Cívico-Militares do Paraná",
     page_icon="🏫",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -23,156 +46,109 @@ def main():
     render_header()
     render_investigation_banner()
     
-    # Carregamento de dados com cache
-    try:
-        df_raw = load_tidy_data()
-    except Exception as e:
-        st.error(f"Erro ao carregar os dados estruturados: {e}")
-        st.stop()
+    # Gerenciamento de roteamento por Query Params e Session State
+    query_inep = st.query_params.get("escola") or st.query_params.get("inep")
+    if "selected_inep" not in st.session_state:
+        st.session_state["selected_inep"] = None
         
-    filter_opts = get_filter_options(df_raw)
-    
+    if query_inep and str(query_inep).isdigit():
+        st.session_state["selected_inep"] = int(query_inep)
+        
     # ==========================================
-    # SIDEBAR: FILTROS DINÂMICOS
+    # SIDEBAR: NAVEGAÇÃO & BUSCA GLOBAL
     # ==========================================
-    st.sidebar.title("🎛️ Filtros de Investigação")
+    st.sidebar.title("🏫 Investigação CCM-PR")
+    st.sidebar.caption("Dados Oficiais Auditados — Estado do Paraná")
     
-    # 1. Filtro de Ano
-    ano_selecionado = st.sidebar.selectbox(
-        "Ano de Referência:",
-        options=["Todos os Anos"] + filter_opts["anos"],
-        index=1  # Padrão: 2023 (ou ano mais recente com ciclo completo)
-    )
-    anos_filtro = [ano_selecionado] if ano_selecionado != "Todos os Anos" else None
-    
-    # 2. Filtro de Etapa de Ensino (Organizado por relevância para o programa)
-    etapas_disponiveis = ["Anos Finais (6º-9º)", "Ensino Médio", "Todas as Etapas", "Anos Iniciais (1º-5º)"]
-    etapa_selecionada = st.sidebar.selectbox(
-        "Etapa de Ensino:",
-        options=etapas_disponiveis,
-        index=0,  # Padrão: Anos Finais (foco primordial dos colégios cívico-militares)
-        help="O programa estadual (SEED-PR) concentra-se nos Anos Finais do Fundamental e no Ensino Médio."
-    )
-    etapas_filtro = [etapa_selecionada] if etapa_selecionada != "Todas as Etapas" else None
-    
-    if etapa_selecionada == "Anos Iniciais (1º-5º)":
-        st.sidebar.info(
-            "ℹ️ **Anos Iniciais**: O programa cívico-militar da SEED-PR destina-se aos Anos Finais e Ensino Médio. "
-            "Nos Anos Iniciais (geridos pelas redes municipais), apenas 18 escolas estaduais cívico-militares possuíam turmas de 5º ano avaliadas no SAEB 2023.",
-            icon="💡"
-        )
-    
-    # 3. Filtro de Rede de Ensino
-    redes_selecionadas = st.sidebar.multiselect(
-        "Rede de Ensino:",
-        options=filter_opts["redes"],
-        default=filter_opts["redes"]
-    )
-    
-    # 4. Filtro de Município
-    municipios_selecionados = st.sidebar.multiselect(
-        "Municípios (deixe em branco para todos):",
-        options=filter_opts["municipios"],
-        default=[]
-    )
-    
-    # 5. Filtro de Tipo de Gestão
-    tipo_gestao = st.sidebar.radio(
-        "Grupo de Gestão:",
-        options=["Todas", "Cívico-Militar", "Não Cívico-Militar"],
-        index=0,
-        horizontal=True
-    )
-    
-    # 6. Busca textual por escola / ID
-    busca_escola = st.sidebar.text_input(
-        "Buscar escola por nome ou código INEP:",
-        placeholder="Ex: Alberto Krause, 41122801..."
-    )
-    
-    # Aplicação dos filtros
-    df_filtrado = apply_filters(
-        df_raw,
-        anos=anos_filtro,
-        etapas=etapas_filtro,
-        redes=redes_selecionadas,
-        municipios=municipios_selecionados if municipios_selecionados else None,
-        tipo_gestao=tipo_gestao,
-        search_query=busca_escola
-    )
-    
-    # Resumo da Amostra na Sidebar
+    # Busca Global Rápida por Escola / INEP
     st.sidebar.markdown("---")
-    st.sidebar.markdown("##### 🏛️ Universo Cívico-Militar (SEED-PR)")
-    st.sidebar.caption("Relação Oficial: **306 colégios** (305 estabelecimentos ativos no PR)")
+    st.sidebar.markdown("##### 🔍 Busca Direta de Escola")
     
-    total_cm = df_filtrado[df_filtrado["TIPO_GESTAO"] == "Cívico-Militar"]["ID_ESCOLA"].nunique() if not df_filtrado.empty else 0
-    cm_com_saeb = df_filtrado[(df_filtrado["TIPO_GESTAO"] == "Cívico-Militar") & df_filtrado["SAEB_PORTUGUES"].notna()]["ID_ESCOLA"].nunique()
-    
-    st.sidebar.write(f"• Cadastradas no filtro: **{total_cm:,}** escolas")
-    st.sidebar.write(f"• Com notas SAEB: **{cm_com_saeb:,}** avaliadas")
-    
-    st.sidebar.markdown("##### 🏫 Não Cívico-Militares")
-    total_ncm = df_filtrado[df_filtrado["TIPO_GESTAO"] == "Não Cívico-Militar"]["ID_ESCOLA"].nunique() if not df_filtrado.empty else 0
-    ncm_com_saeb = df_filtrado[(df_filtrado["TIPO_GESTAO"] == "Não Cívico-Militar") & df_filtrado["SAEB_PORTUGUES"].notna()]["ID_ESCOLA"].nunique()
-
-    
-    st.sidebar.write(f"• Cadastradas no filtro: **{total_ncm:,}** escolas")
-    st.sidebar.write(f"• Com notas SAEB: **{ncm_com_saeb:,}** avaliadas")
-    
-    if len(df_filtrado) == 0:
-        st.warning("Nenhum dado encontrado para a combinação de filtros selecionada. Ajuste os filtros na barra lateral.")
-        st.stop()
-
-        
-    # ==========================================
-    # NAVEGAÇÃO PRINCIPAL (ABAS)
-    # ==========================================
-    nav_tab0, nav_tab1, nav_tab2, nav_tab3, nav_tab4, nav_tab5, nav_tab6, nav_tab7 = st.tabs([
-        "🏫 Catálogo de Escolas",
-        "⚖️ Comparações & Targets",
-        "🎯 SAEB Detalhado",
-        "📋 Aprovação & Rendimento",
-        "📈 Séries Históricas",
-        "🗺️ Comparativo Municipal",
-        "🔎 Explorador & Microdados",
-        "📖 Metodologia & Transparência"
-    ])
-    
-    with nav_tab0:
-        render_directory_view(df_raw)
-        
-    with nav_tab1:
-        render_comparisons_view(df_filtrado, df_raw)
-        
-    with nav_tab2:
-        render_saeb_view(df_filtrado)
-        
-    with nav_tab3:
-        render_complementary_view(df_filtrado)
-        
-    with nav_tab4:
-        # Na evolução temporal, passamos o dataframe sem o filtro de ano único se o usuário filtrou um único ano
-        # para que ele possa ver a série completa da etapa/municípios selecionados
-        df_temporal = apply_filters(
-            df_raw,
-            anos=None,
-            etapas=etapas_filtro,
-            redes=redes_selecionadas,
-            municipios=municipios_selecionados if municipios_selecionados else None,
-            tipo_gestao=tipo_gestao,
-            search_query=busca_escola
+    try:
+        df_cad = load_cadastro()
+        lista_busca = [
+            f"{r['nome_escola']} — {r['municipio']} (INEP: {r['codigo_inep']})"
+            for _, r in df_cad.sort_values(["municipio", "nome_escola"]).iterrows()
+        ]
+        busca_global = st.sidebar.selectbox(
+            "Localizar qualquer escola:",
+            options=["Digite ou selecione uma escola..."] + lista_busca,
+            index=0,
+            key="sidebar_global_school_search"
         )
-        render_temporal_view(df_temporal)
+        if busca_global != "Digite ou selecione uma escola...":
+            inep_buscado = int(busca_global.split("INEP: ")[-1].replace(")", ""))
+            if st.session_state["selected_inep"] != inep_buscado:
+                st.session_state["selected_inep"] = inep_buscado
+                st.query_params["escola"] = str(inep_buscado)
+                st.rerun()
+    except Exception as e:
+        st.sidebar.warning("Carregamento cadastral em andamento...")
         
-    with nav_tab5:
-        render_geo_view(df_filtrado)
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("##### 🧭 Navegação Principal")
+    
+    nav_options = [
+        "Visão geral",
+        "Mapa",
+        "Escolas",
+        "Comparações",
+        "Evolução",
+        "Metodologia",
+        "Dados"
+    ]
+    
+    # Se o usuário estava em uma aba anterior gravada
+    if "nav_tab" not in st.session_state or st.session_state["nav_tab"] not in nav_options:
+        st.session_state["nav_tab"] = "Visão geral"
         
-    with nav_tab6:
-        render_explorer_view(df_filtrado)
+    selected_nav = st.sidebar.radio(
+        "Selecione uma área:",
+        options=nav_options,
+        index=nav_options.index(st.session_state["nav_tab"]),
+        key="main_nav_radio"
+    )
+    st.session_state["nav_tab"] = selected_nav
+
+    # Se estiver em modo de Detalhe da Escola e o usuário clicar em uma área do menu, sai do detalhe
+    if st.session_state["selected_inep"] is not None:
+        if st.sidebar.button("⬅️ Sair do Detalhe da Escola", use_container_width=True):
+            st.session_state["selected_inep"] = None
+            if "escola" in st.query_params:
+                del st.query_params["escola"]
+            st.rerun()
+
+    # Informações de transparência no rodapé da barra lateral
+    st.sidebar.markdown("---")
+    st.sidebar.caption(
+        "⚖️ **Princípio Jornalístico:** O painel reporta fatos e evidências documentais auditadas. "
+        "Não gera conclusões causais, rankings ou escores de desempenho."
+    )
+    st.sidebar.caption("Versão auditada: `v1.2 (18/09/2026)`")
+
+    # ==========================================
+    # ROTEAMENTO E RENDERIZAÇÃO DE TELAS
+    # ==========================================
+    # Prioridade 1: Detalhe da Escola (se selecionada via URL, mapa, lista ou busca)
+    if st.session_state["selected_inep"] is not None:
+        render_school_detail_view(st.session_state["selected_inep"])
+        return
         
-    with nav_tab7:
+    # Prioridade 2: Navegação principal entre as 7 áreas
+    if selected_nav == "Visão geral":
+        render_overview_view()
+    elif selected_nav == "Mapa":
+        render_map_view()
+    elif selected_nav == "Escolas":
+        render_school_list_view()
+    elif selected_nav == "Comparações":
+        render_comparisons_view()
+    elif selected_nav == "Evolução":
+        render_evolution_view()
+    elif selected_nav == "Metodologia":
         render_methodology_view()
+    elif selected_nav == "Dados":
+        render_transparency_view()
 
 if __name__ == "__main__":
     main()
