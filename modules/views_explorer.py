@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 import plotly.express as px
 from modules.data_loader import load_tidy_data
 
@@ -141,16 +142,18 @@ def render_explorer_view(df_filtrado: pd.DataFrame):
             
             tabela_historico["TAXA_NAO_APROVACAO"] = 100.0 - tabela_historico["TAXA_APROVACAO"]
             
+            fmt_hist = {
+                "SAEB_PORTUGUES": "{:.1f}",
+                "SAEB_MATEMATICA": "{:.1f}",
+                "SAEB_NOTA_MEDIA": "{:.2f}",
+                "IDEB_OBSERVADO": "{:.2f}",
+                "IDEB_PROJECAO": "{:.2f}",
+                "TAXA_APROVACAO": "{:.1f}%",
+                "TAXA_NAO_APROVACAO": "{:.1f}%"
+            }
+            fmt_show = {c: fmt_hist[c] for c in tabela_historico.columns if c in fmt_hist}
             st.dataframe(
-                tabela_historico.style.format({
-                    "SAEB_PORTUGUES": "{:.1f}",
-                    "SAEB_MATEMATICA": "{:.1f}",
-                    "SAEB_NOTA_MEDIA": "{:.2f}",
-                    "IDEB_OBSERVADO": "{:.2f}",
-                    "IDEB_PROJECAO": "{:.2f}",
-                    "TAXA_APROVACAO": "{:.1f}%",
-                    "TAXA_NAO_APROVACAO": "{:.1f}%"
-                }, na_rep="-"),
+                tabela_historico.style.format(fmt_show, na_rep="-"),
                 use_container_width=True,
                 hide_index=True
             )
