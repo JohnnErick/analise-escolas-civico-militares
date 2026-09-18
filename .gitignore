@@ -15,3 +15,19 @@ Thumbs.db
 
 # Configurações locais do Streamlit que contenham credenciais (mas permitimos config.toml)
 .streamlit/secrets.toml
+
+# Dados brutos volumosos originais (downloads e zips do INEP / MEC)
+data/raw/
+*.zip
+
+# CSVs volumosos redundantes quando a versão .parquet correspondente já está versionada
+data/processed/rendimento/rendimento_escolas_parana_tidy.csv
+data/processed/saeb/saeb_escolas_parana_tidy.csv
+data/processed/ideb/ideb_escolas_parana_tidy.csv
+data/processed/ccm_saeb_rendimento_ideb.csv
+data/processed/ccm_saeb_rendimento_ideb_serie_completa.csv
+data/processed/saeb/ccm_saeb_matriz_integrada.csv
+data/processed/saeb/ccm_saeb_serie_historica_completa.csv
+
+# Biblioteca de referência local de PDFs e duplicatas de planilhas (rastreadas em 'planilha ref/' e 'data/extracted/')
+biblioteca de ref/
