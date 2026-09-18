@@ -8,6 +8,7 @@ from modules.views_temporal import render_temporal_view
 from modules.views_complementary import render_complementary_view
 from modules.views_geo import render_geo_view
 from modules.views_explorer import render_explorer_view
+from modules.views_directory import render_directory_view
 from modules.views_methodology import render_methodology_view
 
 # Configuração da página
@@ -127,7 +128,8 @@ def main():
     # ==========================================
     # NAVEGAÇÃO PRINCIPAL (ABAS)
     # ==========================================
-    nav_tab1, nav_tab2, nav_tab3, nav_tab4, nav_tab5, nav_tab6, nav_tab7 = st.tabs([
+    nav_tab0, nav_tab1, nav_tab2, nav_tab3, nav_tab4, nav_tab5, nav_tab6, nav_tab7 = st.tabs([
+        "🏫 Catálogo de Escolas",
         "⚖️ Comparações & Targets",
         "🎯 SAEB Detalhado",
         "📋 Aprovação & Rendimento",
@@ -137,6 +139,9 @@ def main():
         "📖 Metodologia & Transparência"
     ])
     
+    with nav_tab0:
+        render_directory_view(df_raw)
+        
     with nav_tab1:
         render_comparisons_view(df_filtrado, df_raw)
         
