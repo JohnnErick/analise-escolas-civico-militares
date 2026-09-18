@@ -62,12 +62,29 @@ def render_methodology_view():
             | **Nota Média Padronizada** | `VL_NOTA_MEDIA_YYYY` | Nota padronizada de 0 a 10 calculada pelo INEP a partir do SAEB ($N$ na fórmula do IDEB). | **Indicador Principal** |
             | **IDEB Observado** | `VL_OBSERVADO_YYYY` | Índice de Desenvolvimento da Educação Básica (0 a 10), calculado por $IDEB = N \\times P$. | **Indicador Complementar** |
             | **Meta do IDEB (Projeção)** | `VL_PROJECAO_YYYY` | Meta bianual calculada pelo MEC para a unidade escolar. | **Indicador Complementar** |
-            | **Taxa de Aprovação** | `VL_APROVACAO_YYYY_SI_4` | Percentual de estudantes aprovados no ano letivo (0% a 100%). | **Indicador Complementar** |
+            | **Taxa de Aprovação Global** | `VL_APROVACAO_YYYY_SI_4` | Percentual de estudantes aprovados na média dos anos da etapa (0% a 100%). | **Indicador / Target de Comparação** |
+            | **Taxas de Aprovação por Série** | `VL_APROVACAO_YYYY_1` a `_4` | Percentual de aprovação discriminado por série/ano escolar individual (ex: 6º ao 9º ano ou 1ª à 3ª série). | **Target de Comparação Detalhado** |
             | **Indicador de Rendimento ($P$)** | `VL_INDICADOR_REND_YYYY` | Fator de transição/fluxo escolar calculado pelo INEP (0 a 1). | **Indicador Complementar** |
+            | **Superação da Meta** | `VL_OBSERVADO` - `VL_PROJECAO` | Desvio em relação à meta oficial projetada pelo INEP. | **Indicador Comparativo** |
             """
         )
         
-    with st.expander("⚠️ 4. Tratamento de Dados Ausentes e Limitações", expanded=True):
+    with st.expander("⚖️ 4. Metodologia de Benchmarking e Grupos de Comparação", expanded=True):
+        st.markdown(
+            """
+            Para propiciar investigações jornalísticas e científicas equilibradas, o painel disponibiliza três targets de grupo (benchmarks):
+            
+            1. **Rede Estadual Regular (Não CM) — [Recomendado]**:
+               - Isola apenas estabelecimentos da Rede Pública Estadual geridos pela SEED-PR que mantêm o modelo civil padrão.
+               - Elimina distorções decorrentes de redes municipais (focadas nos anos iniciais) ou federais/privadas.
+            2. **Não Cívico-Militar (Geral)**:
+               - Conjunto agregado de todas as escolas não cívico-militares filtradas pelo usuário.
+            3. **Mesmo Município (Pareamento Territorial)**:
+               - Considera unicamente as escolas não cívico-militares situadas nos municípios que possuem ao menos uma escola militarizada ativa, controlando parcialmente variações socioeconômicas e geográficas locais.
+            """
+        )
+        
+    with st.expander("⚠️ 5. Tratamento de Dados Ausentes e Limitações", expanded=True):
         st.markdown(
             """
             - **Siglas e Ausências do INEP**:
@@ -78,7 +95,7 @@ def render_methodology_view():
             """
         )
         
-    with st.expander("🔗 5. Auditoria do Cruzamento das Planilhas (Exclusivo Paraná)", expanded=True):
+    with st.expander("🔗 6. Auditoria do Cruzamento das Planilhas (Exclusivo Paraná)", expanded=True):
         st.markdown(
             """
             O projeto é **estritamente voltado para o Estado do Paraná (PR)**.

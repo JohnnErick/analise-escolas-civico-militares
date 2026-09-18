@@ -22,9 +22,17 @@ def render_investigation_banner():
         icon="🔍"
     )
 
-def render_kpi_cards(df: pd.DataFrame, metric_col: str, metric_title: str, format_str="{:.1f}"):
-    df_cm = df[df["TIPO_GESTAO"] == "Cívico-Militar"][metric_col].dropna()
-    df_ncm = df[df["TIPO_GESTAO"] == "Não Cívico-Militar"][metric_col].dropna()
+def render_kpi_cards(
+    df: pd.DataFrame,
+    metric_col: str,
+    metric_title: str,
+    format_str="{:.1f}",
+    group_col: str = "TIPO_GESTAO",
+    cm_group: str = "Cívico-Militar",
+    benchmark_group: str = "Não Cívico-Militar"
+):
+    df_cm = df[df[group_col] == cm_group][metric_col].dropna() if group_col in df.columns else pd.Series(dtype=float)
+    df_ncm = df[df[group_col] == benchmark_group][metric_col].dropna() if group_col in df.columns else pd.Series(dtype=float)
     
     n_cm = len(df_cm)
     n_ncm = len(df_ncm)
@@ -42,7 +50,7 @@ def render_kpi_cards(df: pd.DataFrame, metric_col: str, metric_title: str, forma
     
     with c1:
         st.metric(
-            label=f"Cívico-Militar — Média ({metric_title})",
+            label=f"{cm_group} — Média ({metric_title})",
             value=format_str.format(mean_cm) if pd.notna(mean_cm) else "Sem dados",
             help=f"Mediana: {format_str.format(med_cm) if pd.notna(med_cm) else 'N/A'}"
         )
@@ -50,7 +58,7 @@ def render_kpi_cards(df: pd.DataFrame, metric_col: str, metric_title: str, forma
         
     with c2:
         st.metric(
-            label=f"Não Cívico-Militar — Média ({metric_title})",
+            label=f"{benchmark_group} — Média ({metric_title})",
             value=format_str.format(mean_ncm) if pd.notna(mean_ncm) else "Sem dados",
             help=f"Mediana: {format_str.format(med_ncm) if pd.notna(med_ncm) else 'N/A'}"
         )
@@ -64,7 +72,7 @@ def render_kpi_cards(df: pd.DataFrame, metric_col: str, metric_title: str, forma
             delta=delta_str if pd.notna(diff_mean) else None,
             delta_color="off"  # Mantém cor neutra para não enviesar bom/ruim
         )
-        st.caption("Diferença simples: CM menos Não-CM")
+        st.caption(f"Diferença simples: {cm_group} menos {benchmark_group}")
         
     with c4:
         delta_med_str = f"{diff_med:+.2f}" if pd.notna(diff_med) else "-"
@@ -76,13 +84,20 @@ def render_kpi_cards(df: pd.DataFrame, metric_col: str, metric_title: str, forma
         )
         st.caption("Resistente a valores extremos/outliers")
 
-def render_stats_table(df: pd.DataFrame, metric_col: str, metric_name: str):
-    df_valid = df.dropna(subset=[metric_col, "TIPO_GESTAO"])
+def render_stats_table(
+    df: pd.DataFrame,
+    metric_col: str,
+    metric_name: str,
+    group_col: str = "TIPO_GESTAO"
+):
+    if group_col not in df.columns:
+        return
+    df_valid = df.dropna(subset=[metric_col, group_col])
     if df_valid.empty:
         st.warning("Não há dados suficientes para a tabela descritiva com os filtros atuais.")
         return
         
-    stats = df_valid.groupby("TIPO_GESTAO")[metric_col].agg(
+    stats = df_valid.groupby(group_col)[metric_col].agg(
         Escolas="count",
         Média="mean",
         Desvio_Padrão="std",
@@ -94,7 +109,7 @@ def render_stats_table(df: pd.DataFrame, metric_col: str, metric_name: str):
     ).reset_index()
     
     stats.columns = [
-        "Tipo de Gestão", "Nº Escolas", "Média", "Desvio Padrão",
+        "Grupo / Segmento", "Nº Escolas", "Média", "Desvio Padrão",
         "Mínimo", "1º Quartil (25%)", "Mediana (50%)", "3º Quartil (75%)", "Máximo"
     ]
     

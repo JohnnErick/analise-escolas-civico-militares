@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from modules.data_loader import load_tidy_data, get_filter_options, apply_filters
 from modules.components import render_header, render_investigation_banner
+from modules.views_comparisons import render_comparisons_view
 from modules.views_saeb import render_saeb_view
 from modules.views_temporal import render_temporal_view
 from modules.views_complementary import render_complementary_view
@@ -126,19 +127,26 @@ def main():
     # ==========================================
     # NAVEGAÇÃO PRINCIPAL (ABAS)
     # ==========================================
-    nav_tab1, nav_tab2, nav_tab3, nav_tab4, nav_tab5, nav_tab6 = st.tabs([
-        "🎯 SAEB (Principal)",
+    nav_tab1, nav_tab2, nav_tab3, nav_tab4, nav_tab5, nav_tab6, nav_tab7 = st.tabs([
+        "⚖️ Comparações & Targets",
+        "🎯 SAEB Detalhado",
+        "📋 Aprovação & Rendimento",
         "📈 Séries Históricas",
-        "📊 IDEB & Rendimento",
         "🗺️ Comparativo Municipal",
         "🔎 Explorador & Microdados",
         "📖 Metodologia & Transparência"
     ])
     
     with nav_tab1:
-        render_saeb_view(df_filtrado)
+        render_comparisons_view(df_filtrado, df_raw)
         
     with nav_tab2:
+        render_saeb_view(df_filtrado)
+        
+    with nav_tab3:
+        render_complementary_view(df_filtrado)
+        
+    with nav_tab4:
         # Na evolução temporal, passamos o dataframe sem o filtro de ano único se o usuário filtrou um único ano
         # para que ele possa ver a série completa da etapa/municípios selecionados
         df_temporal = apply_filters(
@@ -152,16 +160,13 @@ def main():
         )
         render_temporal_view(df_temporal)
         
-    with nav_tab3:
-        render_complementary_view(df_filtrado)
-        
-    with nav_tab4:
+    with nav_tab5:
         render_geo_view(df_filtrado)
         
-    with nav_tab5:
+    with nav_tab6:
         render_explorer_view(df_filtrado)
         
-    with nav_tab6:
+    with nav_tab7:
         render_methodology_view()
 
 if __name__ == "__main__":

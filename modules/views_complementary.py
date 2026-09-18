@@ -1,7 +1,14 @@
 import streamlit as st
 import pandas as pd
 from modules.components import render_kpi_cards, render_stats_table
-from modules.charts import make_boxplot_comparison, make_histogram_comparison, make_ideb_vs_projecao_scatter
+from modules.charts import (
+    make_boxplot_comparison,
+    make_histogram_comparison,
+    make_ideb_vs_projecao_scatter,
+    make_grade_approval_bars,
+    make_approval_brackets_bar,
+    make_scatter_aprovacao_vs_saeb
+)
 
 def render_complementary_view(df: pd.DataFrame):
     st.header("📊 Indicadores Complementares: IDEB e Rendimento Escolar")
@@ -105,5 +112,27 @@ def render_complementary_view(df: pd.DataFrame):
             )
             if fig_box_rend:
                 st.plotly_chart(fig_box_rend, use_container_width=True)
+                
+        # Faixas de Aprovação e Comparativo por Série
+        c_faixa, c_serie = st.columns(2)
+        with c_faixa:
+            fig_faixas = make_approval_brackets_bar(df, title="Proporção de Escolas por Faixa de Aprovação (%)")
+            if fig_faixas:
+                st.plotly_chart(fig_faixas, use_container_width=True)
+        with c_serie:
+            fig_series = make_grade_approval_bars(df, title="Taxa Média de Aprovação por Série/Ano Escolar")
+            if fig_series:
+                st.plotly_chart(fig_series, use_container_width=True)
+                
+        # Cruzamento: Taxa de Aprovação vs SAEB
+        st.markdown("##### Relação entre Taxa de Aprovação e Nota SAEB")
+        fig_cross = make_scatter_aprovacao_vs_saeb(
+            df,
+            saeb_col="SAEB_NOTA_MEDIA",
+            saeb_label="Nota Média SAEB (0-10)",
+            title="Dispersão: Taxa de Aprovação vs Nota Média SAEB"
+        )
+        if fig_cross:
+            st.plotly_chart(fig_cross, use_container_width=True)
                 
         render_stats_table(df, "TAXA_APROVACAO", "Taxa de Aprovação (%)")

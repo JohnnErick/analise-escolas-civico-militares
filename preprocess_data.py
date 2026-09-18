@@ -136,6 +136,10 @@ def processar_dados():
             col_proj = f"VL_PROJECAO_{ano}"
             col_rend = f"VL_INDICADOR_REND_{ano}"
             col_aprov = f"VL_APROVACAO_{ano}_SI_4"
+            col_aprov_1 = f"VL_APROVACAO_{ano}_1"
+            col_aprov_2 = f"VL_APROVACAO_{ano}_2"
+            col_aprov_3 = f"VL_APROVACAO_{ano}_3"
+            col_aprov_4 = f"VL_APROVACAO_{ano}_4"
             
             sub = pd.DataFrame({
                 "SG_UF": df_raw["SG_UF"],
@@ -157,6 +161,10 @@ def processar_dados():
                 "IDEB_PROJECAO": df_raw[col_proj] if col_proj in cols else np.nan,
                 "INDICADOR_RENDIMENTO": df_raw[col_rend] if col_rend in cols else np.nan,
                 "TAXA_APROVACAO": df_raw[col_aprov] if col_aprov in cols else np.nan,
+                "TAXA_APROVACAO_1": df_raw[col_aprov_1] if col_aprov_1 in cols else np.nan,
+                "TAXA_APROVACAO_2": df_raw[col_aprov_2] if col_aprov_2 in cols else np.nan,
+                "TAXA_APROVACAO_3": df_raw[col_aprov_3] if col_aprov_3 in cols else np.nan,
+                "TAXA_APROVACAO_4": df_raw[col_aprov_4] if col_aprov_4 in cols else np.nan,
             })
             dfs_tidy.append(sub)
             
