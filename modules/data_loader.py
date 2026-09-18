@@ -238,3 +238,51 @@ def load_comparisons_dataset() -> pd.DataFrame:
         
     return df
 
+@st.cache_data(show_spinner=False)
+def load_ccm_mapping() -> pd.DataFrame:
+    """
+    Carrega o mapeamento oficial das escolas Cívico-Militares do Paraná (306 unidades).
+    """
+    file_path = DATA_DIR / "mapeamento_escolas_civico_militares.csv"
+    if not file_path.exists():
+        return pd.DataFrame()
+    return pd.read_csv(file_path, sep=";")
+
+def get_school_ccm_status(codigo_inep: int, esc_row: pd.Series = None) -> tuple[bool, int | None, str]:
+    """
+    Retorna (is_ccm: bool, ano_transicao: int | None, coorte_label: str) para uma escola.
+    Identifica de forma robusta e integrada as coortes:
+    - 2021: Programa Inicial (Lei nº 20.338/2020 / relação oficial dos 306 colégios)
+    - 2024: Expansão da Rede (Editais 2023 / 106 escolas ativas em 2024)
+    - 2026: Expansão Futura (Editais 2025 / 33 escolas com implantação em 2026)
+    """
+    if esc_row is None:
+        try:
+            df_cad = load_cadastro()
+            sub = df_cad[df_cad["codigo_inep"] == codigo_inep]
+            esc_row = sub.iloc[0] if not sub.empty else {}
+        except Exception:
+            esc_row = {}
+
+    ano_inicio = esc_row.get("ano_inicio_ccm") if hasattr(esc_row, "get") else None
+    if pd.notna(ano_inicio) and str(ano_inicio).strip() in ["2021", "2024", "2026"]:
+        ano = int(str(ano_inicio).strip())
+        if ano == 2021:
+            return True, 2021, "Coorte 2021 (Programa Inicial)"
+        elif ano == 2024:
+            return True, 2024, "Coorte 2024 (Expansão)"
+        elif ano == 2026:
+            return True, 2026, "Coorte 2026 (Consulta Pública)"
+
+    # Checar na base oficial dos 306 colégios cívico-militares do PR
+    df_map = load_ccm_mapping()
+    if not df_map.empty and "ID_ESCOLA" in df_map.columns:
+        if codigo_inep in df_map["ID_ESCOLA"].dropna().astype(int).values:
+            return True, 2021, "Coorte 2021 (Programa Inicial)"
+
+    # Checar se no cadastro auditado consta como CCM
+    if hasattr(esc_row, "get") and bool(esc_row.get("is_ccm", False)):
+        return True, 2024, "Coorte 2024 (Expansão Auditada)"
+
+    return False, None, "Escola Regular (Não Cívico-Militar)"
+

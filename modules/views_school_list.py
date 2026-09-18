@@ -88,8 +88,8 @@ def render_school_list_view():
                 key="school_list_ano_ini"
             )
             
-        st.markdown("##### 🔀 Ordenação da Lista *(Critérios Neutros)*")
-        ordem_col, _ = st.columns([2, 2])
+        st.markdown("##### 🔀 Ordenação e Ações Rápidas")
+        ordem_col, reset_col = st.columns([3, 1])
         with ordem_col:
             sort_choice = st.selectbox(
                 "Ordenar por:",
@@ -102,6 +102,15 @@ def render_school_list_view():
                 index=0,
                 help="Ordenações restritas a critérios neutros. Não são permitidas ordenações baseadas em notas ou rankings."
             )
+        with reset_col:
+            st.write("")
+            st.write("")
+            if st.button("🧹 Limpar Filtros", key="btn_reset_school_filters", use_container_width=True):
+                for k in ["school_list_search", "school_list_escopo", "school_list_status", "school_list_mun", "school_list_nre", "school_list_etapa", "school_list_ano_ini"]:
+                    if k in st.session_state:
+                        del st.session_state[k]
+                st.session_state["school_list_page"] = 1
+                st.rerun()
 
     # ==========================================
     # APLICAÇÃO DOS FILTROS
@@ -180,49 +189,118 @@ def render_school_list_view():
         "rede_ensino": "Rede"
     })
     
-    st.info("💡 **Dica:** Clique em uma linha da tabela abaixo para inspecionar os dados ou utilize a busca rápida para abrir diretamente o relatório da unidade.")
+    # ==========================================
+    # LISTA DE ESCOLAS COM ACESSO DIRETO EM 1 CLIQUE
+    # ==========================================
+    st.markdown("---")
+    st.markdown("### 📋 Escolas Encontradas")
+    st.caption("Acesse instantaneamente o dossiê detalhado com raio-x de qualquer unidade clicando no botão correspondente:")
     
-    # Evento de seleção na tabela interativa
-    event = st.dataframe(
-        tabela_show,
-        use_container_width=True,
-        height=480,
-        selection_mode="single-row",
-        on_select="rerun",
-        hide_index=True,
-        key="table_schools_main"
-    )
+    PAGE_SIZE = 15
+    total_pages = max(1, int(np.ceil(total_encontrado / PAGE_SIZE)))
     
-    selected_row_inep = None
-    if event and event.selection and event.selection.rows:
-        sel_idx = event.selection.rows[0]
-        selected_row_inep = int(df_filtered.iloc[sel_idx]["codigo_inep"])
+    if "school_list_page" not in st.session_state:
+        st.session_state["school_list_page"] = 1
         
-    # Seletor alternativo explícito
-    c_btn1, c_btn2 = st.columns([3, 1])
-    with c_btn1:
-        if selected_row_inep:
-            row_esc = df_filtered[df_filtered["codigo_inep"] == selected_row_inep].iloc[0]
-            st.success(f"Escola selecionada: **{row_esc['nome_escola']}** (INEP: {selected_row_inep})")
-        else:
-            # Dropdown de atalho rápido
-            opcoes_rapidas = [
-                f"{r['nome_escola']} — {r['municipio']} (INEP: {r['codigo_inep']})"
-                for _, r in df_filtered.head(100).iterrows()
-            ]
-            escolha_drop = st.selectbox(
-                "Ou escolha diretamente uma escola da lista filtrada:",
-                options=["Selecione para abrir o detalhe..."] + opcoes_rapidas,
-                index=0
-            )
-            if escolha_drop != "Selecione para abrir o detalhe...":
-                selected_row_inep = int(escolha_drop.split("INEP: ")[-1].replace(")", ""))
-                
-    with c_btn2:
-        st.write("")
-        st.write("")
-        if selected_row_inep:
-            if st.button("🔍 Ver Detalhes da Escola ➔", key="btn_open_selected_detail", use_container_width=True):
-                st.session_state["selected_inep"] = selected_row_inep
-                st.query_params["escola"] = str(selected_row_inep)
+    if st.session_state["school_list_page"] > total_pages:
+        st.session_state["school_list_page"] = total_pages
+    if st.session_state["school_list_page"] < 1:
+        st.session_state["school_list_page"] = 1
+        
+    current_page = st.session_state["school_list_page"]
+    
+    # Barra superior de paginação (quando há múltiplas páginas)
+    if total_pages > 1:
+        col_p1, col_p2, col_p3 = st.columns([1, 2, 1])
+        with col_p1:
+            if st.button("◀️ Página Anterior", key="btn_prev_page_top", disabled=(current_page <= 1), use_container_width=True):
+                st.session_state["school_list_page"] = current_page - 1
                 st.rerun()
+        with col_p2:
+            st.markdown(
+                f"<div style='text-align: center; padding-top: 6px; font-size: 0.9em;'>"
+                f"Página <b>{current_page}</b> de <b>{total_pages}</b> &bull; "
+                f"Exibindo <b>{(current_page - 1) * PAGE_SIZE + 1}</b> a <b>{min(current_page * PAGE_SIZE, total_encontrado)}</b> de <b>{total_encontrado}</b>"
+                f"</div>",
+                unsafe_allow_html=True
+            )
+        with col_p3:
+            if st.button("Próxima Página ▶️", key="btn_next_page_top", disabled=(current_page >= total_pages), use_container_width=True):
+                st.session_state["school_list_page"] = current_page + 1
+                st.rerun()
+                
+    start_idx = (current_page - 1) * PAGE_SIZE
+    end_idx = min(start_idx + PAGE_SIZE, total_encontrado)
+    page_schools = df_filtered.iloc[start_idx:end_idx]
+    
+    # Renderização dos cards individuais com botão de 1 clique
+    for _, row_esc in page_schools.iterrows():
+        inep = int(row_esc["codigo_inep"])
+        nome = row_esc["nome_escola"]
+        mun = row_esc["municipio"]
+        nre = row_esc.get("nre", "Não informado")
+        rede = row_esc.get("rede_ensino", "Estadual")
+        etapa = row_esc.get("etapas_ofertadas", "Não informada")
+        is_ccm_flag = bool(row_esc.get("is_ccm", False))
+        ano_ini = row_esc.get("ano_inicio_ccm")
+        
+        if is_ccm_flag:
+            ini_txt = f" (Início: {ano_ini})" if pd.notna(ano_ini) and str(ano_ini).strip() and str(ano_ini) != "Não se aplica" else " (Auditada)"
+            badge_html = f"<span style='background-color: #DCFCE7; color: #166534; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85em;'>🟢 Cívico-Militar{ini_txt}</span>"
+        else:
+            badge_html = "<span style='background-color: #F1F5F9; color: #475569; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85em;'>⚪ Regular (Sem CCM)</span>"
+            
+        with st.container(border=True):
+            c_info, c_action = st.columns([3.5, 1.2])
+            with c_info:
+                st.markdown(f"#### 🏫 {nome}")
+                st.markdown(
+                    f"{badge_html} &nbsp;|&nbsp; 📍 **{mun}** (NRE: {nre}) &nbsp;|&nbsp; "
+                    f"INEP: `{inep}` &nbsp;|&nbsp; Rede: **{rede}**",
+                    unsafe_allow_html=True
+                )
+                if pd.notna(etapa) and str(etapa).strip():
+                    st.caption(f"📚 Etapas: {etapa}")
+            with c_action:
+                st.write("")
+                if st.button("🔍 Ver Raio-X ➔", key=f"btn_open_school_{inep}", type="primary", use_container_width=True):
+                    st.session_state["selected_inep"] = inep
+                    st.query_params["escola"] = str(inep)
+                    st.rerun()
+
+    # Barra inferior de paginação (quando há múltiplas páginas)
+    if total_pages > 1:
+        st.markdown("")
+        col_b1, col_b2, col_b3 = st.columns([1, 2, 1])
+        with col_b1:
+            if st.button("◀️ Página Anterior", key="btn_prev_page_bottom", disabled=(current_page <= 1), use_container_width=True):
+                st.session_state["school_list_page"] = current_page - 1
+                st.rerun()
+        with col_b2:
+            st.markdown(
+                f"<div style='text-align: center; padding-top: 6px; font-size: 0.9em;'>"
+                f"Página <b>{current_page}</b> de <b>{total_pages}</b>"
+                f"</div>",
+                unsafe_allow_html=True
+            )
+        with col_b3:
+            if st.button("Próxima Página ▶️", key="btn_next_page_bottom", disabled=(current_page >= total_pages), use_container_width=True):
+                st.session_state["school_list_page"] = current_page + 1
+                st.rerun()
+
+    # ==========================================
+    # VISUALIZAÇÃO TABULAR PARA MICRODADOS E EXPORTAÇÃO
+    # ==========================================
+    st.markdown("---")
+    with st.expander("📋 Ver Tabela Completa para Exportação e Microdados", expanded=False):
+        st.caption(
+            "Consulte ou baixe a listagem tabular completa de todas as escolas filtradas "
+            "através dos controles nativos da tabela (ícone de download no canto superior direito)."
+        )
+        st.dataframe(
+            tabela_show,
+            use_container_width=True,
+            height=400,
+            hide_index=True,
+            key="table_schools_export"
+        )

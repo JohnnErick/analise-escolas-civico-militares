@@ -88,31 +88,45 @@ def main():
     st.sidebar.markdown("---")
     st.sidebar.markdown("##### 🧭 Navegação Principal")
     
-    nav_options = [
-        "Visão geral",
-        "Mapa",
-        "Escolas",
-        "Comparações",
-        "Evolução",
-        "Metodologia",
-        "Dados"
+    nav_items = [
+        ("📊 Visão geral", "Visão geral"),
+        ("🗺️ Mapa", "Mapa"),
+        ("🏫 Escolas", "Escolas"),
+        ("⚖️ Comparações", "Comparações"),
+        ("📈 Evolução", "Evolução"),
+        ("📖 Metodologia", "Metodologia"),
+        ("💾 Dados", "Dados")
     ]
     
     # Se o usuário estava em uma aba anterior gravada
-    if "nav_tab" not in st.session_state or st.session_state["nav_tab"] not in nav_options:
+    valid_nav_keys = [k for _, k in nav_items]
+    if "nav_tab" not in st.session_state or st.session_state["nav_tab"] not in valid_nav_keys:
         st.session_state["nav_tab"] = "Visão geral"
         
-    selected_nav = st.sidebar.radio(
-        "Selecione uma área:",
-        options=nav_options,
-        index=nav_options.index(st.session_state["nav_tab"]),
-        key="main_nav_radio"
-    )
-    st.session_state["nav_tab"] = selected_nav
+    has_school_selected = st.session_state.get("selected_inep") is not None
+    
+    # Se estiver em modo de Detalhe da Escola, exibe destaque do dossiê e botão de retorno
+    if has_school_selected:
+        st.sidebar.button(
+            f"🔍 Dossiê da Escola Ativa (INEP: {st.session_state['selected_inep']})",
+            key="btn_active_school_dossier",
+            use_container_width=True,
+            type="primary",
+            disabled=True
+        )
+        if st.sidebar.button("⬅️ Sair do Dossiê e Voltar", key="btn_exit_dossier", use_container_width=True):
+            st.session_state["selected_inep"] = None
+            if "escola" in st.query_params:
+                del st.query_params["escola"]
+            st.rerun()
+        st.sidebar.markdown("---")
 
-    # Se estiver em modo de Detalhe da Escola e o usuário clicar em uma área do menu, sai do detalhe
-    if st.session_state["selected_inep"] is not None:
-        if st.sidebar.button("⬅️ Sair do Detalhe da Escola", use_container_width=True):
+    # Renderiza os 7 botões da navegação principal
+    for label, nav_key in nav_items:
+        is_active = (st.session_state.get("nav_tab") == nav_key and not has_school_selected)
+        btn_type = "primary" if is_active else "secondary"
+        if st.sidebar.button(label, key=f"btn_nav_{nav_key}", use_container_width=True, type=btn_type):
+            st.session_state["nav_tab"] = nav_key
             st.session_state["selected_inep"] = None
             if "escola" in st.query_params:
                 del st.query_params["escola"]
@@ -135,6 +149,7 @@ def main():
         return
         
     # Prioridade 2: Navegação principal entre as 7 áreas
+    selected_nav = st.session_state.get("nav_tab", "Visão geral")
     if selected_nav == "Visão geral":
         render_overview_view()
     elif selected_nav == "Mapa":
